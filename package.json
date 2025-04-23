@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ts": "tsc --noEmit --incremental",
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -35,6 +37,7 @@
     "@types/react-slick": "^0.23.13",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.15",
+    "husky": "^9.1.7",
     "typescript": "^5"
   }
 }

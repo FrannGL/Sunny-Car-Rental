@@ -19,7 +19,7 @@ import WhyUs1 from "@/src/components/sections/WhyUs1";
 export default function Index3() {
   return (
     <>
-      <Layout headerStyle={3} footerStyle={1}>
+      <Layout footerStyle={1}>
         <Hero1 />
         <Search1 />
         <CarsListing2 />
