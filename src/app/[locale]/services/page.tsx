@@ -19,7 +19,7 @@ export default function Services() {
                 <img
                   className="w-100 h-100 img-banner"
                   src="/assets/imgs/page-header/banner1.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
@@ -35,7 +35,7 @@ export default function Services() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold">
@@ -69,7 +69,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-1.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -106,7 +106,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-2.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -143,7 +143,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-3.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -180,7 +180,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-4.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -217,7 +217,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-5.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -254,7 +254,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-6.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -291,7 +291,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-7.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -328,7 +328,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-8.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -365,7 +365,7 @@ export default function Services() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/services/services-list-1/img-9.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -443,15 +443,15 @@ export default function Services() {
                   <div className="box-author-testimonials background-100">
                     <img
                       src="/assets/imgs/page/homepage1/testimonial.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     <img
                       src="/assets/imgs/page/homepage1/testimonial2.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     <img
                       src="/assets/imgs/page/homepage1/testimonial3.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     Testimonials
                   </div>
@@ -487,7 +487,7 @@ export default function Services() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -503,27 +503,27 @@ export default function Services() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -547,7 +547,7 @@ export default function Services() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -563,27 +563,27 @@ export default function Services() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -607,7 +607,7 @@ export default function Services() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -623,27 +623,27 @@ export default function Services() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -666,7 +666,7 @@ export default function Services() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -682,27 +682,27 @@ export default function Services() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -731,14 +731,14 @@ export default function Services() {
                             <img
                               className="rounded-12"
                               src="/assets/imgs/cta/cta-10/img-1.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </SwiperSlide>
                           <SwiperSlide className="swiper-slide">
                             <img
                               className="rounded-12"
                               src="/assets/imgs/cta/cta-10/img-1.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </SwiperSlide>
                         </div>
@@ -993,7 +993,7 @@ export default function Services() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1028,7 +1028,7 @@ export default function Services() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Jimmy Dave
@@ -1053,7 +1053,7 @@ export default function Services() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1089,7 +1089,7 @@ export default function Services() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Steven Job
@@ -1114,7 +1114,7 @@ export default function Services() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1150,7 +1150,7 @@ export default function Services() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     David Jame
@@ -1175,7 +1175,7 @@ export default function Services() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1210,7 +1210,7 @@ export default function Services() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Jimmy Dave
@@ -1235,7 +1235,7 @@ export default function Services() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1271,7 +1271,7 @@ export default function Services() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Steven Job
@@ -1296,7 +1296,7 @@ export default function Services() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1332,7 +1332,7 @@ export default function Services() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     David Jame

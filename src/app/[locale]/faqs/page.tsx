@@ -24,7 +24,7 @@ export default function Faqs() {
                   <span>
                     <img
                       src="/assets/imgs/template/icons/arrow-right.svg"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </span>
                   <Link href="#" className="neutral-1000 text-md-bold">
@@ -275,7 +275,7 @@ export default function Faqs() {
                         <img
                           className="invert"
                           src="/assets/imgs/page/pages/cancel.png"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -318,7 +318,7 @@ export default function Faqs() {
                         <img
                           className="invert"
                           src="/assets/imgs/page/pages/tech.png"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>

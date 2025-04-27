@@ -18,7 +18,10 @@ export default function Error404() {
                   <img src="/assets/imgs/template/icons/arrow-left.svg" /> Back
                   to Home
                 </Link>
-                <img src="/assets/imgs/template/404.png" alt="Carento" />
+                <img
+                  src="/assets/imgs/template/404.png"
+                  alt="Sunny Car Rental"
+                />
               </div>
             </div>
           </div>

@@ -12,15 +12,15 @@ export default function Testimonials() {
               <div className="box-author-testimonials">
                 <img
                   src="/assets/imgs/page/homepage1/testimonial.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
                 <img
                   src="/assets/imgs/page/homepage1/testimonial2.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
                 <img
                   src="/assets/imgs/page/homepage1/testimonial3.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
                 Testimonials
               </div>
@@ -47,8 +47,8 @@ export default function Testimonials() {
                           </p>
                           <p className="text-md-regular neutral-500">
                             I’ve used many car rental platforms before, but
-                            Carento’s booking system is hands down the best! The
-                            process is so smooth and straightforward.
+                            Sunny Car Rental’s booking system is hands down the
+                            best! The process is so smooth and straightforward.
                           </p>
                         </div>
                         <div className="card-top pt-40 border-0 mb-0">
@@ -56,7 +56,7 @@ export default function Testimonials() {
                             <div className="card-image">
                               <img
                                 src="/assets/imgs/testimonials/testimonials-1/author-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </div>
                             <div className="card-info">
@@ -72,27 +72,27 @@ export default function Testimonials() {
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                         </div>
@@ -116,7 +116,7 @@ export default function Testimonials() {
                             <div className="card-image">
                               <img
                                 src="/assets/imgs/testimonials/testimonials-1/author-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </div>
                             <div className="card-info">
@@ -132,27 +132,27 @@ export default function Testimonials() {
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                         </div>
@@ -176,7 +176,7 @@ export default function Testimonials() {
                             <div className="card-image">
                               <img
                                 src="/assets/imgs/testimonials/testimonials-1/author-3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </div>
                             <div className="card-info">
@@ -192,27 +192,27 @@ export default function Testimonials() {
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                         </div>
@@ -235,7 +235,7 @@ export default function Testimonials() {
                             <div className="card-image">
                               <img
                                 src="/assets/imgs/testimonials/testimonials-1/author-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </div>
                             <div className="card-info">
@@ -251,27 +251,27 @@ export default function Testimonials() {
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <img
                               className="background-brand-2 p-1"
                               src="/assets/imgs/template/icons/star-black.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                         </div>

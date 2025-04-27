@@ -281,31 +281,31 @@ export default function CarsDetails3() {
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/cars-details/banner.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/cars-details/banner2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/cars-details/banner3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/cars-details/banner4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/cars-details/banner5.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </Slider>
@@ -344,7 +344,7 @@ export default function CarsDetails3() {
                           {" "}
                           <img
                             src="/assets/imgs/page/activities/video.svg"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           Video Clips
                         </a>
@@ -360,49 +360,49 @@ export default function CarsDetails3() {
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn5.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn6.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide">
                           <img
                             src="/assets/imgs/page/car/banner-thumn3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </Slider>
@@ -415,7 +415,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/km.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -430,7 +430,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/diesel.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -445,7 +445,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/auto.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -460,7 +460,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/seat.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -475,7 +475,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/bag.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -490,7 +490,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/suv.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -503,7 +503,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/door.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -518,7 +518,7 @@ export default function CarsDetails3() {
                           <div className="feature-image">
                             <img
                               src="/assets/imgs/page/car/lit.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="feature-info">
@@ -1686,7 +1686,7 @@ export default function CarsDetails3() {
                           <div className="me-2">
                             <img
                               src="/assets/imgs/template/icons/car-1.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-author-info">
@@ -1758,12 +1758,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1772,12 +1772,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1786,12 +1786,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1800,12 +1800,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/jaguar.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/jaguar-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1814,12 +1814,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/honda.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/honda-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1828,12 +1828,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/chevrolet.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/chevrolet-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1842,12 +1842,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/acura.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/acura-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1856,12 +1856,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bmw.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bmw-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1870,12 +1870,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/toyota.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/toyota-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1884,12 +1884,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1898,12 +1898,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1912,12 +1912,12 @@ export default function CarsDetails3() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>

@@ -15,7 +15,7 @@ export default function BlogList() {
                   <span>
                     <img
                       src="/assets/imgs/template/icons/arrow-right.svg"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </span>
                   <Link href="#" className="neutral-1000 text-md-bold">
@@ -30,7 +30,7 @@ export default function BlogList() {
                     <div className="card-image">
                       <img
                         src="/assets/imgs/blog/blog-list/img-1.png"
-                        alt="carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div className="card-info">
@@ -48,7 +48,7 @@ export default function BlogList() {
                           <div className="box-author-small">
                             <img
                               src="/assets/imgs/page/homepage1/avatar.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             <p className="text-sm-bold">By Jimmy Dave</p>
                           </div>
@@ -68,7 +68,7 @@ export default function BlogList() {
                           <Link href="/blog-details">
                             <img
                               src="/assets/imgs/blog/blog-list/img-2.png"
-                              alt="carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -96,7 +96,7 @@ export default function BlogList() {
                           <Link href="/blog-details">
                             <img
                               src="/assets/imgs/blog/blog-list/img-3.png"
-                              alt="carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -124,7 +124,7 @@ export default function BlogList() {
                           <Link href="/blog-details">
                             <img
                               src="/assets/imgs/blog/blog-list/img-4.png"
-                              alt="carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -153,7 +153,7 @@ export default function BlogList() {
                           <Link href="/blog-details">
                             <img
                               src="/assets/imgs/blog/blog-list/img-5.png"
-                              alt="carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -217,7 +217,7 @@ export default function BlogList() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-list/news.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -273,7 +273,7 @@ export default function BlogList() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-list/news2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -329,7 +329,7 @@ export default function BlogList() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-list/news3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -386,7 +386,7 @@ export default function BlogList() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-list/news4.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -543,7 +543,7 @@ export default function BlogList() {
                                   <Link href="/blog-details">
                                     <img
                                       src="/assets/imgs/blog/blog-list/trending.png"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </Link>
                                 </div>
@@ -567,7 +567,7 @@ export default function BlogList() {
                                   <Link href="/blog-details">
                                     <img
                                       src="/assets/imgs/blog/blog-list/trending1.png"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </Link>
                                 </div>
@@ -591,7 +591,7 @@ export default function BlogList() {
                                   <Link href="/blog-details">
                                     <img
                                       src="/assets/imgs/blog/blog-list/trending2.png"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </Link>
                                 </div>
@@ -615,7 +615,7 @@ export default function BlogList() {
                                   <Link href="/blog-details">
                                     <img
                                       src="/assets/imgs/blog/blog-list/trending3.png"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </Link>
                                 </div>
@@ -638,7 +638,7 @@ export default function BlogList() {
                                   <Link href="/blog-details">
                                     <img
                                       src="/assets/imgs/blog/blog-list/trending4.png"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </Link>
                                 </div>
@@ -669,7 +669,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -677,7 +677,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat2.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -685,7 +685,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat3.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -693,7 +693,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat4.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -701,7 +701,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat5.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -709,7 +709,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat6.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -717,7 +717,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat7.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -725,7 +725,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat8.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -733,7 +733,7 @@ export default function BlogList() {
                               <Link href="#">
                                 <img
                                   src="/assets/imgs/blog/blog-list/cat.png"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </Link>
                             </li>
@@ -745,7 +745,7 @@ export default function BlogList() {
                           <img
                             className="rounded-3 w-100"
                             src="/assets/imgs/blog/blog-list/banner-ads.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </Link>
                       </div>

@@ -1,5 +1,5 @@
 /***
- Theme Name: Carento
+ Theme Name: Sunny Car Rental
  Description: Car rental HTML template
  Version: 1.0
  License: GNU General Public License v2 or later
@@ -11253,7 +11253,7 @@ a.icon-socials:hover svg path {
 }
 
 .box-banner-home7 .item-banner-slide {
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   background-position: top center;
   background-repeat: no-repeat;
@@ -12990,6 +12990,7 @@ a.icon-socials:hover svg path {
 
   .container-search-advance {
     position: relative;
+    top: -200px;
     bottom: auto;
     left: auto;
     right: auto;

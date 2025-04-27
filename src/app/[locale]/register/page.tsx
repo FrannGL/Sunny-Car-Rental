@@ -79,7 +79,7 @@ export default function Register() {
                       <Link className="btn btn-login btn-google mr-10" href="#">
                         <img
                           src="/assets/imgs/template/popup/google.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <span className="text-sm-bold">
                           Sign up with Google
@@ -88,13 +88,13 @@ export default function Register() {
                       <Link className="btn btn-login mr-10" href="#">
                         <img
                           src="/assets/imgs/template/popup/facebook.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                       <Link className="btn btn-login" href="#">
                         <img
                           src="/assets/imgs/template/popup/apple.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                     </div>

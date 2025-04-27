@@ -14,12 +14,12 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
               <Link className="d-flex" href="/">
                 <img
                   className="light-mode"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                   src="/assets/imgs/template/logo-d.svg"
                 />
                 <img
                   className="dark-mode"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                   src="/assets/imgs/template/logo-w.svg"
                 />
               </Link>
@@ -28,7 +28,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
               <a className="close-canvas" onClick={handleOffcanvas}>
                 {" "}
                 <img
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                   src="/assets/imgs/template/icons/close.png"
                 />
               </a>
@@ -40,7 +40,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                 <div className="card-image">
                   <img
                     src="/assets/imgs/page/homepage1/author2.png"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </div>
                 <div className="card-info">
@@ -62,7 +62,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                     <Link href="/shop-details">
                       <img
                         src="/assets/imgs/shop/shop-details/other-item1.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </Link>
                   </div>
@@ -78,7 +78,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                     <Link href="/shop-details">
                       <img
                         src="/assets/imgs/shop/shop-details/other-item2.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </Link>
                   </div>
@@ -94,7 +94,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                     <Link href="/shop-details">
                       <img
                         src="/assets/imgs/shop/shop-details/other-item3.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </Link>
                   </div>
@@ -110,7 +110,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                     <Link href="/shop-details">
                       <img
                         src="/assets/imgs/shop/shop-details/other-item4.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </Link>
                   </div>
@@ -126,7 +126,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                     <Link href="/shop-details">
                       <img
                         src="/assets/imgs/shop/shop-details/other-item5.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </Link>
                   </div>
@@ -150,7 +150,7 @@ export default function Offcanvas({ isOffcanvas, handleOffcanvas }: any) {
                   Hours: 8:00 - 17:00, Mon - Sat
                 </p>
                 <p className="email-2 text-md-medium neutral-1000">
-                  support@carento.com
+                  support@Sunny Car Rental.com
                 </p>
               </div>
             </div> */}

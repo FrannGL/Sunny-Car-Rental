@@ -12,7 +12,7 @@ export default function ShopList() {
                 <img
                   className="w-100 h-100 img-fluid img-banner"
                   src="/assets/imgs/page-header/banner9.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 pb-70 translate-middle text-center">
@@ -32,7 +32,7 @@ export default function ShopList() {
                 <span className="@@ds-prev-page">
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold">
@@ -41,7 +41,7 @@ export default function ShopList() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link
@@ -62,7 +62,7 @@ export default function ShopList() {
                     Latest Products
                   </h4>
                   <p className="text-lg-medium text-bold neutral-500">
-                    Experience The Best Car Services In Carento
+                    Experience The Best Car Services In Sunny Car Rental
                   </p>
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product1.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -311,7 +311,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -356,7 +356,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product2.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -401,7 +401,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -446,7 +446,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product3.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -492,7 +492,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -537,7 +537,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product4.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -582,7 +582,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -627,7 +627,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product5.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -672,7 +672,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -717,7 +717,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product6.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -762,7 +762,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -807,7 +807,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product7.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -852,7 +852,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -897,7 +897,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product8.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -942,7 +942,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -987,7 +987,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product9.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -1032,7 +1032,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -1077,7 +1077,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product10.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -1122,7 +1122,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -1167,7 +1167,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product11.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -1213,7 +1213,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -1258,7 +1258,7 @@ export default function ShopList() {
                             </Link>
                             <img
                               src="/assets/imgs/shop/shop-list/product12.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-info p-3 pt-30 border-top">
@@ -1304,7 +1304,7 @@ export default function ShopList() {
                                 <Link href="#" className="card-button pe-3">
                                   <img
                                     src="/assets/imgs/shop/shop-list/stock.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </Link>
                               </div>
@@ -1466,7 +1466,7 @@ export default function ShopList() {
                           <Link href="#" className="btn btn-primary px-3 py-2">
                             <img
                               src="/assets/imgs/template/icons/user.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                             Apply
                           </Link>
@@ -1771,23 +1771,23 @@ export default function ShopList() {
                                   {" "}
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </span>
                                 <span className="checkmark" />
@@ -1800,23 +1800,23 @@ export default function ShopList() {
                                   {" "}
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </span>
                                 <span className="checkmark" />
@@ -1829,23 +1829,23 @@ export default function ShopList() {
                                   {" "}
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </span>
                                 <span className="checkmark" />
@@ -1858,23 +1858,23 @@ export default function ShopList() {
                                   {" "}
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </span>
                                 <span className="checkmark" />
@@ -1887,23 +1887,23 @@ export default function ShopList() {
                                   {" "}
                                   <img
                                     src="/assets/imgs/template/icons/star-yellow.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/template/icons/star-grey.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </span>
                                 <span className="checkmark" />
@@ -1930,12 +1930,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1944,12 +1944,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1958,12 +1958,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1972,12 +1972,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/jaguar.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/jaguar-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1986,12 +1986,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/honda.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/honda-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2000,12 +2000,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/chevrolet.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/chevrolet-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2014,12 +2014,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/acura.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/acura-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2028,12 +2028,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bmw.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bmw-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2042,12 +2042,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/toyota.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/toyota-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2056,12 +2056,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2070,12 +2070,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -2084,12 +2084,12 @@ export default function ShopList() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>

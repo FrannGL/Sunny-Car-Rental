@@ -24,7 +24,7 @@ export default function Pricing() {
                 <img
                   className="w-100 h-100 img-banner"
                   src="/assets/imgs/page-header/banner2.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
@@ -40,7 +40,7 @@ export default function Pricing() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold" />
@@ -97,7 +97,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Access to standard vehicles
@@ -106,7 +106,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           24/7 customer support
@@ -115,7 +115,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Basic insurance coverage
@@ -124,7 +124,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2 text-400">
                           Online booking
@@ -133,7 +133,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2 text-400">
                           Standard roadside assistance
@@ -142,7 +142,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2 text-400">
                           One free vehicle per month
@@ -186,7 +186,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           All Basic Plan features
@@ -195,7 +195,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Access to premium vehicles
@@ -204,7 +204,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Flexible rental terms
@@ -213,7 +213,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           GPS included
@@ -222,7 +222,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Free additional driver
@@ -231,7 +231,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Unlimited vehicle swaps
@@ -275,7 +275,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           All Standard Plan features
@@ -284,7 +284,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Luxury vehicle options
@@ -293,7 +293,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Complimentary upgrades
@@ -302,7 +302,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Enhanced insurance coverage
@@ -311,7 +311,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Free airport pickup, drop-off
@@ -320,7 +320,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Exclusive deals and offers
@@ -364,7 +364,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           All Premium Plan features
@@ -373,7 +373,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           VIP transfer service
@@ -382,7 +382,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Personal concierge
@@ -391,7 +391,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Unlimited mileage
@@ -400,7 +400,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center mb-3">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           Luxury vehicle upgrades
@@ -409,7 +409,7 @@ export default function Pricing() {
                       <li className="d-flex align-items-center">
                         <img
                           src="/assets/imgs/pricing-1/check-primary.svg"
-                          alt="carento"
+                          alt="Sunny Car Rental"
                         />
                         <p className="text-sm-medium neutral-1000 m-0 ms-2">
                           24/7 account manager
@@ -1198,7 +1198,7 @@ export default function Pricing() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1233,7 +1233,7 @@ export default function Pricing() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Jimmy Dave
@@ -1258,7 +1258,7 @@ export default function Pricing() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1294,7 +1294,7 @@ export default function Pricing() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Steven Job
@@ -1319,7 +1319,7 @@ export default function Pricing() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1355,7 +1355,7 @@ export default function Pricing() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     David Jame
@@ -1380,7 +1380,7 @@ export default function Pricing() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1415,7 +1415,7 @@ export default function Pricing() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Jimmy Dave
@@ -1440,7 +1440,7 @@ export default function Pricing() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1476,7 +1476,7 @@ export default function Pricing() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Steven Job
@@ -1501,7 +1501,7 @@ export default function Pricing() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1537,7 +1537,7 @@ export default function Pricing() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     David Jame

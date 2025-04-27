@@ -35,14 +35,14 @@ export default function Footer1() {
 						<div className="col-md-3 col-sm-12 footer-1">
 							<div className="mt-20 mb-20">
 								<Link className="d-flex" href="/">
-									<img className="light-mode" alt="Carento" src="/assets/imgs/template/logo-w.svg" />
-									<img className="dark-mode" alt="Carento" src="/assets/imgs/template/logo-w.svg" />
+									<img className="light-mode" alt="Sunny Car Rental" src="/assets/imgs/template/logo-w.svg" />
+									<img className="dark-mode" alt="Sunny Car Rental" src="/assets/imgs/template/logo-w.svg" />
 								</Link>
 								<div className="box-info-contact mt-0">
 									<p className="text-md neutral-400 icon-address">2356 Oakwood Drive, Suite 18, San Francisco,
 										California 94111, US</p>
 									<p className="text-md neutral-400 icon-worktime">Hours: 8:00 - 17:00, Mon - Sat</p>
-									<p className="text-md neutral-400 icon-email">support@carento.com</p>
+									<p className="text-md neutral-400 icon-email">support@Sunny Car Rental.com</p>
 								</div>
 								<div className="box-need-help">
 									<p className="need-help text-md-medium mb-5">Need help? Call us</p>
@@ -237,7 +237,8 @@ export default function Footer1() {
             <div className="row align-items-center justify-content-center">
               <div className="col-md-6 text-md-start text-center mb-20">
                 <p className="text-sm color-white">
-                  © {new Date().getFullYear()} Carento Inc. All rights reserved.
+                  © {new Date().getFullYear()} Sunny Car Rental Inc. All rights
+                  reserved.
                 </p>
               </div>
               <div className="col-md-6 text-md-end text-center mb-20">

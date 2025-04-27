@@ -29,12 +29,12 @@ export default function Header3({
                 <Link className="d-flex" href="/">
                   <img
                     className="light-mode"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                     src="/assets/imgs/template/logo-d.svg"
                   />
                   <img
                     className="dark-mode"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                     src="/assets/imgs/template/logo-w.svg"
                   />
                 </Link>
@@ -228,7 +228,7 @@ export default function Header3({
                 >
                   <img
                     src="/assets/imgs/template/icons/menu.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </div>
                 <div

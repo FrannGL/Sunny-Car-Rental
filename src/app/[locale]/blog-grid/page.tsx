@@ -17,7 +17,7 @@ export default function BlogGrid() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold">
@@ -47,7 +47,7 @@ export default function BlogGrid() {
                           <div className="box-author-small">
                             <img
                               src="/assets/imgs/blog/blog-grid/avatar.png"
-                              alt="carento"
+                              alt="Sunny Car Rental"
                             />
                             <p className="text-sm-bold">By Jimmy Dave</p>
                           </div>
@@ -78,7 +78,7 @@ export default function BlogGrid() {
                           <div className="box-author-small">
                             <img
                               src="/assets/imgs/blog/blog-grid/avatar.png"
-                              alt="carento"
+                              alt="Sunny Car Rental"
                             />
                             <p className="text-sm-bold">By Jimmy Dave</p>
                           </div>
@@ -173,7 +173,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-3.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -203,7 +203,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -224,7 +224,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-4.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -254,7 +254,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -275,7 +275,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-5.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -305,7 +305,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -326,7 +326,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-6.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -356,7 +356,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -377,7 +377,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-7.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -407,7 +407,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar5.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -428,7 +428,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-8.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -458,7 +458,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar6.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -479,7 +479,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-9.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -509,7 +509,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar7.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -530,7 +530,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-10.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -560,7 +560,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -581,7 +581,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-11.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -611,7 +611,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar5.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -632,7 +632,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-12.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -662,7 +662,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -683,7 +683,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-13.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -713,7 +713,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave
@@ -734,7 +734,7 @@ export default function BlogGrid() {
                   <div className="card-image">
                     <img
                       src="/assets/imgs/blog/blog-grid/img-14.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                   <div className="card-info">
@@ -764,7 +764,7 @@ export default function BlogGrid() {
                           <img
                             className="rounded-circle border border-primary"
                             src="/assets/imgs/blog/blog-grid/avatar8.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           <p className="text-sm-bold neutral-1000">
                             Jimmy Dave

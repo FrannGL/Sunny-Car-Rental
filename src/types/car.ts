@@ -1,0 +1,14 @@
+export interface Car {
+  brand: string;
+  model: string;
+  year: number;
+  plate_number: string;
+  status: "available" | "unavailable";
+  price_per_day: number;
+  gama: "baja" | "media" | "alta";
+  id: number;
+  created_at: string;
+  updated_at: string;
+  image_base64: string | null;
+  location: string | null;
+}

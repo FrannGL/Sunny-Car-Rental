@@ -12,7 +12,7 @@ export default function DealerListing() {
                 <img
                   className="w-100 h-100 img-banner"
                   src="/assets/imgs/page-header/banner7.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
@@ -28,7 +28,7 @@ export default function DealerListing() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold" />
@@ -78,7 +78,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-1.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -111,7 +111,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-2.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -144,7 +144,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-3.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -177,7 +177,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-4.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -210,7 +210,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-5.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -243,7 +243,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-6.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -276,7 +276,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-7.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -309,7 +309,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-8.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -342,7 +342,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-9.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -375,7 +375,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-10.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -408,7 +408,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-11.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -441,7 +441,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-12.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -474,7 +474,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-13.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -507,7 +507,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-2.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -540,7 +540,7 @@ export default function DealerListing() {
                       <div className="position-relative">
                         <img
                           src="/assets/imgs/dealer/dealer-listing/icon-4.svg"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </div>
@@ -711,14 +711,14 @@ export default function DealerListing() {
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="mt-auto">
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </div>
@@ -727,14 +727,14 @@ export default function DealerListing() {
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="position-relative">
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </div>

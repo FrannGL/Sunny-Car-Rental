@@ -23,7 +23,7 @@ export default function AboutUs() {
                 <img
                   className="w-100 h-100 img-banner"
                   src="/assets/imgs/page-header/banner.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
@@ -39,7 +39,7 @@ export default function AboutUs() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold">
@@ -61,12 +61,12 @@ export default function AboutUs() {
                 </div>
                 <div className="col-lg-7 offset-lg-1">
                   <p className="text-lg-medium neutral-500">
-                    Welcome to Carento, your trusted partner in car rentals.
-                    Since our founding, we have been committed to providing our
-                    customers with a seamless and reliable car rental
-                    experience. Whether you're planning a business trip, a
-                    family vacation, or just need a vehicle for everyday use, we
-                    offer a wide range of vehicles to meet your needs.
+                    Welcome to Sunny Car Rental, your trusted partner in car
+                    rentals. Since our founding, we have been committed to
+                    providing our customers with a seamless and reliable car
+                    rental experience. Whether you're planning a business trip,
+                    a family vacation, or just need a vehicle for everyday use,
+                    we offer a wide range of vehicles to meet your needs.
                   </p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function AboutUs() {
                     <img
                       className="rounded-12"
                       src="/assets/imgs/section-1/img-1.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     <div className="box-tag bg-white p-3 d-flex position-absolute bottom-0 end-0 rounded-12 m-3">
                       <span className="text-dark fs-72 me-3">86</span>
@@ -92,7 +92,7 @@ export default function AboutUs() {
                     <img
                       className="rounded-12"
                       src="/assets/imgs/section-1/img-2.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                 </div>
@@ -108,7 +108,7 @@ export default function AboutUs() {
                     <img
                       className="rounded-12"
                       src="/assets/imgs/section-1/img-3.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                   </div>
                 </div>
@@ -295,7 +295,7 @@ export default function AboutUs() {
                       <Link href="/dealer-details">
                         <img
                           src="/assets/imgs/team/team-1/portrait-1.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                     </div>
@@ -321,7 +321,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-1.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -331,7 +331,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-2.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -341,7 +341,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-3.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -351,7 +351,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-4.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -362,7 +362,7 @@ export default function AboutUs() {
                             <img
                               className="m-0"
                               src="/assets/imgs/team/team-1/arrow-up-right.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -376,7 +376,7 @@ export default function AboutUs() {
                       <Link href="/dealer-details">
                         <img
                           src="/assets/imgs/team/team-1/portrait-2.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                     </div>
@@ -402,7 +402,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-1.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -412,7 +412,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-2.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -422,7 +422,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-3.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -432,7 +432,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-4.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -443,7 +443,7 @@ export default function AboutUs() {
                             <img
                               className="m-0"
                               src="/assets/imgs/team/team-1/arrow-up-right.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -457,7 +457,7 @@ export default function AboutUs() {
                       <Link href="/dealer-details">
                         <img
                           src="/assets/imgs/team/team-1/portrait-3.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                     </div>
@@ -483,7 +483,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-1.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -493,7 +493,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-2.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -503,7 +503,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-3.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -513,7 +513,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-4.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -524,7 +524,7 @@ export default function AboutUs() {
                             <img
                               className="m-0"
                               src="/assets/imgs/team/team-1/arrow-up-right.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -538,7 +538,7 @@ export default function AboutUs() {
                       <Link href="/dealer-details">
                         <img
                           src="/assets/imgs/team/team-1/portrait-4.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                     </div>
@@ -564,7 +564,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-1.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -574,7 +574,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-2.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -584,7 +584,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-3.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                             <Link
@@ -594,7 +594,7 @@ export default function AboutUs() {
                               <img
                                 className="m-0"
                                 src="/assets/imgs/team/team-1/icon-4.svg"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -605,7 +605,7 @@ export default function AboutUs() {
                             <img
                               className="m-0"
                               src="/assets/imgs/team/team-1/arrow-up-right.svg"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -683,14 +683,14 @@ export default function AboutUs() {
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="mt-auto">
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </div>
@@ -699,14 +699,14 @@ export default function AboutUs() {
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="position-relative">
                           <img
                             className="bdrd8 w-100"
                             src="/assets/imgs/cta/cta-8/img-4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </div>
@@ -806,7 +806,7 @@ export default function AboutUs() {
                       <img
                         className="rounded-12"
                         src="/assets/imgs/cta/cta-9/img-1.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                       <a
                         className="btn btn-play popup-youtube position-absolute top-50 start-50 translate-middle"
@@ -815,7 +815,7 @@ export default function AboutUs() {
                       <img
                         className="position-absolute top-100 start-100 translate-middle rounded-12 d-none d-md-block"
                         src="/assets/imgs/cta/cta-9/img-2.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                   </div>
@@ -827,13 +827,14 @@ export default function AboutUs() {
                       Our Commitment
                     </Link>
                     <h4 className="mb-4 neutral-1000">
-                      Carento offers clear pricing and 24/7 great support.
+                      Sunny Car Rental offers clear pricing and 24/7 great
+                      support.
                     </h4>
                     <p className="text-lg-medium neutral-500 mb-4">
                       We are committed to offering transparent pricing with no
                       hidden fees, comprehensive insurance options for peace of
                       mind, and 24/7 customer support to assist you whenever you
-                      need it. At Carento, your satisfaction is our top
+                      need it. At Sunny Car Rental, your satisfaction is our top
                       priority.
                     </p>
                     <div className="row">
@@ -886,15 +887,15 @@ export default function AboutUs() {
                   <div className="box-author-testimonials background-100">
                     <img
                       src="/assets/imgs/page/homepage1/testimonial.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     <img
                       src="/assets/imgs/page/homepage1/testimonial2.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     <img
                       src="/assets/imgs/page/homepage1/testimonial3.png"
-                      alt="Carento"
+                      alt="Sunny Car Rental"
                     />
                     Testimonials
                   </div>
@@ -930,7 +931,7 @@ export default function AboutUs() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -946,27 +947,27 @@ export default function AboutUs() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -990,7 +991,7 @@ export default function AboutUs() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -1006,27 +1007,27 @@ export default function AboutUs() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -1050,7 +1051,7 @@ export default function AboutUs() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -1066,27 +1067,27 @@ export default function AboutUs() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -1109,7 +1110,7 @@ export default function AboutUs() {
                                 <div className="card-image">
                                   <img
                                     src="/assets/imgs/testimonials/testimonials-1/author-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                                 <div className="card-info">
@@ -1125,27 +1126,27 @@ export default function AboutUs() {
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                                 <img
                                   className="background-brand-2 p-1"
                                   src="/assets/imgs/template/icons/star-black.svg"
-                                  alt="Carento"
+                                  alt="Sunny Car Rental"
                                 />
                               </div>
                             </div>
@@ -1499,7 +1500,7 @@ export default function AboutUs() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-1.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1534,7 +1535,7 @@ export default function AboutUs() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Jimmy Dave
@@ -1559,7 +1560,7 @@ export default function AboutUs() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1595,7 +1596,7 @@ export default function AboutUs() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Steven Job
@@ -1620,7 +1621,7 @@ export default function AboutUs() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-3.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1656,7 +1657,7 @@ export default function AboutUs() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     David Jame
@@ -1681,7 +1682,7 @@ export default function AboutUs() {
                             <Link href="/blog-details">
                               <img
                                 src="/assets/imgs/blog/blog-1/img-2.png"
-                                alt="Carento"
+                                alt="Sunny Car Rental"
                               />
                             </Link>
                           </div>
@@ -1717,7 +1718,7 @@ export default function AboutUs() {
                                 <div className="card-author">
                                   <img
                                     src="/assets/imgs/blog/blog-1/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <p className="text-sm-bold neutral-1000">
                                     Steven Job

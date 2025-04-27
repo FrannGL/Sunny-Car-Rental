@@ -181,31 +181,31 @@ export default function ShopDetails() {
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/shop/shop-details/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/shop/shop-details/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/shop/shop-details/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/shop/shop-details/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide-activity">
                           <img
                             src="/assets/imgs/shop/shop-details/img-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </Slider>
@@ -217,7 +217,7 @@ export default function ShopDetails() {
                           {" "}
                           <img
                             src="/assets/imgs/page/activities/video.svg"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                           Video Clips
                         </a>
@@ -233,49 +233,49 @@ export default function ShopDetails() {
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-1.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-2.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-3.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                         <div className="banner-slide border p-0 mx-2 rounded-3">
                           <img
                             src="/assets/imgs/shop/shop-details/thumb-4.png"
-                            alt="Carento"
+                            alt="Sunny Car Rental"
                           />
                         </div>
                       </Slider>
@@ -304,7 +304,7 @@ export default function ShopDetails() {
                       <Link href="#">
                         <img
                           src="/assets/imgs/shop/shop-list/stock.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </Link>
                     </div>
@@ -621,23 +621,23 @@ export default function ShopDetails() {
                                 <div className="review-rate">
                                   <img
                                     src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <img
                                     src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                               </div>
@@ -735,7 +735,7 @@ export default function ShopDetails() {
                                 <div className="author-review">
                                   <img
                                     src="/assets/imgs/blog/blog-details/avatar-1.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <div className="author-info">
                                     <p className="text-lg-bold">
@@ -750,27 +750,27 @@ export default function ShopDetails() {
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                               </div>
@@ -791,7 +791,7 @@ export default function ShopDetails() {
                                 <div className="author-review">
                                   <img
                                     src="/assets/imgs/blog/blog-details/avatar-2.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <div className="author-info">
                                     <p className="text-lg-bold">
@@ -806,27 +806,27 @@ export default function ShopDetails() {
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                               </div>
@@ -848,7 +848,7 @@ export default function ShopDetails() {
                                 <div className="author-review">
                                   <img
                                     src="/assets/imgs/blog/blog-details/avatar-3.png"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                   <div className="author-info">
                                     <p className="text-lg-bold">
@@ -863,27 +863,27 @@ export default function ShopDetails() {
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />{" "}
                                   <img
                                     className="background-brand-2 p-1"
                                     src="/assets/imgs/template/icons/star-white.svg"
-                                    alt="Carento"
+                                    alt="Sunny Car Rental"
                                   />
                                 </div>
                               </div>
@@ -1022,23 +1022,23 @@ export default function ShopDetails() {
                                   <p className="rate-type-review">
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </p>
                                 </div>
@@ -1049,23 +1049,23 @@ export default function ShopDetails() {
                                   <p className="rate-type-review">
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </p>
                                 </div>
@@ -1078,23 +1078,23 @@ export default function ShopDetails() {
                                   <p className="rate-type-review">
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </p>
                                 </div>
@@ -1105,23 +1105,23 @@ export default function ShopDetails() {
                                   <p className="rate-type-review">
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </p>
                                 </div>
@@ -1134,23 +1134,23 @@ export default function ShopDetails() {
                                   <p className="rate-type-review">
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </p>
                                 </div>
@@ -1161,23 +1161,23 @@ export default function ShopDetails() {
                                   <p className="rate-type-review">
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                     <img
                                       src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Carento"
+                                      alt="Sunny Car Rental"
                                     />
                                   </p>
                                 </div>
@@ -1251,7 +1251,7 @@ export default function ShopDetails() {
                           <div className="me-2">
                             <img
                               src="/assets/imgs/template/icons/car-1.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </div>
                           <div className="card-author-info">
@@ -1317,7 +1317,7 @@ export default function ShopDetails() {
                           <Link href="#">
                             <img
                               src="/assets/imgs/shop/shop-details/other-item1.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -1333,7 +1333,7 @@ export default function ShopDetails() {
                           <Link href="#">
                             <img
                               src="/assets/imgs/shop/shop-details/other-item2.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -1349,7 +1349,7 @@ export default function ShopDetails() {
                           <Link href="#">
                             <img
                               src="/assets/imgs/shop/shop-details/other-item3.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -1366,7 +1366,7 @@ export default function ShopDetails() {
                           <Link href="#">
                             <img
                               src="/assets/imgs/shop/shop-details/other-item4.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -1382,7 +1382,7 @@ export default function ShopDetails() {
                           <Link href="#">
                             <img
                               src="/assets/imgs/shop/shop-details/other-item5.png"
-                              alt="Carento"
+                              alt="Sunny Car Rental"
                             />
                           </Link>
                         </div>
@@ -1411,12 +1411,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1425,12 +1425,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1439,12 +1439,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1453,12 +1453,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/jaguar.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/jaguar-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1467,12 +1467,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/honda.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/honda-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1481,12 +1481,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/chevrolet.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/chevrolet-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1495,12 +1495,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/acura.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/acura-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1509,12 +1509,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bmw.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bmw-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1523,12 +1523,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/toyota.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/toyota-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1537,12 +1537,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1551,12 +1551,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>
@@ -1565,12 +1565,12 @@ export default function ShopDetails() {
                         <img
                           className="light-mode"
                           src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                         <img
                           className="dark-mode"
                           src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Carento"
+                          alt="Sunny Car Rental"
                         />
                       </div>
                     </li>

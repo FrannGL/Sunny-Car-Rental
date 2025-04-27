@@ -11,7 +11,7 @@ export default function Contact() {
                 <img
                   className="w-100 h-100 rounded-12 img-banner"
                   src="/assets/imgs/page-header/banner4.png"
-                  alt="Carento"
+                  alt="Sunny Car Rental"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
@@ -141,7 +141,7 @@ export default function Contact() {
                             className="email text-md-medium ms-2"
                             href="/mailto:support@alithemes.com"
                           >
-                            newyork@carento.com
+                            newyork@Sunny Car Rental.com
                           </Link>
                         </div>
                       </div>
@@ -256,7 +256,7 @@ export default function Contact() {
                             className="email text-md-medium ms-2"
                             href="/mailto:support@alithemes.com"
                           >
-                            tokyo@carento.com
+                            tokyo@Sunny Car Rental.com
                           </Link>
                         </div>
                       </div>
@@ -375,7 +375,7 @@ export default function Contact() {
                             className="email text-md-medium ms-2"
                             href="/mailto:support@alithemes.com"
                           >
-                            paris@carento.com
+                            paris@Sunny Car Rental.com
                           </Link>
                         </div>
                       </div>
@@ -487,7 +487,7 @@ export default function Contact() {
                             className="email text-md-medium ms-2"
                             href="/mailto:support@alithemes.com"
                           >
-                            sydney@carento.com
+                            sydney@Sunny Car Rental.com
                           </Link>
                         </div>
                       </div>

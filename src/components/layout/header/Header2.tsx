@@ -1,5 +1,6 @@
 "use client";
 import { useAuth } from "@/src/context/AuthContext";
+import useMediaQuery from "@/src/hooks/useMediaQuery";
 import { Link, usePathname, useRouter } from "@/src/i18n/navigation";
 import { useLocale } from "next-intl";
 import dynamic from "next/dynamic";
@@ -8,6 +9,8 @@ import { useCallback } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 import { LiaGlobeAmericasSolid } from "react-icons/lia";
+import { ClipLoader } from "react-spinners";
+
 const ThemeSwitch = dynamic(
   () => import("@/src/components/elements/ThemeSwitch"),
   {
@@ -26,11 +29,12 @@ export default function Header2({
   handleMobileMenu,
   isOffcanvas,
 }: any) {
-  const { user, logout } = useAuth();
+  const { user, isLoading, logout } = useAuth();
 
   const router = useRouter();
   const locale = useLocale();
   const pathname = usePathname();
+  const isMobile = useMediaQuery("(max-width: 1400px)");
 
   const currentLang = languages.find((lang) => lang.value === locale);
 
@@ -84,7 +88,7 @@ export default function Header2({
                   />
                 </svg>
                 <span className="d-none d-lg-inline-block">
-                  sale@carento.com
+                  sale@Sunny Car Rental.com
                 </span>
               </Link>
             </div>
@@ -321,8 +325,15 @@ export default function Header2({
                 </nav>
               </div>
 
-              <div className="header-right">
-                {user ? (
+              <div
+                className="header-right"
+                style={{ paddingRight: isMobile ? 70 : 0 }}
+              >
+                {isLoading ? (
+                  <div style={{ paddingRight: 50 }}>
+                    <ClipLoader color="#70f46d" loading={isLoading} size={50} />
+                  </div>
+                ) : user ? (
                   <Dropdown align="end">
                     <Dropdown.Toggle
                       variant="outline-dark"
@@ -372,7 +383,7 @@ export default function Header2({
                 )}
 
                 <div
-                  className="burger-icon burger-icon-white"
+                  className="burger-icon burger-icon-white mt-2"
                   onClick={handleMobileMenu}
                 >
                   <span className="burger-icon-top" />

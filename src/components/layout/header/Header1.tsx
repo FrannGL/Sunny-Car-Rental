@@ -57,7 +57,7 @@ export default function Header1({
                   />
                 </svg>
                 <span className="d-none d-lg-inline-block">
-                  sale@carento.com
+                  sale@Sunny Car Rental.com
                 </span>
               </Link>
             </div>
@@ -381,7 +381,7 @@ export default function Header1({
                 >
                   <img
                     src="/assets/imgs/template/icons/menu.svg"
-                    alt="Carento"
+                    alt="Sunny Car Rental"
                   />
                 </div>
                 <div

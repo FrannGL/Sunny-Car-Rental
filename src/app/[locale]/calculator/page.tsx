@@ -31,14 +31,14 @@ export default function Calculator() {
                       <img
                         className="rounded-12"
                         src="/assets/imgs/cta/cta-11/img-1.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                     <div>
                       <img
                         className="rounded-12"
                         src="/assets/imgs/cta/cta-11/img-2.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                   </div>
@@ -56,12 +56,12 @@ export default function Calculator() {
                       <img
                         className="rounded-12"
                         src="/assets/imgs/cta/cta-11/img-3.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                       <img
                         className="position-absolute top-100 start-100 translate-middle d-none d-md-block"
                         src="/assets/imgs/cta/cta-11/img-car.png"
-                        alt="Carento"
+                        alt="Sunny Car Rental"
                       />
                     </div>
                   </div>
