@@ -44,15 +44,15 @@ export default function HeroSearch() {
 				</div>
 				<div className="item-search item-search-3">
 					<label className="text-sm-bold neutral-500">Pick Up Date &amp; Time</label>
-					<div className="box-calendar-date">
+					{/* <div className="box-calendar-date">
 						<MyDatePicker />
-					</div>
+					</div> */}
 				</div>
 				<div className="item-search bd-none">
 					<label className="text-sm-bold neutral-500">Return Date &amp; Time</label>
-					<div className="box-calendar-date">
+					{/* <div className="box-calendar-date">
 						<MyDatePicker />
-					</div>
+					</div> */}
 				</div>
 				<div className="item-search bd-none d-flex justify-content-end">
 					<button className="btn btn-brand-2 text-nowrap">

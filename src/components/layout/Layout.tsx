@@ -9,6 +9,8 @@ import Footer2 from "./footer/Footer2";
 import Header1 from "./header/Header1";
 import Header2 from "./header/Header2";
 import Header3 from "./header/Header3";
+import useCustomQuery from "@/src/hooks/useCustomQuery";
+import { useCarStore } from "@/src/store/useCarStore";
 
 interface LayoutProps {
   footerStyle?: Number;
@@ -30,6 +32,8 @@ export default function Layout({
       ? document.body.classList.add("mobile-menu-active")
       : document.body.classList.remove("mobile-menu-active");
   };
+  const { data, error } = useCustomQuery("cars");
+  const { setCars } = useCarStore();
 
   useEffect(() => {
     const WOW: any = require("wowjs");
@@ -53,6 +57,17 @@ export default function Layout({
       document.removeEventListener("scroll", handleScroll);
     };
   }, [scroll]);
+
+  useEffect(() => {
+    if (data) {
+      setCars(data);
+    }
+  }, [data, setCars]);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <>
       <div id="top" />

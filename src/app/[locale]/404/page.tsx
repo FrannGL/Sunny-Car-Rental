@@ -1,5 +1,6 @@
 import Layout from "@/src/components/layout/Layout";
 import { Link } from "@/src/i18n/navigation";
+import Image from "next/image";
 export default function Error404() {
   return (
     <>
@@ -15,8 +16,13 @@ export default function Error404() {
                   using the menu.
                 </p>
                 <Link href="/" className="btn btn-primary mt-30">
-                  <img src="/assets/imgs/template/icons/arrow-left.svg" /> Back
-                  to Home
+                  <Image
+                    alt="arrow-left"
+                    width={20}
+                    height={20}
+                    src="/assets/imgs/template/icons/arrow-left.svg"
+                  />{" "}
+                  Back to Home
                 </Link>
                 <img
                   src="/assets/imgs/template/404.png"

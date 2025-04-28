@@ -1,14 +1,30 @@
+"use client";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-'use client'
-import { useState } from "react"
-import DatePicker from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
+interface MyDatePickerProps {
+  form?: boolean;
+  value: Date | null;
+  onChange: (date: Date) => void;
+}
 
-export default function MyDatePicker({form}:any) {
-	const [startDate, setStartDate] = useState(new Date())
+export default function MyDatePicker({
+  onChange,
+  value,
+  form,
+}: MyDatePickerProps) {
   return (
-	<>
-		<DatePicker selected={startDate} onChange={(date:any) => setStartDate(date)} className={!form? "search-input datepicker" : "form-control calendar-date"} />
-	</>
-  )
+    <DatePicker
+      selected={value}
+      dateFormat="dd/MM/yyyy"
+      onChange={(date: Date | null) => {
+        if (date) {
+          onChange(date);
+        }
+      }}
+      className={
+        !form ? "search-input datepicker" : "form-control calendar-date"
+      }
+    />
+  );
 }

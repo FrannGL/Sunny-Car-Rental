@@ -186,60 +186,8 @@ export default function Header2({
                         </li>
                       </ul>
                     </li> */}
-                    <li className="mega-li-small has-children">
-                      <Link href="#">Vehicles</Link>
-                      <div className="mega-menu">
-                        <div className="mega-menu-inner mega-menu-inner-small">
-                          <div className="row">
-                            <div className="col-lg-6">
-                              <h6 className="text-lg-bold neutral-1000">
-                                Cars List
-                              </h6>
-                              <ul className="sub-menu">
-                                <li>
-                                  <Link href="/cars-list-1">Cars List v1</Link>
-                                </li>
-                                <li>
-                                  <Link href="/cars-list-2">Cars List v2</Link>
-                                </li>
-                                <li>
-                                  <Link href="/cars-list-3">Cars List v3</Link>
-                                </li>
-                                <li>
-                                  <Link href="/cars-list-4">Cars List v4</Link>
-                                </li>
-                              </ul>
-                            </div>
-                            <div className="col-lg-6">
-                              <h6 className="text-lg-bold neutral-1000">
-                                Car Details
-                              </h6>
-                              <ul className="sub-menu">
-                                <li>
-                                  <Link href="/cars-details-1">
-                                    Car Details v1
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/cars-details-2">
-                                    Car Details v2
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/cars-details-3">
-                                    Car Details v3
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/cars-details-4">
-                                    Car Details v4
-                                  </Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <li className="mega-li-small">
+                      <Link href="/cars">Vehicles</Link>
                     </li>
                     <li className="mega-li-small has-children">
                       <Link href="#">Dealers</Link>
@@ -331,7 +279,7 @@ export default function Header2({
               >
                 {isLoading ? (
                   <div style={{ paddingRight: 50 }}>
-                    <ClipLoader color="#70f46d" loading={isLoading} size={50} />
+                    <ClipLoader color="#70f46d" loading size={50} />
                   </div>
                 ) : user ? (
                   <Dropdown align="end">
@@ -343,6 +291,7 @@ export default function Header2({
                         alignItems: "center",
                         gap: "0.5rem",
                         borderRadius: "0.5rem",
+                        padding: "10px 25px",
                       }}
                     >
                       <FaUserCircle size={20} />
@@ -362,10 +311,18 @@ export default function Header2({
                     </Dropdown.Menu>
                   </Dropdown>
                 ) : (
-                  <div className="d-none d-xxl-inline-block align-middle mr-15">
-                    <Link className="btn btn-signin neutral-1000" href="/login">
+                  <div className="d-xxl-inline-block align-middle mr-1 mt-2">
+                    <Link
+                      className="btn btn-signin neutral-1000"
+                      href="/login"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
                       <svg
-                        className="mb-1"
                         xmlns="http://www.w3.org/2000/svg"
                         width={12}
                         height={12}

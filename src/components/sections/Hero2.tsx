@@ -1,26 +1,10 @@
 "use client";
-import useCustomQuery from "@/src/hooks/useCustomQuery";
 import { Link } from "@/src/i18n/navigation";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import HeroSearch from "../elements/HeroSearch";
-import { useCarStore } from "@/src/store/useCarStore";
-import { useEffect } from "react";
 
 export default function Hero2() {
-  const { data, error } = useCustomQuery("cars");
-  const { setCars } = useCarStore();
-
-  useEffect(() => {
-    if (data) {
-      setCars(data);
-    }
-  }, [data, setCars]);
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
   return (
     <>
       <section className="section-box box-banner-home7 background-body">

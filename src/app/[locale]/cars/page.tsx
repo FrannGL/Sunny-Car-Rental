@@ -1,6 +1,5 @@
 "use client";
 import CarCard1 from "@/src/components/elements/carcard/CarCard1";
-import CarCard2 from "@/src/components/elements/carcard/CarCard2";
 import HeroSearch from "@/src/components/elements/HeroSearch";
 import SortCarsFilter from "@/src/components/elements/SortCarsFilter";
 import ByAmenities from "@/src/components/Filter/ByAmenities";
@@ -15,11 +14,17 @@ import rawCarsData from "@/src/util/cars.json";
 import useCarFilter from "@/src/util/useCarFilter";
 import { Link } from "@/src/i18n/navigation";
 import Marquee from "react-fast-marquee";
+import { useCarStore } from "@/src/store/useCarStore";
+import BrandsMarquee from "@/src/components/BrandsMarquee";
+
 const carsData = rawCarsData.map((car) => ({
   ...car,
   rating: parseFloat(car.rating as string),
 }));
-export default function CarsList4() {
+
+export default function Cars() {
+  const { cars } = useCarStore();
+
   const {
     filter,
     setFilter,
@@ -30,11 +35,11 @@ export default function CarsList4() {
     currentPage,
     setCurrentPage,
     uniqueNames,
-    uniqueFuelTypes,
-    uniqueAmenities,
+    // uniqueFuelTypes,
+    // uniqueAmenities,
     uniqueLocations,
-    uniqueRatings,
-    uniqueCarTypes,
+    // uniqueRatings,
+    // uniqueCarTypes,
     filteredCars,
     sortedCars,
     totalPages,
@@ -51,7 +56,7 @@ export default function CarsList4() {
     handleClearFilters,
     startItemIndex,
     endItemIndex,
-  } = useCarFilter(carsData);
+  } = useCarFilter(cars);
 
   return (
     <>
@@ -63,14 +68,14 @@ export default function CarsList4() {
                 <img
                   className="w-100 h-100 img-fluid img-banner"
                   src="/assets/imgs/page-header/banner6.png"
-                  alt="Sunny Car Rental"
+                  alt="Carento"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 pb-70 translate-middle text-center">
                 <span className="text-sm-bold bg-2 px-4 py-3 rounded-12">
                   Find cars for sale and for rent near you
                 </span>
-                <h2 className="text-white mt-4">Uncover Your Dream Ride</h2>
+                <h2 className="text-white mt-4">Find Your Perfect Car</h2>
                 <span className="text-white text-lg-medium">
                   Search and find your best car rental with easy way
                 </span>
@@ -82,7 +87,7 @@ export default function CarsList4() {
                 <span className="@@ds-prev-page">
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Sunny Car Rental"
+                    alt="Carento"
                   />
                 </span>
                 <Link href="#" className="neutral-1000 text-md-bold">
@@ -91,7 +96,7 @@ export default function CarsList4() {
                 <span>
                   <img
                     src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Sunny Car Rental"
+                    alt="Carento"
                   />
                 </span>
                 <Link
@@ -156,7 +161,6 @@ export default function CarsList4() {
               </div>
             </div>
           </section>
-
           <section className="box-section block-content-tourlist background-body">
             <div className="container">
               <div className="box-content-main pt-20">
@@ -173,11 +177,14 @@ export default function CarsList4() {
                       sortedCars={sortedCars}
                     />
                   </div>
-                  <div className="box-grid-hotels wow fadeIn">
+                  <div className="box-grid-tours wow fadeIn">
                     <div className="row">
                       {paginatedCars.map((car) => (
-                        <div className="col-xl-12 col-lg-12" key={car.id}>
-                          <CarCard2 car={car} />
+                        <div
+                          className="col-lg-4 col-md-6 wow fadeInUp"
+                          key={car.id}
+                        >
+                          <CarCard1 car={car} />
                         </div>
                       ))}
                     </div>
@@ -228,7 +235,7 @@ export default function CarsList4() {
                       </div>
                     </div>
                   </div>
-                  <div className="sidebar-left border-1 background-body">
+                  {/* <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
@@ -241,8 +248,8 @@ export default function CarsList4() {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="sidebar-left border-1 background-body">
+                  </div> */}
+                  {/* <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
@@ -255,8 +262,8 @@ export default function CarsList4() {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="sidebar-left border-1 background-body">
+                  </div> */}
+                  {/* <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
@@ -283,8 +290,8 @@ export default function CarsList4() {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="sidebar-left border-1 background-body">
+                  </div> */}
+                  {/* <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
@@ -297,190 +304,11 @@ export default function CarsList4() {
                         />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
-            <div className="background-100 pt-55 pb-55">
-              <div className="container">
-                <Marquee
-                  direction="left"
-                  pauseOnHover={true}
-                  className="carouselTicker carouselTicker-left box-list-brand-car justify-content-center  wow fadeIn"
-                >
-                  <ul className="carouselTicker__list">
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/jaguar.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/jaguar-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/honda.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/honda-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/chevrolet.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/chevrolet-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/acura.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/acura-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/bmw.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/bmw-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/toyota.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/toyota-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                  </ul>
-                </Marquee>
-              </div>
-            </div>
+            <BrandsMarquee carsData={filteredCars} />
           </section>
         </div>
       </Layout>
