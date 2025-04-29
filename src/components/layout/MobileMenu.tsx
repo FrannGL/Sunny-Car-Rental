@@ -49,23 +49,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                       >
                         <i className="arrow-small-down"></i>
                       </span>
-                      <Link href="#">Home Pages</Link>
-                      <ul
-                        className="sub-menu"
-                        style={{
-                          display: `${isAccordion == 1 ? "block" : "none"}`,
-                        }}
-                      >
-                        <li>
-                          <Link href="/">Home page v1</Link>
-                        </li>
-                        <li>
-                          <Link href="/index-2">Home page v2</Link>
-                        </li>
-                        <li>
-                          <Link href="/index-3">Home page v3</Link>
-                        </li>
-                      </ul>
+                      <Link href="/">Home Pages</Link>
                     </li>
                     <li
                       className={`has-children ${

@@ -14,6 +14,10 @@ export default function CarsListing4() {
     setVisibleCars((prevVisibleCars) => prevVisibleCars + 4);
   };
 
+  if (!cars.length) {
+    return <></>;
+  }
+
   return (
     <>
       <section

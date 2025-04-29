@@ -65,7 +65,7 @@ export default function Hero2() {
                 <div className="left-top-search">
                   <Link
                     className="category-link text-sm-bold btn-click active"
-                    href="#"
+                    href="/cars"
                   >
                     All cars
                   </Link>

@@ -187,6 +187,9 @@ export default function Header2({
                       </ul>
                     </li> */}
                     <li className="mega-li-small">
+                      <Link href="/">Home</Link>
+                    </li>
+                    <li className="mega-li-small">
                       <Link href="/cars">Vehicles</Link>
                     </li>
                     <li className="mega-li-small has-children">

@@ -6,7 +6,8 @@ export const request = async (
   endpoint: string,
   method: "GET" | "POST" | "PUT" | "DELETE",
   body?: any,
-  responseType?: "json" | "blob" | "text" | "formData"
+  responseType?: "json" | "blob" | "text" | "formData",
+  isPublic: boolean = false
 ): Promise<{
   data: any;
   status: number;
@@ -15,7 +16,7 @@ export const request = async (
   try {
     const token = getToken();
 
-    if (!token && method !== "GET") {
+    if (!isPublic && !token && method !== "GET") {
       return {
         data: {},
         status: 401,
@@ -30,7 +31,7 @@ export const request = async (
 
     const headers: Record<string, string | undefined> = {
       "Content-Type": isFormData ? undefined : "application/json",
-      Authorization: token ? `Bearer ${token}` : undefined,
+      Authorization: !isPublic && token ? `Bearer ${token}` : undefined,
     };
 
     const config: AxiosRequestConfig = {

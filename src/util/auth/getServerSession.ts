@@ -1,4 +1,3 @@
-import { CONFIG } from "@/src/config/config-global";
 import { User } from "@/src/types/user";
 import { cookies } from "next/headers";
 
