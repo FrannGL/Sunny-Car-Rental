@@ -54,7 +54,10 @@ export const request = async (
       return {
         data: error.response.data,
         status: error.response.status,
-        error: error.response.data?.message || "Unknown error",
+        error:
+          error.response.data?.detail ||
+          error.response.data?.message ||
+          "Unknown error",
       };
     }
 

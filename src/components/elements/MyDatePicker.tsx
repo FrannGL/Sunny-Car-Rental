@@ -6,12 +6,14 @@ interface MyDatePickerProps {
   form?: boolean;
   value: Date | null;
   onChange: (date: Date) => void;
+  disablePastDays?: boolean;
 }
 
 export default function MyDatePicker({
   onChange,
   value,
   form,
+  disablePastDays = false,
 }: MyDatePickerProps) {
   return (
     <DatePicker
@@ -25,6 +27,7 @@ export default function MyDatePicker({
       className={
         !form ? "search-input datepicker" : "form-control calendar-date"
       }
+      minDate={disablePastDays ? new Date() : undefined}
     />
   );
 }

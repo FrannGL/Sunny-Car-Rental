@@ -2,6 +2,7 @@
 
 import { Link } from "@/src/i18n/navigation";
 import { Car } from "../types/car";
+import { ProtectedLink } from "./ProtectedLink";
 
 interface CarCardProps {
   car: Car;
@@ -68,12 +69,12 @@ export const CarCard = ({ car }: CarCardProps) => {
                 <p className="text-md-medium neutral-500">/day</p>
               </div>
               <div className="card-button">
-                <Link
+                <ProtectedLink
                   className="btn btn-gray"
-                  href={`/cars-details-2?id=${car.id}`}
+                  href={`/cars-details/${car.id}`}
                 >
                   Book Now
-                </Link>
+                </ProtectedLink>
               </div>
             </div>
           </div>

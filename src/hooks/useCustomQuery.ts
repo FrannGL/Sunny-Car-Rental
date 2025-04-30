@@ -24,7 +24,7 @@ export function useCustomQuery(endpoint: string, isPublic = false) {
   const { data, isPending, error, isFetching, refetch } = useQuery({
     queryKey,
     queryFn: fetchFn,
-    enabled: isPublic ? true : !!token,
+    enabled: isPublic || !!token,
     staleTime: 15 * 60 * 1000,
     placeholderData: keepPreviousData,
     refetchOnWindowFocus: false,

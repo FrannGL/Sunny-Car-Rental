@@ -12199,6 +12199,25 @@ a.icon-socials:hover svg path {
   margin-bottom: 32px;
 }
 
+.item-line-booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-line-booking label {
+  font-size: 14px;
+  margin: 0;
+}
+
+.item-line-booking .checkbox {
+  width: 20px;
+  height: 20px;
+  transform: scale(0.9);
+  color: "#fff";
+  accent-color: #70f46d;
+}
+
 .booking-form .head-booking-form {
   background-color: var(--bs-neutral-100);
   padding: 25px 35px;

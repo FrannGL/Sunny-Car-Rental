@@ -5,7 +5,6 @@ const protectedRoutes = ["/cars"];
 
 const isProtectedRoute = (path: string): boolean => {
   const pathWithoutLocale = path.replace(/^\/[a-z]{2}(?:-[a-z]{2})?/, "");
-
   return protectedRoutes.some(
     (route) =>
       pathWithoutLocale === route || pathWithoutLocale.startsWith(`${route}/`)
@@ -15,18 +14,24 @@ const isProtectedRoute = (path: string): boolean => {
 export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
-  const locale = request.cookies.get("NEXT_LOCALE")?.value || "en";
+  const localeMatch = path.match(/^\/([a-z]{2})(?:-[a-z]{2})?(?=\/|$)/);
+
+  if (!localeMatch) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/en${path}`;
+    return NextResponse.redirect(url);
+  }
+
+  const locale = localeMatch[1] || "en";
 
   if (isProtectedRoute(path)) {
     const { token } = getServerSession();
 
     if (!token) {
       const loginPath = `/${locale}/login`;
-
       const returnUrl = request.nextUrl.href;
       const loginUrl = new URL(loginPath, request.url);
       loginUrl.searchParams.set("returnUrl", returnUrl);
-
       return NextResponse.redirect(loginUrl);
     }
   }
@@ -36,14 +41,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Coincide con todas las rutas excepto:
-     * 1. /api (rutas API)
-     * 2. /_next (archivos internos de Next.js)
-     * 3. /_vercel (archivos internos de Vercel)
-     * 4. /static (carpeta estática si la usas)
-     * 5. Archivos con extensiones comunes (.ico, .png, etc.)
-     */
     "/((?!api|_next|_vercel|static|.*\\..*|_app|_document|favicon.ico).*)",
   ],
 };

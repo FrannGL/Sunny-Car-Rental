@@ -2,8 +2,8 @@
 import MyDatePicker from "@/src/components/elements/MyDatePicker";
 import Layout from "@/src/components/layout/Layout";
 import useBookingForm from "@/src/hooks/useBookingForm";
-import { useClientSession } from "@/src/hooks/useClientSession";
 import { Link } from "@/src/i18n/navigation";
+import { useCarStore } from "@/src/store/useCarStore";
 import { Car } from "@/src/types/car";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -68,6 +68,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
 
+  const { locations } = useCarStore();
+
   useEffect(() => {
     setNav1(slider1);
     setNav2(slider2);
@@ -98,7 +100,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
   };
   const [isAccordion, setIsAccordion] = useState(null);
 
-  const { formValues, handleDateChange, handleSubmit } = useBookingForm(car);
+  const { formValues, handleDateChange, handleSubmit, handleChange } =
+    useBookingForm(car);
 
   const handleAccordion = (key: any) => {
     setIsAccordion((prevState) => (prevState === key ? null : key));
@@ -1439,53 +1442,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <div className="sidebar-banner">
-                    <div className="p-4 background-body border rounded-3">
-                      <p className="text-xl-bold neutral-1000 mb-4">
-                        Get Started
-                      </p>
-                      <Link
-                        href="#"
-                        className="btn btn-primary w-100 rounded-3 py-3 mb-3"
-                      >
-                        Schedule Test Drive
-                        <svg
-                          width={17}
-                          height={16}
-                          viewBox="0 0 17 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </Link>
-                      <Link href="#" className="btn btn-book bg-2">
-                        Make An Offer Price
-                        <svg
-                          width={17}
-                          height={16}
-                          viewBox="0 0 17 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                  <form onClick={handleSubmit}>
+                  <form onSubmit={handleSubmit}>
                     <div className="booking-form">
                       <div className="head-booking-form">
                         <p className="text-xl-bold neutral-1000">
@@ -1500,6 +1457,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           <div className="input-calendar">
                             <MyDatePicker
                               form
+                              disablePastDays
                               value={formValues.pickupDate}
                               onChange={(date) =>
                                 handleDateChange("pickupDate", date)
@@ -1545,7 +1503,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                             </svg>
                           </div>
                         </div>
-                        <div className="item-line-booking">
+                        {/* <div className="item-line-booking">
                           <div className="box-tickets">
                             <strong className="text-md-bold neutral-1000">
                               Add Extra:
@@ -1635,19 +1593,176 @@ export default function CarsDetails3({ car }: { car: Car }) {
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div className="item-line-booking last-item pb-0">
-                          <strong className="text-md-medium neutral-1000">
-                            Subtotal
-                          </strong>
-                          <div className="line-booking-right">
-                            <p className="text-xl-bold neutral-1000">
-                              {" "}
-                              {formValues.subtotal}{" "}
-                            </p>
+                        </div> */}
+                        <div className="additional-fields">
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Payment Method
+                            </label>
+                            <select
+                              name="payment_method"
+                              value={formValues.payment_method}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            >
+                              <option value="">Select a method</option>
+                              <option value="credit_card">Credit Card</option>
+                              <option value="debit_card">Debit Card</option>
+                              <option value="paypal">PayPal</option>
+                              <option value="cash">Cash</option>
+                            </select>
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Driver
+                            </label>
+                            <input
+                              type="text"
+                              name="driver"
+                              value={formValues.driver}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Driver Licence
+                            </label>
+                            <input
+                              type="text"
+                              name="driver_lic"
+                              value={formValues.driver_lic}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Additional Driver
+                            </label>
+                            <input
+                              type="text"
+                              name="ad_driver"
+                              value={formValues.ad_driver}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "80%" }}
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Additional Driver Licence
+                            </label>
+                            <input
+                              type="text"
+                              name="ad_driver_lic"
+                              value={formValues.ad_driver_lic}
+                              onChange={handleChange}
+                              className="input-style"
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-sm-bold neutral-1000">
+                              White Gas
+                            </label>
+                            <input
+                              type="checkbox"
+                              name="with_gas"
+                              className="checkbox"
+                              checked={formValues.with_gas}
+                              onChange={handleChange}
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Coupon Code
+                            </label>
+                            <input
+                              type="text"
+                              name="coupon_code"
+                              value={formValues.coupon_code}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Pickup Location
+                            </label>
+                            <select
+                              name="pickup_location_id"
+                              value={formValues.pickup_location_id}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            >
+                              <option value="">Select a location</option>
+                              {locations.map((location) => (
+                                <option key={location.id} value={location.id}>
+                                  {location.name} ({location.country})
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Return Location
+                            </label>
+                            <select
+                              name="return_location_id"
+                              value={formValues.return_location_id}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            >
+                              <option value="">Select a location</option>
+                              {locations.map((location) => (
+                                <option key={location.id} value={location.id}>
+                                  {location.name} ({location.country})
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Damage Report
+                            </label>
+                            <input
+                              type="text"
+                              name="damage_report"
+                              value={formValues.damage_report}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%" }}
+                            />
+                          </div>
+
+                          <div className="item-line-booking">
+                            <label className="text-md-bold neutral-1000">
+                              Comments
+                            </label>
+                            <textarea
+                              name="comments"
+                              value={formValues.comments}
+                              onChange={handleChange}
+                              className="input-style"
+                              style={{ width: "70%", resize: "none" }}
+                            />
                           </div>
                         </div>
-                        <div className="item-line-booking last-item pb-0">
+                        {/* <div className="item-line-booking last-item pb-0">
                           <strong className="text-md-medium neutral-1000">
                             Sale discount
                           </strong>
@@ -1656,14 +1771,24 @@ export default function CarsDetails3({ car }: { car: Car }) {
                               ${formValues.discount}
                             </p>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="item-line-booking last-item">
                           <strong className="text-md-bold neutral-1000">
                             Total Payable
                           </strong>
-                          <div className="line-booking-right">
+                          {/* <div className="line-booking-right">
                             <p className="text-xl-bold neutral-1000">
                               ${formValues.subtotal - formValues.discount}
+                            </p>
+                          </div> */}
+                        </div>
+                        <div className="item-line-booking last-item pb-0">
+                          <strong className="text-md-medium neutral-1000">
+                            Subtotal
+                          </strong>
+                          <div className="line-booking-right">
+                            <p className="text-xl-bold neutral-1000">
+                              $ {formValues.subtotal.toFixed(2)}
                             </p>
                           </div>
                         </div>

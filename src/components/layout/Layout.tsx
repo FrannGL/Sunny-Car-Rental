@@ -32,8 +32,10 @@ export default function Layout({
       ? document.body.classList.add("mobile-menu-active")
       : document.body.classList.remove("mobile-menu-active");
   };
-  const { data, error } = useCustomQuery("cars");
-  const { setCars } = useCarStore();
+  const { data, error } = useCustomQuery("cars", true);
+  const { data: locationsData, error: locationsError } =
+    useCustomQuery("locations");
+  const { setCars, setLocations } = useCarStore();
 
   useEffect(() => {
     const WOW: any = require("wowjs");
@@ -62,7 +64,10 @@ export default function Layout({
     if (data) {
       setCars(data);
     }
-  }, [data, setCars]);
+    if (locationsData) {
+      setLocations(locationsData);
+    }
+  }, [data, locationsData, setLocations, setCars]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
