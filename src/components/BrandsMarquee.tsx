@@ -1,11 +1,10 @@
 import Marquee from "react-fast-marquee";
-import { Car } from "../types/car";
 
 interface Props {
-  carsData: Car[];
+  brands: string[];
 }
 
-export default function BrandsMarquee({ carsData }: Props) {
+export default function BrandsMarquee({ brands }: Props) {
   return (
     <div className="background-100 pt-55 pb-55">
       <div className="container">
@@ -15,13 +14,13 @@ export default function BrandsMarquee({ carsData }: Props) {
           className="carouselTicker carouselTicker-left box-list-brand-car justify-content-center wow fadeIn"
         >
           <ul className="carouselTicker__list">
-            {carsData.map((car) => (
-              <li className="carouselTicker__item" key={car.id}>
+            {brands.map((brand) => (
+              <li className="carouselTicker__item" key={brand}>
                 <div className="item-brand">
                   <img
                     className="light-mode"
-                    src={`/assets/imgs/page/homepage2/${car.brand.toLowerCase()}.png`}
-                    alt={car.brand}
+                    src={`/assets/imgs/page/homepage2/${brand.toLowerCase()}.png`}
+                    alt={brand}
                   />
                 </div>
               </li>

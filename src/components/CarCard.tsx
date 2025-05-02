@@ -46,7 +46,7 @@ export const CarCard = ({ car }: CarCardProps) => {
           <div className="card-program">
             <div className="card-location">
               <p className="text-location text-sm-medium neutral-500">
-                {car.location || "Unknown Location"}
+                {car.location.name || "Unknown Location"}
               </p>
             </div>
             <div className="card-facitlities">

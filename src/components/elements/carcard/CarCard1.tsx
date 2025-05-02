@@ -1,17 +1,6 @@
 import { Link } from "@/src/i18n/navigation";
+import { Car } from "@/src/types/car";
 import Image from "next/image";
-
-interface Car {
-  id: number;
-  brand: string;
-  model: string;
-  year: number;
-  plate_number: string;
-  price_per_day: number;
-  status: string;
-  image_base64: string | null;
-  location?: string | null;
-}
 
 export default function CarCard1({ car }: { car: Car }) {
   const fallbackImage =
@@ -52,7 +41,7 @@ export default function CarCard1({ car }: { car: Car }) {
         <div className="card-program">
           <div className="card-location">
             <p className="text-location text-sm-medium neutral-500">
-              {car.location ? car.location : "Unknown location"}
+              {car.location.name ? car.location.name : "Unknown location"}
             </p>
           </div>
           <div className="card-facitlities">

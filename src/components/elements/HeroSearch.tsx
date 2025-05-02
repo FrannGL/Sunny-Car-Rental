@@ -2,8 +2,11 @@
 import { useBookingSearch } from "@/src/hooks/useBookingSearch";
 import { Controller } from "react-hook-form";
 import MyDatePicker from "./MyDatePicker";
+import { useCarStore } from "@/src/store/useCarStore";
 
 export default function HeroSearch() {
+  const { locations } = useCarStore();
+
   const { register, handleSubmit, control, errors, onSubmit } =
     useBookingSearch();
 
@@ -15,10 +18,12 @@ export default function HeroSearch() {
       <div className="item-search">
         <label className="text-sm-bold neutral-500">Pick Up Location</label>
         <select className="form-control" {...register("pickUpLocation")}>
-          <option value="">Select...</option>
-          <option value="Paris, France">Paris, France</option>
-          <option value="Tokyo, Japan">Tokyo, Japan</option>
-          <option value="New York City, USA">New York City, USA</option>
+          <option value="">Select a location</option>
+          {locations.map((location) => (
+            <option key={location.id} value={location.id}>
+              {location.name} ({location.country})
+            </option>
+          ))}
         </select>
         {errors.pickUpLocation && (
           <p
@@ -38,10 +43,12 @@ export default function HeroSearch() {
       <div className="item-search item-search-2">
         <label className="text-sm-bold neutral-500">Drop Off Location</label>
         <select className="form-control" {...register("dropOffLocation")}>
-          <option value="">Select...</option>
-          <option value="Paris, France">Paris, France</option>
-          <option value="Tokyo, Japan">Tokyo, Japan</option>
-          <option value="New York City, USA">New York City, USA</option>
+          <option value="">Select a location</option>
+          {locations.map((location) => (
+            <option key={location.id} value={location.id}>
+              {location.name} ({location.country})
+            </option>
+          ))}
         </select>
         {errors.dropOffLocation && (
           <p
@@ -72,6 +79,7 @@ export default function HeroSearch() {
                   form
                   value={field.value}
                   onChange={field.onChange}
+                  disablePastDays
                 />
                 <svg
                   width={18}
@@ -118,6 +126,7 @@ export default function HeroSearch() {
                   form
                   value={field.value}
                   onChange={field.onChange}
+                  disablePastDays
                 />
                 <svg
                   width={18}

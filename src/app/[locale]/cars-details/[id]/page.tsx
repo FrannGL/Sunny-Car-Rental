@@ -60,7 +60,5 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   const car = await response.json();
 
-  console.log(car);
-
   return <CarsDetails3 car={car} />;
 }

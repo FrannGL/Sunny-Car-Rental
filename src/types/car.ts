@@ -1,3 +1,5 @@
+import { Location } from "./locations";
+
 export interface Car {
   brand: string;
   model: string;
@@ -10,5 +12,5 @@ export interface Car {
   created_at: string;
   updated_at: string;
   image_base64: string | null;
-  location: string | null;
+  location: Location;
 }

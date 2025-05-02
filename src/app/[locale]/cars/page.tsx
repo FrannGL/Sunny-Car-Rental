@@ -16,6 +16,8 @@ import { Link } from "@/src/i18n/navigation";
 import Marquee from "react-fast-marquee";
 import { useCarStore } from "@/src/store/useCarStore";
 import BrandsMarquee from "@/src/components/BrandsMarquee";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 const carsData = rawCarsData.map((car) => ({
   ...car,
@@ -34,7 +36,7 @@ export default function Cars() {
     setItemsPerPage,
     currentPage,
     setCurrentPage,
-    uniqueNames,
+    uniqueBrands,
     // uniqueFuelTypes,
     // uniqueAmenities,
     uniqueLocations,
@@ -58,6 +60,19 @@ export default function Cars() {
     endItemIndex,
   } = useCarFilter(cars);
 
+  const searchParams = useSearchParams();
+
+  const brands = Array.from(new Set(filteredCars.map((car) => car.brand)));
+
+  useEffect(() => {
+    if (searchParams && searchParams.toString()) {
+      const element = document.getElementById("our-fleet");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [searchParams]);
+
   return (
     <>
       <Layout footerStyle={1}>
@@ -80,7 +95,7 @@ export default function Cars() {
                   Search and find your best car rental with easy way
                 </span>
               </div>
-              <div className="background-body position-absolute z-1 top-100 start-50 translate-middle px-3 py-2 rounded-12 border d-flex gap-3 d-none d-none d-md-flex">
+              {/* <div className="background-body position-absolute z-1 top-100 start-50 translate-middle px-3 py-2 rounded-12 border d-flex gap-3 d-none d-none d-md-flex">
                 <Link href="/" className="neutral-700 text-md-medium">
                   Home
                 </Link>
@@ -105,11 +120,11 @@ export default function Cars() {
                 >
                   @@current-page
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* search 1 */}
-          <section className="box-section box-search-advance-home10 background-body">
+          {/* <section className="box-section box-search-advance-home10 background-body">
             <div className="container">
               <div className="box-search-advance background-card wow fadeIn">
                 <div className="box-top-search">
@@ -145,13 +160,13 @@ export default function Cars() {
                 <HeroSearch />
               </div>
             </div>
-          </section>
+          </section> */}
           {/* cars-listing-1 */}
           <section className="section-box pt-50 background-body">
             <div className="container">
               <div className="row align-items-end">
                 <div className="col-md-9 mb-30 wow fadeInUp">
-                  <h4 className="title-svg neutral-1000 mb-15">
+                  <h4 id="our-fleet" className="title-svg neutral-1000 mb-15">
                     Our Vehicle Fleet
                   </h4>
                   <p className="text-lg-medium text-bold neutral-500">
@@ -235,20 +250,20 @@ export default function Cars() {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="sidebar-left border-1 background-body">
+                  <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Car type
+                          Filter Brand
                         </h6>
                         <ByCarType
-                          uniqueCarTypes={uniqueCarTypes}
+                          uniqueBrands={uniqueBrands}
                           filter={filter}
                           handleCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                   {/* <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
@@ -291,11 +306,11 @@ export default function Cars() {
                       </div>
                     </div>
                   </div> */}
-                  {/* <div className="sidebar-left border-1 background-body">
+                  <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Booking Location
+                          Filter Location
                         </h6>
                         <ByLocation
                           uniqueLocations={uniqueLocations}
@@ -304,11 +319,11 @@ export default function Cars() {
                         />
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
-            <BrandsMarquee carsData={filteredCars} />
+            <BrandsMarquee brands={brands} />
           </section>
         </div>
       </Layout>

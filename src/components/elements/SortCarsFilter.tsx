@@ -43,9 +43,11 @@ export default function SortCarsFilter({
                 Sort by:
               </span>
               <select value={sortCriteria} onChange={handleSortChange}>
-                <option value="name">Model</option>
+                <option value="brand">Brand</option>
+                {/* <option value="name">Model</option> */}
                 <option value="price">Price</option>
-                <option value="rating">Rating</option>
+                <option value="location">Location</option>
+                {/* <option value="rating">Rating</option> */}
               </select>
             </div>
           </div>

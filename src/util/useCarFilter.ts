@@ -1,74 +1,93 @@
 "use client";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useMemo, useState, useEffect } from "react";
 import { Car } from "../types/car";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export interface Filter {
-  model: string[];
-  //   fuelType: string[];
-  //   amenities: string[];
-  //   locations: string[];
+  brand: string[];
+  locations: string[];
   price_per_day: [number, number];
-  //   ratings: number[];
-  //   carType: string[];
 }
 
-type SortCriteria = "name" | "price" | "rating";
+type SortCriteria = "price" | "brand" | "location";
 
 const useCarFilter = (carsData: Car[]) => {
   const [filter, setFilter] = useState<Filter>({
-    model: [],
-    // fuelType: [],
-    // amenities: [],
-    // locations: [],
+    brand: [],
+    locations: [],
     price_per_day: [0, 500],
-    // ratings: [],
-    // carType: [],
   });
-  const [sortCriteria, setSortCriteria] = useState<SortCriteria>("name");
-  const [itemsPerPage, setItemsPerPage] = useState<number>(10);
+  const [sortCriteria, setSortCriteria] = useState<SortCriteria>("brand");
+  const [itemsPerPage, setItemsPerPage] = useState<number>(6);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const uniqueNames = [...new Set(carsData.map((car) => car.model))];
-  //   const uniqueFuelTypes = [...new Set(carsData.map((car) => car.fuelType))];
-  //   const uniqueAmenities = [...new Set(carsData.map((car) => car.amenities))];
-  const uniqueLocations = [...new Set(carsData.map((car) => car.location))];
-  //   const uniqueRatings = [...new Set(carsData.map((car) => car.rating))];
-  //   const uniqueCarTypes = [...new Set(carsData.map((car) => car.carType))];
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
-  //   const filteredCars = carsData.filter((car) => {
-  //     return (
-  //       (filter.names.length === 0 || filter.names.includes(car.model)) &&
-  //       (filter.fuelType.length === 0 ||
-  //         filter.fuelType.includes(car.fuelType)) &&
-  //       (filter.amenities.length === 0 ||
-  //         filter.amenities.includes(car.amenities)) &&
-  //       (filter.locations.length === 0 ||
-  //         filter.locations.includes(car.location)) &&
-  //       car.price >= filter.price_per_day[0] &&
-  //       car.price <= filter.price_per_day[1] &&
-  //       (filter.ratings.length === 0 || filter.ratings.includes(car.rating)) &&
-  //       (filter.carType.length === 0 || filter.carType.includes(car.carType))
-  //     );
-  //   });
+  useEffect(() => {
+    const pickUpLocationId = searchParams.get("pickUpLocation");
+    const dropOffLocationId = searchParams.get("dropOffLocation");
 
-  const filteredCars = carsData.filter((car) => {
-    return (
-      (filter.model.length === 0 || filter.model.includes(car.model)) &&
-      car.price_per_day >= filter.price_per_day[0] &&
-      car.price_per_day <= filter.price_per_day[1]
-    );
-  });
+    const locationNames: string[] = [];
 
-  console.log(filteredCars);
-
-  const sortedCars = [...filteredCars].sort((a, b) => {
-    if (sortCriteria === "name") {
-      return a.model.localeCompare(b.model);
-    } else if (sortCriteria === "price") {
-      return a.price_per_day - b.price_per_day;
+    if (pickUpLocationId) {
+      const pickUpLoc = carsData.find(
+        (car) => car.location.id.toString() === pickUpLocationId
+      )?.location.name;
+      if (pickUpLoc && !locationNames.includes(pickUpLoc)) {
+        locationNames.push(pickUpLoc);
+      }
     }
-    return 0;
-  });
+
+    if (dropOffLocationId) {
+      const dropOffLoc = carsData.find(
+        (car) => car.location.id.toString() === dropOffLocationId
+      )?.location.name;
+      if (dropOffLoc && !locationNames.includes(dropOffLoc)) {
+        locationNames.push(dropOffLoc);
+      }
+    }
+
+    if (locationNames.length > 0) {
+      setFilter((prevFilter) => ({
+        ...prevFilter,
+        locations: locationNames,
+      }));
+    }
+  }, [searchParams, carsData]);
+
+  const uniqueBrands = useMemo(
+    () => [...new Set(carsData.map((car) => car.brand))],
+    [carsData]
+  );
+
+  const uniqueLocations = useMemo(() => {
+    return Array.from(
+      new Map(carsData.map((car) => [car.location.name, car.location])).values()
+    );
+  }, [carsData]);
+
+  const filteredCars = useMemo(() => {
+    return carsData.filter((car) => {
+      return (
+        (filter.brand.length === 0 || filter.brand.includes(car.brand)) &&
+        (filter.locations.length === 0 ||
+          filter.locations.includes(car.location.name)) &&
+        car.price_per_day >= filter.price_per_day[0] &&
+        car.price_per_day <= filter.price_per_day[1]
+      );
+    });
+  }, [carsData, filter]);
+
+  const sortedCars = useMemo(() => {
+    return [...filteredCars].sort((a, b) => {
+      if (sortCriteria === "price") return a.price_per_day - b.price_per_day;
+      if (sortCriteria === "brand") return a.brand.localeCompare(b.brand);
+      if (sortCriteria === "location")
+        return a.location.name.localeCompare(b.location.name);
+      return 0;
+    });
+  }, [filteredCars, sortCriteria]);
 
   const totalPages = Math.ceil(sortedCars.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -80,15 +99,14 @@ const useCarFilter = (carsData: Car[]) => {
     (e: ChangeEvent<HTMLInputElement>) => {
       const checked = e.target.checked;
       setFilter((prevFilter) => {
-        const values = prevFilter[field] as (string | number)[];
-        if (checked) {
-          return { ...prevFilter, [field]: [...values, value] };
-        } else {
-          return {
-            ...prevFilter,
-            [field]: values.filter((item) => item !== value),
-          };
-        }
+        const currentValues = prevFilter[field];
+        if (!Array.isArray(currentValues)) return prevFilter;
+
+        const updatedValues = checked
+          ? [...currentValues, value]
+          : currentValues.filter((item) => item !== value);
+
+        return { ...prevFilter, [field]: updatedValues };
       });
     };
 
@@ -126,17 +144,22 @@ const useCarFilter = (carsData: Car[]) => {
 
   const handleClearFilters = () => {
     setFilter({
-      model: [],
-      //   fuelType: [],
-      //   amenities: [],
-      //   locations: [],
+      brand: [],
+      locations: [],
       price_per_day: [0, 500],
-      //   ratings: [],
-      //   carType: [],
     });
-    setSortCriteria("name");
+    setSortCriteria("brand");
     setItemsPerPage(4);
     setCurrentPage(1);
+
+    const current = new URLSearchParams(searchParams.toString());
+
+    current.delete("pickUpLocation");
+    current.delete("dropOffLocation");
+    current.delete("pickupDate");
+    current.delete("dropoffDate");
+
+    router.replace(`?${current.toString()}`, { scroll: false });
   };
 
   const startItemIndex = (currentPage - 1) * itemsPerPage + 1;
@@ -154,12 +177,8 @@ const useCarFilter = (carsData: Car[]) => {
     setItemsPerPage,
     currentPage,
     setCurrentPage,
-    uniqueNames,
-    // uniqueFuelTypes,
-    // uniqueAmenities,
+    uniqueBrands,
     uniqueLocations,
-    // uniqueRatings,
-    // uniqueCarTypes,
     filteredCars,
     sortedCars,
     totalPages,
