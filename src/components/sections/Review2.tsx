@@ -17,8 +17,8 @@ export default function Review2() {
 										<div className="ps-md-5 ps-2 position-relative z-1">
 											<span className="text-primary text-md-bold">CAR REVIEW</span>
 											<h3 className="mt-20 mb-20 color-white">
-												Hyundai Tucson Plug-In <br className="d-none d-md-block" />
-												Hybrid 2025 review
+												Exploras nuestros vehículos<br className="d-none d-md-block" />
+												y conocé el mundo en 4 ruedas.
 											</h3>
 											<p className="text-lg-medium color-white">The Tucson Plug-in Hybrid is easy to drive and provides a sufficient all-electric range.</p>
 											<Link href="#" className="btn btn-primary mt-30">

@@ -1,16 +1,12 @@
 "use client";
+import { useCustomQuery } from "@/src/hooks/useCustomQuery";
+import { useCarStore } from "@/src/store/useCarStore";
 import { useEffect, useState } from "react";
 import BackToTop from "../elements/BackToTop";
 import Breadcrumb from "./Breadcrumb";
 import MobileMenu from "./MobileMenu";
-import Offcanvas from "./Offcanvas";
 import Footer1 from "./footer/Footer1";
-import Footer2 from "./footer/Footer2";
-import Header1 from "./header/Header1";
 import Header2 from "./header/Header2";
-import Header3 from "./header/Header3";
-import { useCarStore } from "@/src/store/useCarStore";
-import { useCustomQuery } from "@/src/hooks/useCustomQuery";
 
 interface LayoutProps {
   footerStyle?: Number;
@@ -36,29 +32,6 @@ export default function Layout({
   const { data: locationsData, error: locationsError } =
     useCustomQuery("locations");
   const { setCars, setLocations } = useCarStore();
-
-  useEffect(() => {
-    const WOW: any = require("wowjs");
-    (window as any).wow = new WOW.WOW({
-      live: false,
-    });
-
-    // Initialize WOW.js
-    (window as any).wow.init();
-
-    const handleScroll = (): void => {
-      const scrollCheck: boolean = window.scrollY > 100;
-      if (scrollCheck !== scroll) {
-        setScroll(scrollCheck);
-      }
-    };
-
-    document.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, [scroll]);
 
   useEffect(() => {
     if (data) {

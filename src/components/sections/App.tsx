@@ -7,14 +7,13 @@ export default function App() {
         <div className="container position-relative z-1">
           <div className="row align-items-center py-5">
             <div className="col-lg-5">
-              <h4 className=" wow fadeInDown">
-                Sunny Car Rental App is Available
-              </h4>
+              <h4 className=" wow fadeInDown">Sunny Car Rental</h4>
               <p className="text-md-medium pb-3 wow fadeInUp">
-                Manage all your car rentals on the go with the Sunny Car Rental
-                app
+                Encuentra vehículos de calidad con atención personalizada y
+                tarifas que se adaptan a ti. Tu próxima aventura comienza aquí,
+                sin complicaciones.
               </p>
-              <div className="download-apps mt-0">
+              {/* <div className="download-apps mt-0">
                 <Link className=" wow fadeInUp" href="#">
                   <img
                     src="/assets/imgs/template/googleplay.png"
@@ -27,7 +26,7 @@ export default function App() {
                     alt="Sunny Car Rental"
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
             <div className="col-lg-7">
               <div className="box-app-img wow fadeIn">

@@ -216,18 +216,18 @@ export default function Footer1() {
                   <div className="ps-lg-5">
                     <h4 className="text-white">Our location</h4>
                     <p className="neutral-500 mb-30">
-                      12560 Rental Rd, Memphis, TN 38118, United States
+                      Quatre Carreres, 46013 Valencia, España
                     </p>
                     <iframe
                       className="h-520 rounded-3"
-                      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d283661.3575233618!2d2.2296777857951824!3d47.16509219592609!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1712486491620!5m2!1svi!2s"
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d70000!2d-0.375!3d39.4667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1715000000000!5m2!1sen!2ses"
                       width="100%"
                       height={650}
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                    />
                   </div>
                 </div>
               </div>
@@ -235,13 +235,13 @@ export default function Footer1() {
           </section>
           <div className="footer-bottom mt-50">
             <div className="row align-items-center justify-content-center">
-              <div className="col-md-6 text-md-start text-center mb-20">
+              <div className="col-md-6 text-md-center text-center mb-20">
                 <p className="text-sm color-white">
                   © {new Date().getFullYear()} Sunny Car Rental Inc. All rights
                   reserved.
                 </p>
               </div>
-              <div className="col-md-6 text-md-end text-center mb-20">
+              {/* <div className="col-md-6 text-md-end text-center mb-20">
                 <div className="d-flex align-items-center justify-content-center justify-content-md-end">
                   <p className="text-lg-bold neutral-0 d-inline-block mr-10">
                     Follow us
@@ -305,7 +305,7 @@ export default function Footer1() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

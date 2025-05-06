@@ -17,12 +17,12 @@ export default function Home() {
         <Hero2 />
         {/* <Categories2 /> */}
         <CarsListing4 />
-        <Cta4 />
+        {/* <Cta4 /> */}
         <Review2 />
-        <Static1 />
-        <Brand2 />
+        {/* <Static1 /> */}
+        {/* <Brand2 /> */}
         {/* <Team1 /> */}
-        <Cta5 />
+        {/* <Cta5 /> */}
         {/* <Testimonials /> */}
         <WhyUs1 />
         {/* <Blog2 /> */}

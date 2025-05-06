@@ -2,6 +2,7 @@
 import { Link } from "@/src/i18n/navigation";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Icon } from "@iconify/react";
 import HeroSearch from "../elements/HeroSearch";
 
 export default function Hero2() {
@@ -27,12 +28,12 @@ export default function Hero2() {
                         +3600 cars for you
                       </span>
                       <h1 className="mt-20 mb-20 color-white">
-                        Find your next vehicle today
+                        Libertad para moverte. Sin romper tu presupuesto
                       </h1>
                       <h6 className="color-white heading-6-medium pb-lg-0 pb-4">
-                        Browse our diverse inventory and enjoy a seamless buying
-                        experience <br />
-                        with expert support every step of the way
+                        Descubre opciones accesibles y confiables para que te
+                        desplaces sin preocupaciones. Compra fácil, rápida y con
+                        asesoría experta en cada paso.
                       </h6>
                     </div>
                   </div>
@@ -44,12 +45,12 @@ export default function Hero2() {
                         Best car rental system
                       </span>
                       <h1 className="mt-20 mb-20 color-white">
-                        Discover your next ride today
+                        Calidad, servicio y precios que te van a sorprender.
                       </h1>
                       <h6 className="color-white heading-6-medium">
-                        Explore our wide selection and enjoy a smooth purchasing
-                        journey, <br />
-                        with expert assistance at every turn
+                        Encuentra vehículos de calidad con atención
+                        personalizada y tarifas que se adaptan a ti. Tu próxima
+                        aventura comienza aquí, sin complicaciones.
                       </h6>
                     </div>
                   </div>
@@ -65,17 +66,25 @@ export default function Hero2() {
                 <div className="left-top-search">
                   <Link
                     className="category-link text-sm-bold btn-click active"
-                    href="/cars"
+                    href="/booking"
                   >
                     All cars
                   </Link>
                 </div>
                 <div className="right-top-search d-none d-md-flex">
                   <Link
-                    className="text-sm-medium need-some-help"
-                    href="/contact"
+                    className="text-sm-medium d-flex align-items-center gap-2"
+                    href="https://wa.me/1234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Need help?
+                    <Icon
+                      icon="mdi:whatsapp"
+                      width="22"
+                      height="22"
+                      color="#25D366"
+                    />
+                    <span className="d-none d-lg-inline">Need Help?</span>
                   </Link>
                 </div>
               </div>

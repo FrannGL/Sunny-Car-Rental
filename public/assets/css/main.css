@@ -5644,8 +5644,7 @@ label {
 }
 
 .header .main-header .header-right {
-  width: 30%;
-  min-width: 405px;
+  width: 10%;
   text-align: right;
   display: flex;
   align-items: center;
@@ -9450,7 +9449,7 @@ a.icon-socials:hover svg path {
 
 .container-search-advance {
   position: absolute;
-  top: 400px;
+  top: 415px;
   left: 0px;
   right: 0px;
   z-index: 12;
@@ -11257,7 +11256,7 @@ a.icon-socials:hover svg path {
   position: relative;
   background-position: top center;
   background-repeat: no-repeat;
-  padding: 120px 0px 180px 0px;
+  padding: 85px 0px 180px 0px;
   background-size: cover;
 }
 

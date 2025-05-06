@@ -190,9 +190,12 @@ export default function Header2({
                       <Link href="/">Home</Link>
                     </li>
                     <li className="mega-li-small">
-                      <Link href="/cars">Vehicles</Link>
+                      <Link href="/about-us">About Us</Link>
                     </li>
-                    <li className="mega-li-small has-children">
+                    <li className="mega-li-small">
+                      <Link href="/booking">Booking</Link>
+                    </li>
+                    {/* <li className="mega-li-small has-children">
                       <Link href="#">Dealers</Link>
                       <div className="mega-menu">
                         <div className="mega-menu-inner mega-menu-inner-small mega-menu-inner-destinations">
@@ -208,8 +211,8 @@ export default function Header2({
                           </ul>
                         </div>
                       </div>
-                    </li>
-                    <li className="has-children">
+                    </li> */}
+                    {/* <li className="has-children">
                       <Link href="#">Shop</Link>
                       <ul className="sub-menu">
                         <li>
@@ -219,8 +222,8 @@ export default function Header2({
                           <Link href="/shop-details">Product Details</Link>
                         </li>
                       </ul>
-                    </li>
-                    <li className="has-children">
+                    </li> */}
+                    {/* <li className="has-children">
                       <Link href="#">Pages</Link>
                       <ul className="sub-menu">
                         <li>
@@ -254,8 +257,8 @@ export default function Header2({
                           <Link href="/404">Error 404</Link>
                         </li>
                       </ul>
-                    </li>
-                    <li className="has-children">
+                    </li> */}
+                    {/* <li className="has-children">
                       <Link href="#">News</Link>
                       <ul className="sub-menu">
                         <li>
@@ -268,7 +271,7 @@ export default function Header2({
                           <Link href="/blog-details">News Details</Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>

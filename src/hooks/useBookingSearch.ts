@@ -34,7 +34,7 @@ export function useBookingSearch() {
         dropoffDate: data.dropoffDate.toISOString(),
       }).toString();
 
-      router.push(`${locale}/cars?${searchParams}`);
+      router.push(`${locale}/booking?${searchParams}`);
     } else {
       console.log("Faltan datos para completar la búsqueda");
     }

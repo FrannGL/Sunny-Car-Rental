@@ -34,7 +34,7 @@ export default function CarsListing4() {
             </div>
             <div className="col-md-4 mt-md-0 mt-4">
               <div className="d-flex justify-content-end">
-                <Link className="btn btn-primary" href="/cars-list-1">
+                <Link className="btn btn-primary" href="/booking">
                   Ver Todos
                   <svg
                     width={16}
