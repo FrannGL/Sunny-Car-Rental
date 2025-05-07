@@ -135,7 +135,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                   </span>
                 </li>
                 <li>
-                  <Link href="/destination">Cars Rental</Link>
+                  <Link href="/booking">Cars Rental</Link>
                   <span className="arrow-right">
                     <svg
                       width={7}

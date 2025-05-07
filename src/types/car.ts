@@ -5,7 +5,7 @@ export interface Car {
   model: string;
   year: number;
   plate_number: string;
-  status: "available" | "unavailable";
+  status: "available" | "unavailable" | "rented";
   price_per_day: number;
   gama: "baja" | "media" | "alta";
   id: number;

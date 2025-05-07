@@ -33,13 +33,35 @@ export default function CarCard1({ car }: { car: Car }) {
             </span>
           </div>
         </div>
-        <div className="card-title">
+        <div
+          className="card-title"
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            gap: 10,
+            alignItems: "center",
+          }}
+        >
           <Link
             className="text-lg-bold neutral-1000 text-nowrap"
             href={`/cars-details/${car.id}`}
           >
             {car.brand} {car.model} {car.year}
           </Link>
+          {car.status === "rented" && (
+            <span
+              style={{
+                backgroundColor: "red",
+                color: "white",
+                padding: "0px 8px",
+                borderRadius: "6px",
+                fontSize: "0.75rem",
+                fontWeight: "600",
+              }}
+            >
+              Rented
+            </span>
+          )}
         </div>
         <div className="card-program">
           <div className="card-location">

@@ -25,7 +25,7 @@ const useBookingForm = (car: Car) => {
   const [formValues, setFormValues] = useState<FormValues>({
     pickupDate: new Date(),
     dropoffDate: new Date(new Date().setDate(new Date().getDate() + 1)),
-    subtotal: 0,
+    subtotal: car.price_per_day,
     payment_method: "cash",
     driver: "",
     driver_lic: 0,

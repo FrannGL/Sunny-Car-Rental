@@ -26,11 +26,25 @@ interface SignInData {
   password: string;
 }
 
+export interface PreRegisterData {
+  username: string;
+  email: string;
+}
+
+export interface RegisterData {
+  email: string;
+  code: string;
+  password: string;
+  conf_pass: string;
+}
+
 interface AuthContextType extends AuthState {
   login: (data: SignInData) => Promise<boolean>;
   logout: () => Promise<boolean>;
   initializeAuth: () => void;
   refreshAuthToken: () => Promise<void>;
+  preRegister: (data: PreRegisterData) => Promise<boolean>;
+  register: (data: RegisterData) => Promise<boolean>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -170,6 +184,84 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const preRegister = async (data: PreRegisterData): Promise<boolean> => {
+    setAuthState((prev) => ({ ...prev, isLoading: true, error: null }));
+
+    try {
+      const response = await fetch(`${CONFIG.site.serverUrl}/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        setAuthState((prev) => ({
+          ...prev,
+          isLoading: false,
+          error: "Error al registrar usuario",
+        }));
+        return false;
+      }
+
+      setAuthState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: null,
+      }));
+
+      return true;
+    } catch (error) {
+      console.error("Error during pre-register:", error);
+      setAuthState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: "Error inesperado. Intenta nuevamente.",
+      }));
+      return false;
+    }
+  };
+
+  const register = async (data: RegisterData): Promise<boolean> => {
+    setAuthState((prev) => ({ ...prev, isLoading: true, error: null }));
+
+    try {
+      const response = await fetch(`${CONFIG.site.serverUrl}/confirmarUser`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        setAuthState((prev) => ({
+          ...prev,
+          isLoading: false,
+          error: "Error al confirmar el usuario",
+        }));
+        return false;
+      }
+
+      setAuthState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: null,
+      }));
+
+      return true;
+    } catch (error) {
+      console.error("Error during registration:", error);
+      setAuthState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: "Error inesperado. Intenta nuevamente.",
+      }));
+      return false;
+    }
+  };
+
   const refreshAuthToken = useCallback(async () => {
     if (!authState.refreshToken) return;
 
@@ -243,6 +335,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     <AuthContext.Provider
       value={{
         ...authState,
+        preRegister,
+        register,
         login,
         logout,
         initializeAuth,
