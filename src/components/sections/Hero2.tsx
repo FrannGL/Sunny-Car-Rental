@@ -27,10 +27,13 @@ export default function Hero2() {
                       <span className="btn background-brand-2 px-3 py-3 rounded-12 text-sm-bold text-dark">
                         +3600 cars for you
                       </span>
-                      <h1 className="mt-20 mb-20 color-white">
+                      <h1
+                        className="mt-20 color-white"
+                        style={{ fontSize: "3.2rem" }}
+                      >
                         Libertad para moverte. Sin romper tu presupuesto
                       </h1>
-                      <h6 className="color-white heading-6-medium pb-lg-0 pb-4">
+                      <h6 className="color-white heading-6-medium pb-lg-0">
                         Descubre opciones accesibles y confiables para que te
                         desplaces sin preocupaciones. Compra fácil, rápida y con
                         asesoría experta en cada paso.
@@ -44,7 +47,10 @@ export default function Hero2() {
                       <span className="btn background-brand-2 px-3 py-3 rounded-12 text-sm-bold text-dark">
                         Best car rental system
                       </span>
-                      <h1 className="mt-20 mb-20 color-white">
+                      <h1
+                        className="mt-20 color-white"
+                        style={{ fontSize: "3.2rem" }}
+                      >
                         Calidad, servicio y precios que te van a sorprender.
                       </h1>
                       <h6 className="color-white heading-6-medium">

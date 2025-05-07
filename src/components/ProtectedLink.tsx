@@ -27,7 +27,7 @@ export const ProtectedLink = ({
     if (token) {
       router.push(href);
     } else {
-      router.push(`${locale}/403`);
+      router.push(`${locale}/login`);
     }
   };
 

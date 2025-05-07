@@ -13,7 +13,7 @@ export const CarCard = ({ car }: CarCardProps) => {
     <div className="col-lg-3 col-md-4 col-sm-6">
       <div className="card-journey-small background-card hover-up">
         <div className="card-image">
-          <Link href={`/cars-details-2?id=${car.id}`}>
+          <Link href={`/cars-details/${car.id}`}>
             <img
               src={
                 car.image_base64 ||

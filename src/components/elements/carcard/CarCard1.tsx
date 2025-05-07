@@ -1,8 +1,11 @@
+import { useAuth } from "@/src/context/AuthContext";
 import { Link } from "@/src/i18n/navigation";
 import { Car } from "@/src/types/car";
 import Image from "next/image";
 
 export default function CarCard1({ car }: { car: Car }) {
+  const { user } = useAuth();
+
   const fallbackImage =
     "https://img.freepik.com/foto-gratis/jeep-offroader-blanco-estacionamiento_114579-4007.jpg?t=st=1745876771~exp=1745880371~hmac=7374e8b64aefabc23a6ec075a494667d1902d33898c646de2e0ded6f48f7e9c9&w=996";
 

@@ -7,10 +7,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale } from "next-intl";
 import { Link } from "@/src/i18n/navigation";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+
 export default function Login() {
   const { token, user, login, isLoading, error } = useAuth();
+  const [callbackUrl, setCallbackUrl] = useState<string | null>(null);
+  const [redirectionAttempted, setRedirectionAttempted] = useState(false);
 
   const router = useRouter();
   const locale = useLocale();
@@ -26,14 +29,40 @@ export default function Login() {
   } = methods;
 
   const onSubmit = async (data: SignInSchemaType) => {
-    await login(data, router);
+    const success = await login(data);
+
+    if (success) {
+      setRedirectionAttempted(false);
+    }
   };
 
   useEffect(() => {
-    if (token && user) {
-      router.replace(`/${locale}`);
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const callback = urlParams.get("callbackUrl");
+      setCallbackUrl(callback);
     }
-  }, [token, user, router, locale]);
+  }, []);
+
+  useEffect(() => {
+    if (token && user && !redirectionAttempted) {
+      setRedirectionAttempted(true);
+
+      const redirectUrl = callbackUrl
+        ? decodeURIComponent(callbackUrl)
+        : `/${locale}`;
+
+      try {
+        router.replace(redirectUrl);
+        setTimeout(() => {
+          window.location.href = redirectUrl;
+        }, 100);
+      } catch (error) {
+        console.error("Error during redirection:", error);
+        window.location.href = redirectUrl;
+      }
+    }
+  }, [token, user, router, locale, callbackUrl, redirectionAttempted]);
 
   return (
     <>
@@ -77,25 +106,7 @@ export default function Login() {
                           </p>
                         )}
                       </div>
-                      {/* <div className="form-group">
-                        <div className="box-remember-forgot">
-                          <div className="remeber-me">
-                            <label className="text-xs-medium neutral-500">
-                              {" "}
-                              <input className="cb-remember" type="checkbox" />
-                              Remember me{" "}
-                            </label>
-                          </div>
-                          <div className="forgotpass">
-                            <Link
-                              className="text-xs-medium neutral-500"
-                              href="#"
-                            >
-                              Forgot password?
-                            </Link>
-                          </div>
-                        </div>
-                      </div> */}
+
                       <div className="form-group mb-30">
                         {error && (
                           <p className="text-danger text-center pb-2">
@@ -125,35 +136,6 @@ export default function Login() {
                           </svg>
                         </button>
                       </div>
-                      {/* <p className="text-md-medium neutral-500 text-center">
-                        Or connect with your social account
-                      </p>
-                      <div className="box-button-logins">
-                        <Link
-                          className="btn btn-login btn-google mr-10"
-                          href="#"
-                        >
-                          <img
-                            src="/assets/imgs/template/popup/google.svg"
-                            alt="Sunny Car Rental"
-                          />
-                          <span className="text-sm-bold">
-                            Sign up with Google
-                          </span>
-                        </Link>
-                        <Link className="btn btn-login mr-10" href="#">
-                          <img
-                            src="/assets/imgs/template/popup/facebook.svg"
-                            alt="Sunny Car Rental"
-                          />
-                        </Link>
-                        <Link className="btn btn-login" href="#">
-                          <img
-                            src="/assets/imgs/template/popup/apple.svg"
-                            alt="Sunny Car Rental"
-                          />
-                        </Link>
-                      </div> */}
                       <p className="text-sm-medium neutral-500 text-center mt-70">
                         Don’t have an account?{" "}
                         <Link className="neutral-1000" href="/register">

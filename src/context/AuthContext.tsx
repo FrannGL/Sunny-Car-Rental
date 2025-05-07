@@ -1,8 +1,6 @@
 "use client";
 
 import { CONFIG } from "@/src/config/config-global";
-import { useLocale } from "next-intl";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import {
   createContext,
   ReactNode,
@@ -29,8 +27,8 @@ interface SignInData {
 }
 
 interface AuthContextType extends AuthState {
-  login: (data: SignInData, router: AppRouterInstance) => Promise<boolean>;
-  logout: (router: AppRouterInstance) => Promise<void>;
+  login: (data: SignInData) => Promise<boolean>;
+  logout: () => Promise<boolean>;
   initializeAuth: () => void;
   refreshAuthToken: () => Promise<void>;
 }
@@ -47,8 +45,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     error: null,
     expiresIn: undefined,
   });
-
-  const locale = useLocale();
 
   const initializeAuth = () => {
     try {
@@ -85,10 +81,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const login = async (
-    data: SignInData,
-    router: AppRouterInstance
-  ): Promise<boolean> => {
+  const login = async (data: SignInData): Promise<boolean> => {
     setAuthState((prev) => ({ ...prev, isLoading: true, error: null }));
 
     try {
@@ -136,7 +129,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         expiresIn: access_token_expires_in,
       });
 
-      router.push(`/${locale}`);
       return true;
     } catch (error) {
       console.error("Error during sign in:", error);
@@ -149,7 +141,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const logout = async (router: AppRouterInstance): Promise<void> => {
+  const logout = async () => {
     setAuthState((prev) => ({ ...prev, isLoading: true }));
 
     try {
@@ -165,7 +157,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         error: null,
       });
 
-      router.push("/");
+      return true;
     } catch (error) {
       console.error("Error during logout:", error);
       setAuthState((prev) => ({
@@ -173,6 +165,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         isLoading: false,
         error: "Error al cerrar sesión",
       }));
+
+      return false;
     }
   };
 

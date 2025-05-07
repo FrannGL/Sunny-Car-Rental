@@ -47,6 +47,11 @@ export default function Header2({
     [router, pathname]
   );
 
+  const handleLogout = async () => {
+    const success = await logout();
+    if (success) router.push(`/login`);
+  };
+
   return (
     <>
       <header
@@ -306,9 +311,7 @@ export default function Header2({
 
                     <Dropdown.Menu>
                       <Dropdown.Item
-                        onClick={async () => {
-                          await logout(router);
-                        }}
+                        onClick={handleLogout}
                         className="logout-item"
                       >
                         <FaSignOutAlt />

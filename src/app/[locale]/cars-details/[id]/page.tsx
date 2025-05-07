@@ -2,7 +2,7 @@ import CarsDetails3 from "@/src/components/sections/CarDetail";
 import { CONFIG } from "@/src/config/config-global";
 import { getServerSession } from "@/src/util/auth/getServerSession";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 export async function generateMetadata({
   params,
@@ -41,7 +41,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   const session = getServerSession();
   const token = session.token;
 
-  if (!token) return null;
+  if (!token) {
+    redirect("/en/login");
+  }
 
   const response = await fetch(
     `${CONFIG.site.serverUrl}/cars/${Number(params.id)}`,

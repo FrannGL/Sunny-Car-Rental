@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "./util/auth/getServerSession";
 
-const protectedRoutes = ["/cars"];
+const protectedRoutes = ["/cars-details"];
 
 const isProtectedRoute = (path: string): boolean => {
   const pathWithoutLocale = path.replace(/^\/[a-z]{2}(?:-[a-z]{2})?/, "");
@@ -31,7 +31,7 @@ export async function middleware(request: NextRequest) {
       const loginPath = `/${locale}/login`;
       const returnUrl = request.nextUrl.href;
       const loginUrl = new URL(loginPath, request.url);
-      loginUrl.searchParams.set("returnUrl", returnUrl);
+      loginUrl.searchParams.set("callbackUrl", returnUrl);
       return NextResponse.redirect(loginUrl);
     }
   }
