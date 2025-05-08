@@ -302,7 +302,7 @@ export default function Header2({
                         alignItems: "center",
                         gap: "0.5rem",
                         borderRadius: "0.5rem",
-                        padding: "10px 25px",
+                        padding: "9px 25px",
                       }}
                     >
                       <FaUserCircle size={20} />
