@@ -29,8 +29,10 @@ export default function Layout({
       : document.body.classList.remove("mobile-menu-active");
   };
   const { data, error } = useCustomQuery("cars", true);
-  const { data: locationsData, error: locationsError } =
-    useCustomQuery("locations");
+  const { data: locationsData, error: locationsError } = useCustomQuery(
+    "locations",
+    true
+  );
   const { setCars, setLocations } = useCarStore();
 
   useEffect(() => {

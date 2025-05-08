@@ -266,6 +266,16 @@ input[type="number"]:focus,
   box-shadow: none !important;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 input:focus::-moz-placeholder {
   opacity: 0;
   -moz-transition: 0.4s;
@@ -12210,7 +12220,7 @@ a.icon-socials:hover svg path {
   margin: 0;
 }
 
-.item-line-booking .checkbox {
+.item-line-booking .item-line-booking-checkbox .checkbox {
   width: 20px;
   height: 20px;
   transform: scale(0.9);

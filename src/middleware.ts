@@ -1,15 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "./util/auth/getServerSession";
-
-const protectedRoutes = ["/cars-details"];
-
-const isProtectedRoute = (path: string): boolean => {
-  const pathWithoutLocale = path.replace(/^\/[a-z]{2}(?:-[a-z]{2})?/, "");
-  return protectedRoutes.some(
-    (route) =>
-      pathWithoutLocale === route || pathWithoutLocale.startsWith(`${route}/`)
-  );
-};
 
 export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
@@ -24,14 +13,18 @@ export async function middleware(request: NextRequest) {
 
   const locale = localeMatch[1] || "en";
 
-  if (isProtectedRoute(path)) {
-    const { token } = getServerSession();
+  const loginPath = `/${locale}/login`;
+  const isLoginPage = path === loginPath;
+  const searchParams = request.nextUrl.searchParams;
+  const hasCallback = searchParams.has("callbackUrl");
 
-    if (!token) {
-      const loginPath = `/${locale}/login`;
-      const returnUrl = request.nextUrl.href;
-      const loginUrl = new URL(loginPath, request.url);
-      loginUrl.searchParams.set("callbackUrl", returnUrl);
+  if (isLoginPage && !hasCallback) {
+    const referer = request.headers.get("referer") || "/";
+    const isRefererLogin = referer.includes(loginPath);
+
+    if (!isRefererLogin) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.searchParams.set("callbackUrl", referer);
       return NextResponse.redirect(loginUrl);
     }
   }

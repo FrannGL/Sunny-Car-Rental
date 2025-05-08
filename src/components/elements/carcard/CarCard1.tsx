@@ -48,7 +48,7 @@ export default function CarCard1({ car }: { car: Car }) {
           >
             {car.brand} {car.model} {car.year}
           </Link>
-          {car.status === "rented" && (
+          {car.status === "rented" ? (
             <span
               style={{
                 backgroundColor: "red",
@@ -60,6 +60,19 @@ export default function CarCard1({ car }: { car: Car }) {
               }}
             >
               Rented
+            </span>
+          ) : (
+            <span
+              style={{
+                backgroundColor: "green",
+                color: "white",
+                padding: "0px 8px",
+                borderRadius: "6px",
+                fontSize: "0.75rem",
+                fontWeight: "600",
+              }}
+            >
+              Available
             </span>
           )}
         </div>

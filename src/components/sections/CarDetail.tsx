@@ -2,7 +2,9 @@
 import MyDatePicker from "@/src/components/elements/MyDatePicker";
 import Layout from "@/src/components/layout/Layout";
 import useBookingForm from "@/src/hooks/useBookingForm";
+import { useClientSession } from "@/src/hooks/useClientSession";
 import { Link } from "@/src/i18n/navigation";
+import { BookingSchemaType } from "@/src/schemas/booking-schema";
 import { useCarStore } from "@/src/store/useCarStore";
 import { Car } from "@/src/types/car";
 import { useEffect, useState } from "react";
@@ -68,6 +70,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
 
+  const { user } = useClientSession();
   const { locations } = useCarStore();
 
   useEffect(() => {
@@ -100,12 +103,36 @@ export default function CarsDetails3({ car }: { car: Car }) {
   };
   const [isAccordion, setIsAccordion] = useState(null);
 
-  const { formValues, handleDateChange, handleSubmit, handleChange } =
+  const { register, handleSubmit, setValue, watch, errors } =
     useBookingForm(car);
 
   const handleAccordion = (key: any) => {
     setIsAccordion((prevState) => (prevState === key ? null : key));
   };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+
+    if (type === "checkbox") {
+      setValue(name as keyof BookingSchemaType, checked);
+    } else {
+      setValue(name as keyof BookingSchemaType, value);
+    }
+  };
+
+  const handleDateChange = (
+    field: "pickupDate" | "dropoffDate",
+    date: Date
+  ) => {
+    setValue(field, date);
+  };
+
+  const formValues = watch();
 
   return (
     <>
@@ -178,10 +205,46 @@ export default function CarsDetails3({ car }: { car: Car }) {
                 </div>
                 <div className="row">
                   <div className="col-lg-8">
-                    <div className="tour-title-main">
+                    <div
+                      className="tour-title-main"
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignItems: "center",
+                        gap: 20,
+                      }}
+                    >
                       <h4 className="neutral-1000">
                         {car.brand} {car.model} {car.year}
                       </h4>
+                      {car.status === "rented" ? (
+                        <span
+                          style={{
+                            backgroundColor: "red",
+                            color: "white",
+                            padding: "5px 10px",
+                            borderRadius: "6px",
+                            fontSize: "1.5rem",
+                            fontWeight: "600",
+                          }}
+                        >
+                          Rented
+                        </span>
+                      ) : (
+                        <span
+                          style={{
+                            backgroundColor: "green",
+                            color: "white",
+                            padding: "5px 10px",
+                            borderRadius: "6px",
+                            fontSize: "1.5rem",
+                            fontWeight: "600",
+                          }}
+                        >
+                          Available
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -1454,6 +1517,11 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           <strong className="text-md-bold neutral-1000">
                             Pick-Up
                           </strong>
+                          {errors.pickupDate && (
+                            <span className="error-message">
+                              {errors.pickupDate.message}
+                            </span>
+                          )}
                           <div className="input-calendar">
                             <MyDatePicker
                               form
@@ -1481,9 +1549,15 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           <strong className="text-md-bold neutral-1000">
                             Drop-Off
                           </strong>
+                          {errors.dropoffDate && (
+                            <span className="error-message">
+                              {errors.dropoffDate.message}
+                            </span>
+                          )}
                           <div className="input-calendar">
                             <MyDatePicker
                               form
+                              disablePastDays
                               value={formValues.dropoffDate}
                               onChange={(date) =>
                                 handleDateChange("dropoffDate", date)
@@ -1503,106 +1577,18 @@ export default function CarsDetails3({ car }: { car: Car }) {
                             </svg>
                           </div>
                         </div>
-                        {/* <div className="item-line-booking">
-                          <div className="box-tickets">
-                            <strong className="text-md-bold neutral-1000">
-                              Add Extra:
-                            </strong>
-                            <div className="line-booking-tickets">
-                              <div className="item-ticket">
-                                <ul className="list-filter-checkbox">
-                                  <li>
-                                    <label className="cb-container">
-                                      {" "}
-                                      <input type="checkbox" />
-                                      <span className="text-md-medium">
-                                        GPS Navigation System{" "}
-                                      </span>
-                                      <span className="checkmark" />{" "}
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div className="include-price">
-                                <p className="text-md-bold neutral-1000">
-                                  $25.00
-                                </p>
-                              </div>
-                            </div>
-                            <div className="line-booking-tickets">
-                              <div className="item-ticket">
-                                <ul className="list-filter-checkbox">
-                                  <li>
-                                    <label className="cb-container">
-                                      {" "}
-                                      <input type="checkbox" />
-                                      <span className="text-md-medium">
-                                        Child Seat{" "}
-                                      </span>
-                                      <span className="checkmark" />{" "}
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div className="include-price">
-                                <p className="text-md-bold neutral-1000">
-                                  $32.00
-                                </p>
-                              </div>
-                            </div>
-                            <div className="line-booking-tickets">
-                              <div className="item-ticket">
-                                <ul className="list-filter-checkbox">
-                                  <li>
-                                    <label className="cb-container">
-                                      {" "}
-                                      <input type="checkbox" />
-                                      <span className="text-md-medium">
-                                        Additional Driver{" "}
-                                      </span>
-                                      <span className="checkmark" />{" "}
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div className="include-price">
-                                <p className="text-md-bold neutral-1000">
-                                  $25.00
-                                </p>
-                              </div>
-                            </div>
-                            <div className="line-booking-tickets">
-                              <div className="item-ticket">
-                                <ul className="list-filter-checkbox">
-                                  <li>
-                                    <label className="cb-container">
-                                      {" "}
-                                      <input type="checkbox" />
-                                      <span className="text-md-medium">
-                                        Insurance Coverage{" "}
-                                      </span>
-                                      <span className="checkmark" />{" "}
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div className="include-price">
-                                <p className="text-md-bold neutral-1000">
-                                  $52.00
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div> */}
                         <div className="additional-fields">
                           <div className="item-line-booking">
                             <label className="text-md-bold neutral-1000">
                               Payment Method
                             </label>
+                            {errors.payment_method && (
+                              <span className="error-message">
+                                {errors.payment_method.message}
+                              </span>
+                            )}
                             <select
-                              name="payment_method"
-                              value={formValues.payment_method}
-                              onChange={handleChange}
+                              {...register("payment_method")}
                               className="input-style"
                               style={{ width: "70%" }}
                             >
@@ -1613,174 +1599,397 @@ export default function CarsDetails3({ car }: { car: Car }) {
                               <option value="cash">Cash</option>
                             </select>
                           </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Driver
-                            </label>
-                            <input
-                              type="text"
-                              name="driver"
-                              value={formValues.driver}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "70%" }}
-                            />
-                          </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Driver Licence
-                            </label>
-                            <input
-                              type="text"
-                              name="driver_lic"
-                              value={formValues.driver_lic}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "70%" }}
-                            />
-                          </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Additional Driver
-                            </label>
-                            <input
-                              type="text"
-                              name="ad_driver"
-                              value={formValues.ad_driver}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "80%" }}
-                            />
-                          </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Additional Driver Licence
-                            </label>
-                            <input
-                              type="text"
-                              name="ad_driver_lic"
-                              value={formValues.ad_driver_lic}
-                              onChange={handleChange}
-                              className="input-style"
-                            />
-                          </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-sm-bold neutral-1000">
-                              White Gas
-                            </label>
-                            <input
-                              type="checkbox"
-                              name="with_gas"
-                              className="checkbox"
-                              checked={formValues.with_gas}
-                              onChange={handleChange}
-                            />
-                          </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Coupon Code
-                            </label>
-                            <input
-                              type="text"
-                              name="coupon_code"
-                              value={formValues.coupon_code}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "70%" }}
-                            />
-                          </div>
-
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Pickup Location
-                            </label>
-                            <select
-                              name="pickup_location_id"
-                              value={formValues.pickup_location_id}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "70%" }}
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
                             >
-                              <option value="">Select a location</option>
-                              {locations.map((location) => (
-                                <option key={location.id} value={location.id}>
-                                  {location.name} ({location.country})
-                                </option>
-                              ))}
-                            </select>
-                          </div>
+                              <label className="text-md-bold neutral-1000">
+                                Driver
+                              </label>
+                              <input
+                                {...register("driver")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
 
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Return Location
-                            </label>
-                            <select
-                              name="return_location_id"
-                              value={formValues.return_location_id}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "70%" }}
-                            >
-                              <option value="">Select a location</option>
-                              {locations.map((location) => (
-                                <option key={location.id} value={location.id}>
-                                  {location.name} ({location.country})
-                                </option>
-                              ))}
-                            </select>
+                            {errors.driver && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.driver.message}
+                              </span>
+                            )}
                           </div>
-                          <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Damage Report
-                            </label>
-                            <input
-                              type="text"
-                              name="damage_report"
-                              value={formValues.damage_report}
-                              onChange={handleChange}
-                              className="input-style"
-                              style={{ width: "70%" }}
-                            />
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Driver Licence
+                              </label>
+                              <input
+                                type="number"
+                                {...register("driver_lic", {
+                                  valueAsNumber: true,
+                                })}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
+                            {errors.driver_lic && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.driver_lic.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Additional Driver
+                              </label>
+                              <input
+                                {...register("ad_driver")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
+
+                            {errors.ad_driver && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.ad_driver.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Additional Driver License
+                              </label>
+                              <input
+                                type="text"
+                                {...register("ad_driver_lic", {
+                                  setValueAs: (v) =>
+                                    v === "" ? undefined : Number(v),
+                                })}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
+
+                            {errors.ad_driver_lic && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.ad_driver_lic.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                              className="item-line-booking-checkbox"
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                With Gas
+                              </label>
+                              <input
+                                {...register("with_gas")}
+                                style={{ width: "70%" }}
+                                type="checkbox"
+                                className="checkbox"
+                                checked={formValues.with_gas}
+                                onChange={handleChange}
+                              />
+                            </div>
+
+                            {errors.with_gas && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.with_gas.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Coupon Code
+                              </label>
+                              <input
+                                {...register("coupon_code")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
+
+                            {errors.coupon_code && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.coupon_code.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Pickup Location
+                              </label>
+                              <select
+                                {...register("pickup_location_id", {
+                                  valueAsNumber: true,
+                                })}
+                                className="input-style"
+                                style={{ width: "60%" }}
+                              >
+                                <option value="">Select a location</option>
+                                {locations.map((location) => (
+                                  <option key={location.id} value={location.id}>
+                                    {location.name} ({location.country})
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+
+                            {errors.pickup_location_id && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.pickup_location_id.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Return Location
+                              </label>
+                              <select
+                                {...register("return_location_id", {
+                                  valueAsNumber: true,
+                                })}
+                                className="input-style"
+                                style={{ width: "60%" }}
+                              >
+                                <option value="">Select a location</option>
+                                {locations.map((location) => (
+                                  <option key={location.id} value={location.id}>
+                                    {location.name} ({location.country})
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+
+                            {errors.return_location_id && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.return_location_id.message}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Damage Report
+                              </label>
+                              <input
+                                {...register("damage_report")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
+
+                            {errors.damage_report && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.damage_report.message}
+                              </span>
+                            )}
                           </div>
 
                           <div className="item-line-booking">
                             <label className="text-md-bold neutral-1000">
                               Comments
                             </label>
+                            {errors.comments && (
+                              <span className="error-message">
+                                {errors.comments.message}
+                              </span>
+                            )}
                             <textarea
-                              name="comments"
-                              value={formValues.comments}
-                              onChange={handleChange}
+                              {...register("comments")}
                               className="input-style"
                               style={{ width: "70%", resize: "none" }}
                             />
                           </div>
                         </div>
-                        {/* <div className="item-line-booking last-item pb-0">
-                          <strong className="text-md-medium neutral-1000">
-                            Sale discount
-                          </strong>
-                          <div className="line-booking-right">
-                            <p className="text-xl-bold neutral-1000">
-                              ${formValues.discount}
-                            </p>
-                          </div>
-                        </div> */}
                         <div className="item-line-booking last-item">
                           <strong className="text-md-bold neutral-1000">
                             Total Payable
                           </strong>
-                          {/* <div className="line-booking-right">
-                            <p className="text-xl-bold neutral-1000">
-                              ${formValues.subtotal - formValues.discount}
-                            </p>
-                          </div> */}
                         </div>
                         <div className="item-line-booking last-item pb-0">
                           <strong className="text-md-medium neutral-1000">
@@ -1793,24 +2002,45 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                         </div>
                         <div className="box-button-book">
-                          <button type="submit" className="btn btn-book">
-                            Book Now
-                            <svg
-                              width={16}
-                              height={16}
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M8 15L15 8L8 1M15 8L1 8"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </button>
+                          {user ? (
+                            <button type="submit" className="btn btn-book">
+                              Book Now
+                              <svg
+                                width={16}
+                                height={16}
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M8 15L15 8L8 1M15 8L1 8"
+                                  stroke="currentColor"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          ) : (
+                            <Link href="/login" className="btn btn-book">
+                              Login to Book
+                              <svg
+                                width={16}
+                                height={16}
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M8 15L15 8L8 1M15 8L1 8"
+                                  stroke="currentColor"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </Link>
+                          )}
                         </div>
                         <div className="box-need-help">
                           <Link href="#">
