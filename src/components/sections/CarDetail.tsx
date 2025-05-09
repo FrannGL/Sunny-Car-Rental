@@ -2,10 +2,10 @@
 import MyDatePicker from "@/src/components/elements/MyDatePicker";
 import Layout from "@/src/components/layout/Layout";
 import useBookingForm from "@/src/hooks/useBookingForm";
+import { useCars } from "@/src/hooks/useCars";
 import { useClientSession } from "@/src/hooks/useClientSession";
 import { Link } from "@/src/i18n/navigation";
 import { BookingSchemaType } from "@/src/schemas/booking-schema";
-import { useCarStore } from "@/src/store/useCarStore";
 import { Car } from "@/src/types/car";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -71,7 +71,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
   const [slider2, setSlider2] = useState(null);
 
   const { user } = useClientSession();
-  const { locations } = useCarStore();
+  const { locations } = useCars();
 
   useEffect(() => {
     setNav1(slider1);

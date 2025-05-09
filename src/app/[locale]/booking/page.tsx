@@ -14,10 +14,11 @@ import rawCarsData from "@/src/util/cars.json";
 import useCarFilter from "@/src/util/useCarFilter";
 import { Link } from "@/src/i18n/navigation";
 import Marquee from "react-fast-marquee";
-import { useCarStore } from "@/src/store/useCarStore";
+
 import BrandsMarquee from "@/src/components/BrandsMarquee";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import { useCars } from "@/src/hooks/useCars";
 
 const carsData = rawCarsData.map((car) => ({
   ...car,
@@ -25,7 +26,7 @@ const carsData = rawCarsData.map((car) => ({
 }));
 
 export default function Cars() {
-  const { cars } = useCarStore();
+  const { cars } = useCars();
 
   const {
     filter,

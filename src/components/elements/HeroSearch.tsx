@@ -2,10 +2,10 @@
 import { useBookingSearch } from "@/src/hooks/useBookingSearch";
 import { Controller } from "react-hook-form";
 import MyDatePicker from "./MyDatePicker";
-import { useCarStore } from "@/src/store/useCarStore";
+import { useCars } from "@/src/hooks/useCars";
 
 export default function HeroSearch() {
-  const { locations } = useCarStore();
+  const { locations } = useCars();
 
   const { register, handleSubmit, control, errors, onSubmit } =
     useBookingSearch();

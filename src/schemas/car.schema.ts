@@ -19,8 +19,11 @@ export const carSchema = z.object({
       invalid_type_error: "Debe ser un número",
     })
     .positive("Debe ser mayor que 0"),
-  gama: z.enum(["baja", "media", "alta"]),
-  location_id: z.string().min(1, "La ubicación es requerida"),
+  gama: z.enum(["economica", "media", "alta"]),
+  location: z.object({
+    id: z.number(),
+    name: z.string(),
+  }),
   image_base64: z.string().nullable().optional(),
 });
 

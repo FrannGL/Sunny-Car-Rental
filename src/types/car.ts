@@ -7,7 +7,7 @@ export interface Car {
   plate_number: string;
   status: "available" | "unavailable" | "rented";
   price_per_day: number;
-  gama: "baja" | "media" | "alta";
+  gama: "economica" | "media" | "alta";
   id: number;
   created_at: string;
   updated_at: string;

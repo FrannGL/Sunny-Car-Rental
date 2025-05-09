@@ -1,7 +1,5 @@
 "use client";
-import { useCustomQuery } from "@/src/hooks/useCustomQuery";
-import { useCarStore } from "@/src/store/useCarStore";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import BackToTop from "../elements/BackToTop";
 import Breadcrumb from "./Breadcrumb";
 import MobileMenu from "./MobileMenu";
@@ -28,25 +26,6 @@ export default function Layout({
       ? document.body.classList.add("mobile-menu-active")
       : document.body.classList.remove("mobile-menu-active");
   };
-  const { data, error } = useCustomQuery("cars", true);
-  const { data: locationsData, error: locationsError } = useCustomQuery(
-    "locations",
-    true
-  );
-  const { setCars, setLocations } = useCarStore();
-
-  useEffect(() => {
-    if (data) {
-      setCars(data);
-    }
-    if (locationsData) {
-      setLocations(locationsData);
-    }
-  }, [data, locationsData, setLocations, setCars]);
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
 
   return (
     <>

@@ -1,12 +1,12 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useCars } from "@/src/hooks/useCars";
 import { Link } from "@/src/i18n/navigation";
 import { swiperGroup2 } from "@/src/util/swiperOptions";
-import { useCarStore } from "@/src/store/useCarStore";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { CarCard } from "../CarCard";
 
 export default function CarsListing3() {
-  const { cars } = useCarStore();
+  const { cars } = useCars();
 
   const filterCars = Array.isArray(cars) ? cars.slice(0, 3) : [];
 

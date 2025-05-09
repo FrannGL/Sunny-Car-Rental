@@ -1,4 +1,4 @@
-import { useCarStore } from "@/src/store/useCarStore";
+import { useCars } from "@/src/hooks/useCars";
 import { Location } from "@/src/types/locations";
 import { Filter } from "@/src/util/useCarFilter";
 
@@ -16,7 +16,7 @@ export default function ByLocation({
   filter,
   handleCheckboxChange,
 }: ByLocationProps) {
-  const { cars } = useCarStore();
+  const { cars } = useCars();
 
   return (
     <>

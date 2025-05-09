@@ -15,6 +15,7 @@ interface CarModalProps {
   defaultValues?: Partial<CarSchema>;
   locations: Location[];
   onSubmitForm: (data: CarSchema) => void;
+  isLoading: boolean;
 }
 
 const CarModal: React.FC<CarModalProps> = ({
@@ -24,6 +25,7 @@ const CarModal: React.FC<CarModalProps> = ({
   defaultValues,
   locations,
   onSubmitForm,
+  isLoading,
 }) => {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
@@ -37,7 +39,10 @@ const CarModal: React.FC<CarModalProps> = ({
     formState: { errors },
   } = useForm<CarSchema>({
     resolver: zodResolver(carSchema),
-    defaultValues,
+    defaultValues: {
+      ...defaultValues,
+      location: defaultValues?.location || undefined,
+    },
     mode: "onChange",
   });
 
@@ -60,8 +65,15 @@ const CarModal: React.FC<CarModalProps> = ({
 
   useEffect(() => {
     if (defaultValues) {
-      Object.entries(defaultValues).forEach(([key, value]) => {
-        setValue(key as keyof CarSchema, value);
+      const values = {
+        ...defaultValues,
+        location: defaultValues?.location || undefined,
+      };
+
+      Object.entries(values).forEach(([key, value]) => {
+        if (value !== undefined) {
+          setValue(key as keyof CarSchema, value);
+        }
       });
 
       if (defaultValues.image_base64) {
@@ -184,7 +196,7 @@ const CarModal: React.FC<CarModalProps> = ({
                 <Form.Label>Gama</Form.Label>
                 <Form.Select {...register("gama")} isInvalid={!!errors.gama}>
                   <option value="">Selecciona gama</option>
-                  <option value="baja">Baja</option>
+                  <option value="economica">Economica</option>
                   <option value="media">Media</option>
                   <option value="alta">Alta</option>
                 </Form.Select>
@@ -197,8 +209,19 @@ const CarModal: React.FC<CarModalProps> = ({
               <Form.Group className="mb-2">
                 <Form.Label>Ubicación</Form.Label>
                 <Form.Select
-                  {...register("location_id")}
-                  isInvalid={!!errors.location_id}
+                  isInvalid={!!errors.location}
+                  disabled={isLoading}
+                  onChange={(e) => {
+                    const selectedLocation = locations.find(
+                      (loc) => loc.id === Number(e.target.value)
+                    );
+                    if (selectedLocation) {
+                      setValue("location", selectedLocation, {
+                        shouldValidate: true,
+                      });
+                    }
+                  }}
+                  value={watch("location")?.id ?? ""}
                 >
                   <option value="">Selecciona ubicación</option>
                   {locations.map((loc) => (
@@ -208,7 +231,7 @@ const CarModal: React.FC<CarModalProps> = ({
                   ))}
                 </Form.Select>
                 <Form.Control.Feedback type="invalid">
-                  {errors.location_id?.message}
+                  {errors.location?.message}
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>

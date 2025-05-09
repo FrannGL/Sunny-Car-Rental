@@ -1,13 +1,14 @@
 "use client";
 
 import { Link } from "@/src/i18n/navigation";
-import { useCarStore } from "@/src/store/useCarStore";
+
 import { CarCard } from "../CarCard";
 import { useState } from "react";
 import { FaCarSide } from "react-icons/fa";
+import { useCars } from "@/src/hooks/useCars";
 
 export default function CarsListing4() {
-  const { cars } = useCarStore();
+  const { cars } = useCars();
   const [visibleCars, setVisibleCars] = useState(4);
 
   const loadMoreCars = () => {

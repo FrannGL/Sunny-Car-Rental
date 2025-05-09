@@ -1,15 +1,16 @@
-import { useState } from "react";
-import { Table, Button, Container, Badge, Stack } from "react-bootstrap";
+"use client";
+
 import { Car } from "@/src/types/car";
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+import { Badge, Button, Container, Stack, Table } from "react-bootstrap";
+import { ClipLoader } from "react-spinners";
+import { toast } from "sonner";
+import { useCars } from "../hooks/useCars";
 import { Link } from "../i18n/navigation";
-import { useCarStore } from "../store/useCarStore";
-import CarModal from "./CarModal";
 import { CarSchema } from "../schemas/car.schema";
-
-interface CarTableProps {
-  cars: Car[];
-}
+import CarModal from "./CarModal";
+import ConfirmationModal from "./ConfirmationModal";
 
 const statusVariant = (status: string) => {
   switch (status) {
@@ -39,14 +40,24 @@ const gamaVariant = (gama: string) => {
   }
 };
 
-const CarTable = ({ cars }: CarTableProps) => {
+const CarTable = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentCar, setCurrentCar] = useState<Car | null>(null);
+  const [carToDelete, setCarToDelete] = useState<Car | null>(null);
 
-  const { locations } = useCarStore();
+  const {
+    cars,
+    locations,
+    updateCar,
+    createCar,
+    deleteCar,
+    isCreating,
+    isLoadingCars,
+    isDeleting,
+  } = useCars();
 
-  const handleEditClick = (car: Car) => {
-    setCurrentCar(car);
+  const handleNewClick = () => {
+    setCurrentCar(null);
     setShowModal(true);
   };
 
@@ -55,54 +66,105 @@ const CarTable = ({ cars }: CarTableProps) => {
     setCurrentCar(null);
   };
 
-  const handleSubmitPost = async (data: CarSchema) => {
-    try {
-      const response = await fetch(`/api/cars`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+  const handleEditClick = (car: Car) => {
+    setCurrentCar(car);
+    setShowModal(true);
+  };
 
-      if (!response.ok) {
-        throw new Error("Error al crear el auto");
+  const handleDeleteClick = (car: Car) => {
+    setCarToDelete(car);
+  };
+
+  const confirmDelete = async () => {
+    if (carToDelete) {
+      try {
+        await deleteCar(carToDelete.id);
+      } catch (error) {
+        console.error("Error al eliminar:", error);
+      } finally {
+        setCarToDelete(null);
       }
+    }
+  };
 
-      const newCar = await response.json();
-      console.log("Auto creado correctamente:", newCar);
+  const cancelDelete = () => {
+    setCarToDelete(null);
+  };
 
+  const handleSubmitNew = async (data: CarSchema) => {
+    try {
+      await createCar(data);
+      toast.success("Vehículo creado correctamente");
       handleCloseModal();
-    } catch (error) {
-      console.error(error);
+    } catch (err: any) {
+      toast.error(err.message || "Error al crear");
     }
   };
 
   const handleSubmitEdit = async (data: CarSchema) => {
-    if (!currentCar) return;
-
     try {
-      const response = await fetch(`/api/cars/${currentCar.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      if (currentCar) {
+        const updatedData = {
+          ...data,
+          location_id: data.location.id,
+        };
 
-      if (!response.ok) {
-        throw new Error("Error al actualizar el auto");
+        await updateCar({ id: currentCar.id, data: updatedData });
+        toast.success("Vehículo actualizado correctamente!", {
+          duration: 3000,
+          style: { backgroundColor: "#28a745", color: "#fff" },
+        });
+        handleCloseModal();
+      } else {
+        toast.error("No se pudo actualizar el vehículo", {
+          duration: 3000,
+          style: { backgroundColor: "#dc3545", color: "#fff" },
+        });
       }
-
-      const updatedCar = await response.json();
-      console.log("Actualizado correctamente:", updatedCar);
-
-      handleCloseModal();
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      toast.error(error.message || "Error al actualizar el vehículo");
     }
   };
+
+  if (isLoadingCars) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{
+          height: "50vh",
+          width: "100%",
+          position: "relative",
+        }}
+      >
+        <ClipLoader
+          size={40}
+          color="#36d7b7"
+          cssOverride={{
+            display: "block",
+            margin: "0 auto",
+            borderWidth: "4px",
+          }}
+        />
+      </div>
+    );
+  }
 
   return (
     <Container fluid className="py-4">
       <div className="d-flex justify-content-center">
         <div className="w-100" style={{ maxWidth: "1200px" }}>
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <h2>Vehículos</h2>
+            <Button
+              variant="primary"
+              onClick={handleNewClick}
+              className="d-flex align-items-center gap-1"
+              disabled={isLoadingCars}
+            >
+              <Icon icon="material-symbols-light:add" width={20} />
+              {isLoadingCars ? "Procesando..." : "Nuevo vehículo"}
+            </Button>
+          </div>
           <Table
             striped
             bordered
@@ -173,6 +235,7 @@ const CarTable = ({ cars }: CarTableProps) => {
                             size="sm"
                             title="Ver detalles"
                             style={{ padding: "0.2rem 0.5rem" }}
+                            disabled={isLoadingCars}
                           >
                             <Icon icon="mdi:external-link" width={16} />
                           </Button>
@@ -183,6 +246,7 @@ const CarTable = ({ cars }: CarTableProps) => {
                           title="Editar"
                           onClick={() => handleEditClick(car)}
                           style={{ padding: "0.2rem 0.5rem" }}
+                          disabled={isLoadingCars}
                         >
                           <Icon icon="mdi:pencil-outline" width={16} />
                         </Button>
@@ -191,6 +255,8 @@ const CarTable = ({ cars }: CarTableProps) => {
                           size="sm"
                           title="Eliminar"
                           style={{ padding: "0.2rem 0.5rem" }}
+                          disabled={isLoadingCars}
+                          onClick={() => handleDeleteClick(car)}
                         >
                           <Icon icon="mdi:trash-can-outline" width={16} />
                         </Button>
@@ -204,6 +270,16 @@ const CarTable = ({ cars }: CarTableProps) => {
         </div>
       </div>
 
+      <ConfirmationModal
+        show={!!carToDelete}
+        onHide={cancelDelete}
+        onConfirm={confirmDelete}
+        title="Confirmar eliminación"
+        message={`¿Estás seguro que deseas eliminar el vehículo ${carToDelete?.brand} ${carToDelete?.model}?`}
+        confirmText="Eliminar"
+        isProcessing={isDeleting}
+      />
+
       <CarModal
         show={showModal}
         onHide={handleCloseModal}
@@ -212,7 +288,8 @@ const CarTable = ({ cars }: CarTableProps) => {
           currentCar ? (currentCar as Partial<CarSchema>) : undefined
         }
         locations={locations}
-        onSubmitForm={currentCar ? handleSubmitEdit : handleSubmitPost}
+        onSubmitForm={currentCar ? handleSubmitEdit : handleSubmitNew}
+        isLoading={isLoadingCars}
       />
     </Container>
   );
