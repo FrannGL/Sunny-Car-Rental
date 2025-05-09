@@ -13,6 +13,32 @@ export async function middleware(request: NextRequest) {
 
   const locale = localeMatch[1] || "en";
 
+  if (path.startsWith(`/${locale}/backoffice`)) {
+    const userSessionCookie = request.cookies.get("user-session")?.value;
+
+    if (!userSessionCookie) {
+      const loginUrl = new URL(`/${locale}/login`, request.url);
+      loginUrl.searchParams.set("callbackUrl", path);
+      return NextResponse.redirect(loginUrl);
+    }
+
+    try {
+      const decodedCookie = decodeURIComponent(userSessionCookie);
+      const sessionData = JSON.parse(decodedCookie);
+
+      if (sessionData?.user?.role?.id !== 2) {
+        return NextResponse.redirect(new URL(`/${locale}/403`, request.url));
+      }
+    } catch (error) {
+      console.error("Error procesando sesión:", error);
+      const response = NextResponse.redirect(
+        new URL(`/${locale}/login`, request.url)
+      );
+      response.cookies.delete("user-session");
+      return response;
+    }
+  }
+
   const loginPath = `/${locale}/login`;
   const isLoginPage = path === loginPath;
   const searchParams = request.nextUrl.searchParams;

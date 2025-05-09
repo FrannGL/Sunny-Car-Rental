@@ -280,6 +280,11 @@ export default function Header2({
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>
+                    {user?.role.id === 2 && (
+                      <li>
+                        <Link href="/backoffice">Backoffice</Link>
+                      </li>
+                    )}
                   </ul>
                 </nav>
               </div>
