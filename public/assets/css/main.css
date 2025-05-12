@@ -12198,6 +12198,16 @@ a.icon-socials:hover svg path {
 
 .input-calendar {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-calendar .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.input-calendar input {
+  width: 100%;
 }
 
 .input-calendar svg {

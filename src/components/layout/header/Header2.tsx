@@ -281,8 +281,25 @@ export default function Header2({
                       <Link href="/contact">Contact</Link>
                     </li>
                     {user?.role.id === 2 && (
-                      <li>
+                      <li className="menu-item-has-children">
                         <Link href="/backoffice">Backoffice</Link>
+                        <ul className="sub-menu">
+                          <li>
+                            <Link href="/backoffice/cars">Cars</Link>
+                          </li>
+                          <li>
+                            <Link href="/backoffice/rentals">Rentals</Link>
+                          </li>
+                          <li>
+                            <Link href="/backoffice/locations">Locations</Link>
+                          </li>
+                          <li>
+                            <Link href="/backoffice/seasons">Seasons</Link>
+                          </li>
+                          <li>
+                            <Link href="/backoffice/coupons">Coupons</Link>
+                          </li>
+                        </ul>
                       </li>
                     )}
                   </ul>
