@@ -7,28 +7,28 @@ export default function Footer1() {
         <div className="container">
           <div className="footer-top">
             <div className="row align-items-center">
-              <div className="col-lg-5 col-md-6 text-center text-md-start">
+              <div className="col-lg-12 col-md-12 text-center text-md-start">
                 <h5 className="color-white wow fadeInDown">
-                  Subscribe to see secret deals prices drop the moment you sign
-                  up!
+                  Escribenos para recibir atencion personalizada, no lo dudes,
+                  aqui estamos para ti.
                 </h5>
               </div>
-              <div className="col-lg-7 col-md-6 text-center text-md-end mt-md-0 mt-4">
+              {/*     <div className="col-lg-7 col-md-6 text-center text-md-end mt-md-0 mt-4">
                 <div className="d-flex align-items-center justify-content-center justify-content-md-end">
                   <form className="form-newsletter wow fadeInUp" action="#">
                     <input
                       className="form-control"
                       type="text"
-                      placeholder="Enter your email"
+                      placeholder="Email"
                     />
                     <input
                       className="btn btn-brand-2"
                       type="submit"
-                      defaultValue="Subscribe"
+                      defaultValue="Suscribirse"
                     />
                   </form>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* <div className="row">
@@ -102,37 +102,37 @@ export default function Footer1() {
             <div className="container">
               <div className="row">
                 <div className="col-lg-6 mb-30">
-                  <h2 className="text-white mb-25">Get in Touch</h2>
+                  <h2 className="text-white mb-25">Contacto</h2>
                   <div className="form-contact">
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="form-group">
                           <label className="text-sm-medium neutral-1000">
-                            First Name
+                            Nombre
                           </label>
                           <input
                             className="form-control username"
                             type="text"
-                            placeholder="First Name"
+                            placeholder="Jose"
                           />
                         </div>
                       </div>
                       <div className="col-lg-6">
                         <div className="form-group">
                           <label className="text-sm-medium neutral-1000">
-                            First Name
+                            Nombre
                           </label>
                           <input
                             className="form-control username"
                             type="text"
-                            placeholder="Last Name"
+                            placeholder="..."
                           />
                         </div>
                       </div>
                       <div className="col-lg-12">
                         <div className="form-group">
                           <label className="text-sm-medium neutral-1000">
-                            Email Adress
+                            Email
                           </label>
                           <input
                             className="form-control email"
@@ -149,7 +149,7 @@ export default function Footer1() {
                           <input
                             className="form-control phone"
                             type="text"
-                            placeholder="Phone number"
+                            placeholder="+99"
                           />
                         </div>
                       </div>
@@ -161,11 +161,11 @@ export default function Footer1() {
                           <textarea
                             className="form-control"
                             rows={6}
-                            placeholder="Leave us a message..."
+                            placeholder="Mensaje ..."
                           />
                         </div>
                       </div>
-                      <div className="box-remember-forgot">
+                      {/*         <div className="box-remember-forgot">
                         <div className="form-group">
                           <div className="remeber-me">
                             <label className="text-sm-medium neutral-500">
@@ -188,10 +188,10 @@ export default function Footer1() {
                             </label>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-lg-12">
                         <button className="btn btn-book">
-                          Send message
+                          Enviar
                           <svg
                             width={17}
                             height={16}
@@ -214,10 +214,8 @@ export default function Footer1() {
                 </div>
                 <div className="col-lg-6 mb-30">
                   <div className="ps-lg-5">
-                    <h4 className="text-white">Our location</h4>
-                    <p className="neutral-500 mb-30">
-                      Quatre Carreres, 46013 Valencia, España
-                    </p>
+                    <h4 className="text-white">Ubicación</h4>
+                    <p className="neutral-500 mb-30">Valencia, España</p>
                     <iframe
                       className="h-520 rounded-3"
                       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d70000!2d-0.375!3d39.4667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1715000000000!5m2!1sen!2ses"

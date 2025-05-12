@@ -24,24 +24,23 @@ export default function Hero2() {
                 <SwiperSlide>
                   <div className="item-banner-slide banner-1">
                     <div className="container">
-                      <span className="btn background-brand-2 px-3 py-3 rounded-12 text-sm-bold text-dark">
+              {/*         <span className="btn background-brand-2 px-3 py-3 rounded-12 text-sm-bold text-dark">
                         +3600 cars for you
-                      </span>
+                      </span> */}
                       <h1
-                        className="mt-20 color-white"
+                        className="mt-20 color-black"
                         style={{ fontSize: "3.2rem" }}
                       >
-                        Libertad para moverte. Sin romper tu presupuesto
+                        Alquiler de Autos en Valencia
                       </h1>
-                      <h6 className="color-white heading-6-medium pb-lg-0">
-                        Descubre opciones accesibles y confiables para que te
-                        desplaces sin preocupaciones. Compra fácil, rápida y con
-                        asesoría experta en cada paso.
+                      <h6 className="color-black">
+                        Te garantizamos la mejor experiencia de alquiler de
+                        auto, y por sobre todo los mejores precios.
                       </h6>
                     </div>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/*       <SwiperSlide>
                   <div className="item-banner-slide banner-2">
                     <div className="container">
                       <span className="btn background-brand-2 px-3 py-3 rounded-12 text-sm-bold text-dark">
@@ -60,7 +59,7 @@ export default function Hero2() {
                       </h6>
                     </div>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
               </div>
             </Swiper>
           </div>
@@ -71,7 +70,7 @@ export default function Hero2() {
               <div className="box-top-search">
                 <div className="left-top-search">
                   <Link
-                    className="category-link text-sm-bold btn-click active"
+                    className="text-sm-bold btn-click active"
                     href="/booking"
                   >
                     All cars

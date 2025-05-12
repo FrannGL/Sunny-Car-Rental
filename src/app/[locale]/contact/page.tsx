@@ -15,14 +15,14 @@ export default function Contact() {
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
-                <h2 className="text-white">Get in touch</h2>
+                <h2 className="text-white">Contactanos</h2>
               </div>
             </div>
           </div>
           <section className="box-section background-body pt-110">
             <div className="container">
               <div className="text-start">
-                <h4 className="neutral-1000">Our agents worldwide</h4>
+                <h4 className="neutral-1000"></h4>
               </div>
               <div className="row mt-30">
                 <div className="col-lg-3 col-sm-6">
@@ -564,33 +564,10 @@ export default function Contact() {
                           />
                         </div>
                       </div>
-                      <div className="box-remember-forgot">
-                        <div className="form-group">
-                          <div className="remeber-me">
-                            <label className="text-sm-medium neutral-500">
-                              {" "}
-                              <input className="cb-remember" type="checkbox" />
-                              Agree to our{" "}
-                              <Link
-                                className="text-sm-medium neutral-1000"
-                                href="/term"
-                              >
-                                Terms of service{" "}
-                              </Link>
-                              and{" "}
-                              <Link
-                                className="text-sm-medium neutral-1000"
-                                href="/privacy"
-                              >
-                                Privacy Policy
-                              </Link>{" "}
-                            </label>
-                          </div>
-                        </div>
-                      </div>
+
                       <div className="col-lg-12">
                         <button className="btn btn-book">
-                          Send message
+                          Enviar mensaje
                           <svg
                             width={17}
                             height={16}

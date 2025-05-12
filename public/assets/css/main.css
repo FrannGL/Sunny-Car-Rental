@@ -73,13 +73,13 @@ TABLE CONTENT
   --bs-neutral-800: #454545;
   --bs-neutral-900: #313131;
   --bs-neutral-1000: #000000;
-  --bs-button-bg: #70f46d;
+  --bs-button-bg: #FBC02D;
   --bs-button-bg-2: #f2f4f6;
   --bs-button-text: #101010;
   --bs-button-text-2: #000000;
-  --bs-brand-2: #70f46d;
-  --bs-brand-2-dark: #70f46d;
-  --bs-brand-2-darken: #5edd5b;
+  --bs-brand-2: #FBC02D;
+  --bs-brand-2-dark: #FBC02D;
+  --bs-brand-2-darken: #FBC02D;
   --bs-brand-2-light: #2d4a2c;
   --bs-link-hover-color: #235922;
   --bs-brand-1: #8acfff;
@@ -1068,7 +1068,8 @@ p {
 }
 
 .background-brand-2 {
-  background-color: var(--bs-brand-2) !important;
+  /* background-color: var(--bs-brand-2) !important; */
+  background-color: linear-gradient(135deg, #FFF9C4, #FFEB3B, #FBC02D, #FFA000, #FF6F00);
 }
 
 .button-bg-2 {
@@ -1423,7 +1424,9 @@ p {
 }
 
 .background-brand-2 {
-  background-color: var(--bs-brand-2) !important;
+
+  /* background-color: var(--bs-brand-2) !important; */
+background: linear-gradient(135deg, #FFF9C4, #FFEB3B, #FBC02D, #FFA000, #FF6F00);
 }
 
 /*Datepick style*/
@@ -1736,7 +1739,7 @@ body {
 
 .btn {
   font-family: var(--urbanist);
-  border-radius: 0px;
+  border-radius: 8px!important;
   padding: 16px 32px;
   font-size: 18px;
   line-height: 1;
@@ -1923,7 +1926,7 @@ body {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  background-color: var(--bs-brand-2);
+  background: linear-gradient(135deg, #FFF9C4, #FFEB3B, #FBC02D, #FFA000, #FF6F00);
   border-radius: 12px;
   color: var(--bs-color-1000) !important;
   display: flex;
@@ -9701,8 +9704,8 @@ a.icon-socials:hover svg path {
 }
 
 .item-banner-slide-review {
-  background-image: url(../imgs/blog/blog-grid/img-1.png);
-  min-height: 504px;
+  background-image: url(../imgs/hero/hero-2/group-of-young-multiethnic-friends-travelling-2024-10-18-03-56-10-utc.jpg);
+  min-height: 604px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11313,7 +11316,7 @@ a.icon-socials:hover svg path {
 }
 
 .box-banner-home7 .item-banner-slide.banner-1 {
-  background: url(../imgs/hero/hero-2/banner.png) lightgray 50% / cover
+  background: url(../imgs/hero/hero-2/envato-labs-image-edit.jpg) lightgray 50% / cover
     no-repeat;
 }
 
