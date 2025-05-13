@@ -280,7 +280,7 @@ export default function Header2({
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>
-                    {user?.role.id === 2 && (
+                    {user?.role?.id === 2 && (
                       <li className="menu-item-has-children">
                         <Link href="/backoffice">Backoffice</Link>
                         <ul className="sub-menu">
