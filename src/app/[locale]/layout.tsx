@@ -1,6 +1,6 @@
 import { routing } from "@/src/i18n/routing";
 import { hasLocale } from "next-intl";
-import { Urbanist } from "next/font/google";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -8,10 +8,9 @@ import "@/node_modules/react-modal-video/css/modal-video.css";
 import Providers from "../Providers";
 import "/public/assets/css/main.css";
 
-const urbanist = Urbanist({
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--urbanist",
+  variable: "--inter",
   display: "swap",
 });
 
@@ -35,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${urbanist.variable}`}>
+      <body className={`${inter.variable}`}>
         <Providers locale={locale}>{children}</Providers>
       </body>
     </html>
