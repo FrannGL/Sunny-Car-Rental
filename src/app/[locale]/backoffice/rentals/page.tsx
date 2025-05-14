@@ -88,10 +88,16 @@ const RentalTable = () => {
     try {
       if (currentRental) {
         await updateRental({ id: currentRental.id, data });
-        toast.success("Renta actualizada");
+        toast.success("Renta actualizada correctamente!", {
+          duration: 3000,
+          style: { backgroundColor: "#28a745", color: "#fff" },
+        });
       } else {
         await createRental(data);
-        toast.success("Renta creada");
+        toast.success("Renta creada correctamente!", {
+          duration: 3000,
+          style: { backgroundColor: "#28a745", color: "#fff" },
+        });
       }
       handleCloseModal();
     } catch (err: any) {
@@ -129,6 +135,9 @@ const RentalTable = () => {
                 <th>Inicio</th>
                 <th>Fin</th>
                 <th>Método de Pago</th>
+                <th>Tipo de Entrega</th>
+                <th>Origen</th>
+                <th>Código</th>
                 <th>Estado</th>
                 <th>Precio total</th>
                 <th>Acciones</th>
@@ -149,6 +158,19 @@ const RentalTable = () => {
                     <td>{new Date(rental.start_date).toLocaleDateString()}</td>
                     <td>{new Date(rental.end_date).toLocaleDateString()}</td>
                     <td>{rental.payment_method.toUpperCase()}</td>
+                    <td>
+                      <Badge bg="info">
+                        {rental.delivery_type.toUpperCase()}
+                      </Badge>
+                    </td>
+                    <td>
+                      <Badge bg="secondary">
+                        {rental.rented_by.toUpperCase()}
+                      </Badge>
+                    </td>
+                    <td>
+                      <Badge bg="dark">{rental.reserve_code}</Badge>
+                    </td>
                     <td>
                       <Badge bg={statusVariant(rental.status)}>
                         {rental.status.toUpperCase()}

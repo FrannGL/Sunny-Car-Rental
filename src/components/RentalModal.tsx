@@ -4,6 +4,7 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RentalSchemaType, RentalSchema } from "../schemas/rental.schema";
 import MyDatePicker from "./elements/MyDatePicker";
+import { useLocations } from "../hooks/useLocations";
 
 type Mode = "create" | "edit";
 
@@ -37,6 +38,10 @@ const RentalModal: React.FC<RentalModalProps> = ({
     mode: "onChange",
   });
 
+  console.log(errors);
+
+  const { locations } = useLocations();
+
   useEffect(() => {
     if (defaultValues) {
       const values = { ...defaultValues };
@@ -69,7 +74,7 @@ const RentalModal: React.FC<RentalModalProps> = ({
               <Form.Group className="mb-2">
                 <Form.Label>Car ID</Form.Label>
                 <Form.Control
-                  {...register("car_id")}
+                  {...register("car_id", { valueAsNumber: true })}
                   isInvalid={!!errors.car_id}
                   type="number"
                 />
@@ -83,7 +88,7 @@ const RentalModal: React.FC<RentalModalProps> = ({
               <Form.Group className="mb-2">
                 <Form.Label>User ID</Form.Label>
                 <Form.Control
-                  {...register("user_id")}
+                  {...register("user_id", { valueAsNumber: true })}
                   isInvalid={!!errors.user_id}
                   type="number"
                 />
@@ -98,11 +103,56 @@ const RentalModal: React.FC<RentalModalProps> = ({
                 <Form.Label>Total a pagar</Form.Label>
                 <Form.Control
                   type="number"
-                  {...register("total_price")}
+                  {...register("total_price", { valueAsNumber: true })}
                   isInvalid={!!errors.total_price}
                 />
                 <Form.Control.Feedback type="invalid">
                   {errors.total_price?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Tipo de Entrega</Form.Label>
+                <Form.Select
+                  {...register("delivery_type")}
+                  isInvalid={!!errors.delivery_type}
+                >
+                  <option value="">Selecciona tipo de entrega</option>
+                  <option value="physical">Física</option>
+                </Form.Select>
+                <Form.Control.Feedback type="invalid">
+                  {errors.delivery_type?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Origen de Renta</Form.Label>
+                <Form.Select
+                  {...register("rented_by")}
+                  isInvalid={!!errors.rented_by}
+                >
+                  <option value="">Selecciona origen</option>
+                  <option value="web">Web</option>
+                </Form.Select>
+                <Form.Control.Feedback type="invalid">
+                  {errors.rented_by?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Código de Reserva</Form.Label>
+                <Form.Control
+                  {...register("reserve_code")}
+                  isInvalid={!!errors.reserve_code}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.reserve_code?.message}
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
@@ -122,6 +172,7 @@ const RentalModal: React.FC<RentalModalProps> = ({
                         <>
                           <MyDatePicker
                             form
+                            disablePastDays
                             value={dateValue}
                             onChange={(date: Date | null) =>
                               field.onChange(date ? date.toISOString() : "")
@@ -167,8 +218,11 @@ const RentalModal: React.FC<RentalModalProps> = ({
                         <>
                           <MyDatePicker
                             form
+                            disablePastDays
                             value={dateValue}
-                            onChange={field.onChange}
+                            onChange={(date: Date | null) =>
+                              field.onChange(date ? date.toISOString() : "")
+                            }
                           />
                           <svg
                             width={18}
@@ -230,7 +284,7 @@ const RentalModal: React.FC<RentalModalProps> = ({
                 <Form.Label>Licencia del conductor</Form.Label>
                 <Form.Control
                   type="number"
-                  {...register("driver_lic")}
+                  {...register("driver_lic", { valueAsNumber: true })}
                   isInvalid={!!errors.driver_lic}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -270,7 +324,7 @@ const RentalModal: React.FC<RentalModalProps> = ({
                 <Form.Label>Licencia conductor adicional</Form.Label>
                 <Form.Control
                   type="number"
-                  {...register("ad_driver_lic")}
+                  {...register("ad_driver_lic", { valueAsNumber: true })}
                   isInvalid={!!errors.ad_driver_lic}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -314,24 +368,37 @@ const RentalModal: React.FC<RentalModalProps> = ({
             <Col md={4}>
               <Form.Group className="mb-2">
                 <Form.Label>Ubicación de recogida</Form.Label>
-                <Form.Control
-                  type="number"
-                  {...register("pickup_location_id")}
+                <Form.Select
+                  {...register("pickup_location_id", { valueAsNumber: true })}
                   isInvalid={!!errors.pickup_location_id}
-                />
+                >
+                  <option value="">Selecciona ubicación</option>
+                  {locations.map((loc) => (
+                    <option key={loc.id} value={loc.id}>
+                      {loc.name}
+                    </option>
+                  ))}
+                </Form.Select>
                 <Form.Control.Feedback type="invalid">
                   {errors.pickup_location_id?.message}
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
+
             <Col md={4}>
               <Form.Group className="mb-2">
                 <Form.Label>Ubicación de entrega</Form.Label>
-                <Form.Control
-                  type="number"
-                  {...register("return_location_id")}
+                <Form.Select
+                  {...register("return_location_id", { valueAsNumber: true })}
                   isInvalid={!!errors.return_location_id}
-                />
+                >
+                  <option value="">Selecciona ubicación</option>
+                  {locations.map((loc) => (
+                    <option key={loc.id} value={loc.id}>
+                      {loc.name}
+                    </option>
+                  ))}
+                </Form.Select>
                 <Form.Control.Feedback type="invalid">
                   {errors.return_location_id?.message}
                 </Form.Control.Feedback>

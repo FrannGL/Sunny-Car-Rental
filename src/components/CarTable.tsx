@@ -152,7 +152,7 @@ const CarTable = () => {
   return (
     <Container fluid className="py-4">
       <div className="d-flex justify-content-center">
-        <div className="w-100" style={{ maxWidth: "1200px" }}>
+        <div className="w-100" style={{ maxWidth: "1400px" }}>
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h2>Vehículos</h2>
             <Button
@@ -182,16 +182,19 @@ const CarTable = () => {
                 <th>Estado</th>
                 <th>Precio/día</th>
                 <th>Gama</th>
+                <th>Transmisión</th>
+                <th>Pasajeros</th>
+                <th>Equipaje</th>
+                <th>Kilometraje</th>
+                <th>Código</th>
                 <th>Ubicación</th>
-                <th>Creado</th>
-                <th>Actualizado</th>
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
               {cars.length === 0 ? (
                 <tr>
-                  <td colSpan={11} className="text-center text-muted py-4">
+                  <td colSpan={14} className="text-center text-muted py-4">
                     No hay autos registrados
                   </td>
                 </tr>
@@ -217,9 +220,28 @@ const CarTable = () => {
                         {car.gama.toUpperCase()}
                       </Badge>
                     </td>
+                    <td>
+                      <Badge bg="info">{car.transmission.toUpperCase()}</Badge>
+                    </td>
+                    <td>
+                      <Badge bg="secondary">
+                        {car.passenger_capacity} PASAJEROS
+                      </Badge>
+                    </td>
+                    <td>
+                      <Badge bg="secondary">
+                        {car.luggage_capacity} MALETAS
+                      </Badge>
+                    </td>
+                    <td>
+                      <Badge bg={car.unlimited_mileage ? "success" : "warning"}>
+                        {car.unlimited_mileage ? "ILIMITADO" : "LIMITADO"}
+                      </Badge>
+                    </td>
+                    <td>
+                      <Badge bg="dark">{car.car_code}</Badge>
+                    </td>
                     <td>{car.location?.name || "N/A"}</td>
-                    <td>{new Date(car.created_at).toLocaleDateString()}</td>
-                    <td>{new Date(car.updated_at).toLocaleDateString()}</td>
                     <td>
                       <Stack
                         direction="horizontal"

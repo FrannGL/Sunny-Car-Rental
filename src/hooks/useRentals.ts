@@ -7,17 +7,18 @@ export const useRentals = () => {
   const queryClient = useQueryClient();
 
   const fetchRentals = async (): Promise<Rental[]> => {
-    const res = await request("rentals/", "GET");
+    const res = await request("rentals", "GET");
     if (res.status !== 200)
       throw new Error(res.error || "Error al obtener rentas");
     return res.data;
   };
 
   const createRental = async (data: RentalSchemaType): Promise<Rental> => {
-    const res = await request("rentals/", "POST", data);
-    if (res.status !== 201)
+    const res = await request("rentals", "POST", data);
+    if (res.error) {
       throw new Error(res.error || "Error al crear la renta");
-    return res.data;
+    }
+    return res.data || res;
   };
 
   const updateRental = async ({

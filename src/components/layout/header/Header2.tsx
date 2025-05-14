@@ -282,7 +282,7 @@ export default function Header2({
                     </li>
                     {user?.role?.id === 2 && (
                       <li className="menu-item-has-children">
-                        <Link href="/backoffice">Backoffice</Link>
+                        <Link href="#">Backoffice</Link>
                         <ul className="sub-menu">
                           <li>
                             <Link href="/backoffice/cars">Cars</Link>

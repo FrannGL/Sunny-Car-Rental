@@ -1,3 +1,7 @@
+import { Location } from "./locations";
+import { Car } from "./car";
+import { User } from "./user";
+
 export interface Rental {
   id: number;
   car_id: number;
@@ -12,6 +16,9 @@ export interface Rental {
   ad_driver: string | null;
   ad_driver_lic: number | null;
   with_gas: boolean;
+  delivery_type: "physical" | string;
+  rented_by: "web" | string;
+  reserve_code: string;
   total_price: number;
   status: "active" | "completed" | "cancelled" | string;
   created_at: string;

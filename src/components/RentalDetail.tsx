@@ -33,17 +33,6 @@ const RentalDetail = ({ onHide, rental, show }: RentalDetailProps) => {
         <Container>
           <Row className="mb-3">
             <Col sm={6}>
-              <strong>ID:</strong> {rental.id}
-            </Col>
-            <Col sm={6}>
-              <strong>Vehículo:</strong> {rental.car_id}
-            </Col>
-          </Row>
-          <Row className="mb-3">
-            <Col sm={6}>
-              <strong>Cliente:</strong> {rental.user_id}
-            </Col>
-            <Col sm={6}>
               <strong>Inicio:</strong>{" "}
               {new Date(rental.start_date).toLocaleDateString()}
             </Col>
@@ -54,16 +43,26 @@ const RentalDetail = ({ onHide, rental, show }: RentalDetailProps) => {
               {new Date(rental.end_date).toLocaleDateString()}
             </Col>
             <Col sm={6}>
-              <strong>Método de Pago:</strong> {rental.payment_method}
+              <strong>Método de Pago:</strong>{" "}
+              <Badge bg="info">{rental.payment_method.toUpperCase()}</Badge>
             </Col>
           </Row>
           <Row className="mb-3">
             <Col sm={6}>
-              <strong>Con Conductor:</strong> {rental.driver ? "Sí" : "No"}
+              <strong>Conductor:</strong> {rental.driver}
             </Col>
             <Col sm={6}>
-              <strong>Licencia de Conductor:</strong>{" "}
-              {rental.driver_lic || "N/A"}
+              <strong>Licencia:</strong>{" "}
+              <Badge bg="dark">{rental.driver_lic || "N/A"}</Badge>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col sm={6}>
+              <strong>Conductor Adicional:</strong> {rental.ad_driver || "No"}
+            </Col>
+            <Col sm={6}>
+              <strong>Licencia Adicional:</strong>{" "}
+              <Badge bg="dark">{rental.ad_driver_lic || "N/A"}</Badge>
             </Col>
           </Row>
           <Row className="mb-3">
@@ -77,13 +76,31 @@ const RentalDetail = ({ onHide, rental, show }: RentalDetailProps) => {
           </Row>
           <Row className="mb-3">
             <Col sm={6}>
-              <strong>Con Gas:</strong> {rental.with_gas ? "Sí" : "No"}
+              <strong>Con Gas:</strong>{" "}
+              <Badge bg={rental.with_gas ? "success" : "danger"}>
+                {rental.with_gas ? "SÍ" : "NO"}
+              </Badge>
             </Col>
             <Col sm={6}>
-              <strong>Precio Total:</strong> ${rental.total_price}
+              <strong>Precio Total:</strong>{" "}
+              <Badge bg="success">${rental.total_price}</Badge>
             </Col>
           </Row>
           <Row className="mb-3">
+            <Col sm={6}>
+              <strong>Tipo de Entrega:</strong>{" "}
+              <Badge bg="info">{rental.delivery_type.toUpperCase()}</Badge>
+            </Col>
+            <Col sm={6}>
+              <strong>Origen de Renta:</strong>{" "}
+              <Badge bg="secondary">{rental.rented_by.toUpperCase()}</Badge>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col sm={6}>
+              <strong>Código de Reserva:</strong>{" "}
+              <Badge bg="dark">{rental.reserve_code}</Badge>
+            </Col>
             <Col sm={6}>
               <strong>Estado:</strong>{" "}
               <Badge
@@ -97,16 +114,6 @@ const RentalDetail = ({ onHide, rental, show }: RentalDetailProps) => {
               >
                 {rental.status.toUpperCase()}
               </Badge>
-            </Col>
-            <Col sm={6}>
-              <strong>Ubicación de Recogida:</strong>{" "}
-              {rental.pickup_location_id || "No especificada"}
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={6}>
-              <strong>Ubicación de Retorno:</strong>{" "}
-              {rental.return_location_id || "No especificada"}
             </Col>
           </Row>
         </Container>
