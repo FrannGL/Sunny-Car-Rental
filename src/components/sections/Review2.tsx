@@ -1,36 +1,53 @@
-'use client'
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "@/src/i18n/navigation";
-import { swiperGroup1 } from '@/src/util/swiperOptions'
+import { swiperGroup1 } from "@/src/util/swiperOptions";
 
 export default function Review2() {
-	return (
-		<>
-
-			<section className="background-body pt-80 pb-50">
-				<div className="container">
-					<div className="box-swiper">
-						<Swiper {...swiperGroup1} className="swiper-container swiper-group-1 position-relative">
-							<div className="swiper-wrapper">
-								<SwiperSlide>
-									<div className="item-banner-slide-review d-flex align-items-center rounded-12">
-										<div className="ps-md-5 ps-2 position-relative z-1">
-											<span className="text-primary text-md-bold">Sunny Rental Cars</span>
-											<h3 className="mt-20 mb-20 color-white">
-												De Valencia y hasta<br className="d-none d-md-block" />
-												Alicante, conocelo en 4 ruedas
-											</h3>
-											<p className="text-lg-medium color-white">The Tucson Plug-in Hybrid is easy to drive and provides a sufficient all-electric range.</p>
-											<Link href="#" className="btn btn-primary mt-30">
-												Ver Rentals
-												<svg xmlns="http://www.w3.org/2000/svg" width={24} height={25} viewBox="0 0 24 25" fill="none">
-													<path d="M12 19.5L19 12.5L12 5.5M19 12.5L5 12.5" stroke="#101010" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-												</svg>
-											</Link>
-										</div>
-									</div>
-								</SwiperSlide>
-				{/* 				<SwiperSlide>
+  return (
+    <>
+      <section className="background-body pt-80 pb-50">
+        <div className="container">
+          <div className="box-swiper">
+            <Swiper
+              {...swiperGroup1}
+              className="swiper-container swiper-group-1 position-relative"
+            >
+              <div className="swiper-wrapper">
+                <SwiperSlide>
+                  <div className="item-banner-slide-review d-flex align-items-center rounded-12">
+                    <div className="ps-md-5 ps-2 position-relative z-1">
+                      <span className="text-primary text-md-bold">
+                        Sunny Rental Cars
+                      </span>
+                      <h3 className="mt-20 mb-20 color-white">
+                        Recorre en 4 ruedas
+                        <br className="d-none d-md-block" />
+                        De Valencia y hastaAlicante
+                      </h3>
+                      
+                    {/*   <Link href="#" className="btn btn-primary mt-30">
+                        Ver Rentals
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={24}
+                          height={25}
+                          viewBox="0 0 24 25"
+                          fill="none"
+                        >
+                          <path
+                            d="M12 19.5L19 12.5L12 5.5M19 12.5L5 12.5"
+                            stroke="#101010"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </Link> */}
+                    </div>
+                  </div>
+                </SwiperSlide>
+                {/* 				<SwiperSlide>
 									<div className="item-banner-slide-review banner-3 d-flex align-items-center rounded-12">
 										<div className="ps-md-5 ps-2 position-relative z-1">
 											<span className="text-primary text-md-bold">CAR REVIEW</span>
@@ -48,8 +65,8 @@ export default function Review2() {
 										</div>
 									</div>
 								</SwiperSlide> */}
-							</div>
-					{/* 		<div className="position-absolute end-0 bottom-0 p-40">
+              </div>
+              {/* 		<div className="position-absolute end-0 bottom-0 p-40">
 								<div className="box-button-slider box-button-slider-team justify-content-end">
 									<div className="swiper-button-prev swiper-button-prev-style-1 swiper-button-prev-2" tabIndex={0} role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-9c1b729b91027a37b">
 										<svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 16 16" fill="none">
@@ -63,10 +80,10 @@ export default function Review2() {
 									</div>
 								</div>
 							</div> */}
-						</Swiper>
-					</div>
-				</div>
-			</section>
-		</>
-	)
+            </Swiper>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

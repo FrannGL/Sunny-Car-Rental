@@ -21,8 +21,8 @@ export default function AboutUs() {
             <div className="custom-container position-relative mx-auto">
               <div className="bg-overlay rounded-12 overflow-hidden">
                 <img
-                  className="w-100 h-100 img-banner"
-                  src="/assets/imgs/page-header/banner.png"
+                  className="w-100 h-200 img-banner"
+                  src="/assets/imgs/hero/hero-2/lady-in-a-suit-gives-keys-to-her-customer-2025-03-07-12-45-30-utc.jpg"
                   alt="Sunny Car Rental"
                 />
               </div>
@@ -54,9 +54,9 @@ export default function AboutUs() {
               <div className="row pb-50">
                 <div className="col-lg-4">
                   <h3 className="neutral-1000">
-                    The Future of <br />
-                    <span className="text-primary">Car Rental</span>
-                    is Here
+                    Rent with
+                    <br />
+                    <span className="text-primary">Sunny Rental Car</span>
                   </h3>
                 </div>
                 <div className="col-lg-7 offset-lg-1">
@@ -70,7 +70,7 @@ export default function AboutUs() {
                   </p>
                 </div>
               </div>
-              <div className="row g-4">
+              {/* <div className="row g-4">
                 <div className="col-lg-4 col-md-6">
                   <div className="box-image rounded-12 position-relative overflow-hidden">
                     <img
@@ -112,7 +112,7 @@ export default function AboutUs() {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="container pt-96">
               <div className="row mt-40">
@@ -274,7 +274,7 @@ export default function AboutUs() {
             </div>
           </section>
           {/* team 1 */}
-          <section className="section-team-1 py-96 background-body border-top border-bottom">
+          {/*     <section className="section-team-1 py-96 background-body border-top border-bottom">
             <div className="container">
               <div className="row align-items-center justify-content-center">
                 <div className="col-xl-6 col-lg-7 col-md-9 col-sm-11">
@@ -615,7 +615,7 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* cta 8*/}
           <section className="section-cta-7 background-body py-96">
             <div className="box-cta-6">
@@ -724,7 +724,7 @@ export default function AboutUs() {
                 <div>
                   <div className="wow fadeIn">
                     <div className="d-flex align-items-center justify-content-around flex-wrap">
-                      <div className="mb-4 mb-lg-0 d-block px-lg-5 px-3">
+                      {/*       <div className="mb-4 mb-lg-0 d-block px-lg-5 px-3">
                         <div className="d-flex justify-content-center justify-content-md-start">
                           <h3 className="count neutral-1000">
                             <CounterUp count={45} />
@@ -751,7 +751,7 @@ export default function AboutUs() {
                             Collaboration
                           </p>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="mb-4 mb-lg-0 d-block px-lg-5 px-3">
                         <div className="d-flex justify-content-center justify-content-md-start">
                           <h3 className="count neutral-1000">
@@ -778,7 +778,7 @@ export default function AboutUs() {
                           <p className="text-lg-bold neutral-1000">Customers</p>
                         </div>
                       </div>
-                      <div className="mb-4 mb-lg-0 d-block px-lg-5 px-3">
+                      {/*     <div className="mb-4 mb-lg-0 d-block px-lg-5 px-3">
                         <div className="d-flex justify-content-center justify-content-md-start">
                           <h3 className="count neutral-1000">
                             <CounterUp count={15} />
@@ -789,7 +789,7 @@ export default function AboutUs() {
                           <p className="text-lg-bold neutral-1000">User</p>
                           <p className="text-lg-bold neutral-1000">Account</p>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -880,7 +880,7 @@ export default function AboutUs() {
             </div>
           </section>
           {/* testimonials */}
-          <section className="section-box py-96 background-body">
+          {/*   <section className="section-box py-96 background-body">
             <div className="container">
               <div className="row">
                 <div className="col-auto mx-auto wow fadeInUp text-center d-flex flex-column align-items-center justify-content-center">
@@ -1158,7 +1158,7 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* faqs 1 */}
           <section className="section-box box-faqs background-body pt-0">
             <div className="box-faqs-inner">
@@ -1427,7 +1427,7 @@ export default function AboutUs() {
             </div>
           </section>
           {/* blog-1 */}
-          <section className="section-box box-news background-body">
+          {/*     <section className="section-box box-news background-body">
             <div className="container">
               <div className="row align-items-end">
                 <div className="col-md-9 mb-30 wow fadeInUp">
@@ -1742,7 +1742,7 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           <ModalVideo
             channel="youtube"
             isOpen={isOpen}

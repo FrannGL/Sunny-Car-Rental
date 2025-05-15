@@ -150,32 +150,20 @@ export default function Header2({
         <div className="container-fluid background-body">
           <div className="main-header">
             <div className="header-left">
-              <div className="header-logo">
-                <Link className="d-flex" href="/">
-                  <Image
-                    alt="Sunny Rental Cars"
-                    src="/assets/imgs/app/app-1/logo.svg"
-                    width={120}
-                    height={100}
-                  />
-                  {/* <img
-                    className="light-mode"
-                    alt="Sunny Rental Cars"
-                    src="/assets/imgs/app/app-1/logo.svg"
-                    width={200}
-                    height={100}
-                  />
-                  <img
-                    className="dark-mode"
-                    alt="Sunny Rental Cars"
-                    src="/assets/imgs/app/app-1/logo.svg"
-                    width={200}
-                    height={100}
-                  /> */}
-                </Link>
-              </div>
+              {pathname !== "/" && (
+                <div className="header-logo">
+                  <Link className="d-flex" href="/">
+                    <Image
+                      alt="Sunny Rental Cars"
+                      src="/assets/imgs/logo.png"
+                      width={120}
+                      height={100}
+                    />
+                  </Link>
+                </div>
+              )}
               <div className="header-nav">
-                <nav className="nav-main-menu">
+                <nav className={`nav-main-menu ${pathname === "/" ? "justify-content-start" : ""}`}>
                   <ul className="main-menu">
                     {/* <li className="has-children">
                       <Link href="#">Home</Link>

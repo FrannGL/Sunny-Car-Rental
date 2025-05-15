@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Icon } from "@iconify/react";
 import HeroSearch from "../elements/HeroSearch";
+import Image from "next/image";
 
 export default function Hero2() {
   return (
@@ -24,18 +25,35 @@ export default function Hero2() {
                 <SwiperSlide>
                   <div className="item-banner-slide banner-1">
                     <div className="container">
-              {/*         <span className="btn background-brand-2 px-3 py-3 rounded-12 text-sm-bold text-dark">
-                        +3600 cars for you
-                      </span> */}
+                      <div className="container d-flex justify-content-center">
+                        <Link className="d-flex" href="/">
+                          <img
+                            alt="Sunny Rental Cars"
+                            src="/assets/imgs/logo.png"
+                            width="220px"
+                            height="auto"
+                          />
+                        </Link>
+                      </div>
                       <h1
-                        className="mt-20 color-black"
-                        style={{ fontSize: "3.2rem" }}
+                        className="mt-20"
+                        style={{ 
+                          fontSize: "3.2rem",
+                          color: "white",
+                          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 3px #FFD700, 0 0 5px #FFD700"
+                        }}
                       >
-                        Alquiler de Autos en Valencia
+                        Alquiler de autos en Valencia y Alicante – Low Cost y
+                        sin sorpresas
                       </h1>
-                      <h6 className="color-black">
-                        Te garantizamos la mejor experiencia de alquiler de
-                        auto, y por sobre todo los mejores precios.
+                      <h6 
+                        style={{ 
+                          color: "white",
+                          textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 2px #FFD700"
+                        }}
+                      >
+                        Reserva online tu coche al mejor precio. Sin cargos
+                        ocultos, sin complicaciones.
                       </h6>
                     </div>
                   </div>
@@ -66,17 +84,26 @@ export default function Hero2() {
         </div>
         <div className="container-search-advance">
           <div className="container">
-            <div className="box-search-advance background-card wow fadeInUp mb-5">
-              <div className="box-top-search">
-                <div className="left-top-search">
+            <div
+              className="box-search-advance wow fadeInUp mb-5"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0)", border: "none" }}
+            >
+              <div
+                className="box-top-search"
+                style={{
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
+                  color: "white",
+                }}
+              >
+                {/*       <div className="left-top-search">
                   <Link
                     className="text-sm-bold btn-click active"
                     href="/booking"
                   >
                     All cars
                   </Link>
-                </div>
-                <div className="right-top-search d-none d-md-flex">
+                </div> */}
+                {/*           <div className="right-top-search d-none d-md-flex">
                   <Link
                     className="text-sm-medium d-flex align-items-center gap-2"
                     href="https://wa.me/1234567890"
@@ -91,7 +118,7 @@ export default function Hero2() {
                     />
                     <span className="d-none d-lg-inline">Need Help?</span>
                   </Link>
-                </div>
+                </div> */}
               </div>
               <HeroSearch />
             </div>

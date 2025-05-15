@@ -3,6 +3,8 @@ export default function WhyUs1({ cls }: any) {
     <>
       <section className={`section-box box-why-book-22 background-body ${cls}`}>
         <div className="container">
+          <br />
+          <br />
           <div className="text-center wow fadeInUp">
             <p className="text-xl-medium neutral-500 wow fadeInUp">
               ¿Cómo funciona?
@@ -12,6 +14,8 @@ export default function WhyUs1({ cls }: any) {
               funciona de la siguiente manera
             </h3>
           </div>
+          <br />
+          <br />
           <div className="row mt-40">
             <div className="col-lg-3 col-sm-6">
               <div className="card-why wow fadeIn" data-wow-delay="0.1s">
