@@ -36,21 +36,23 @@ export default function Hero2() {
                         </Link>
                       </div>
                       <h1
-                        className="mt-20"
-                        style={{ 
+                        className="mt-20 subtitle-padding"
+                        style={{
                           fontSize: "3.2rem",
                           color: "white",
-                          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 3px #FFD700, 0 0 5px #FFD700"
+                          textShadow:
+                            "2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 3px #FFD700, 0 0 5px #FFD700",
                         }}
                       >
-                        Alquiler de autos en Valencia y Alicante – Low Cost y
-                        sin sorpresas
+                        Alquilá tu auto en Valencia o Alicante, Low Cost
                       </h1>
-                      <h6 
-                        style={{ 
+                      <h6
+                        style={{
                           color: "white",
-                          textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 2px #FFD700"
+                          textShadow:
+                            "1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 2px #FFD700",
                         }}
+                        className="subtitle-padding"
                       >
                         Reserva online tu coche al mejor precio. Sin cargos
                         ocultos, sin complicaciones.

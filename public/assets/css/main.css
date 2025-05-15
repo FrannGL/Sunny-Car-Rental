@@ -9499,6 +9499,12 @@ a.icon-socials:hover svg path {
   z-index: 12;
 }
 
+@media (max-width: 768px) {
+  .container-search-advance {
+    top: -220px !important;
+  }
+}
+
 .container-search-advance .box-search-advance {
   top: 0px;
 }
@@ -11296,7 +11302,7 @@ a.icon-socials:hover svg path {
 }
 
 .box-banner-home7 .item-banner-slide {
-  min-height: 85vh;
+  min-height: 25vh;
   position: relative;
   background-position: top center;
   background-repeat: no-repeat;
@@ -14410,3 +14416,9 @@ a.icon-socials:hover svg path {
   background-color: var(--bs-brand-2) !important;
 }
 /*# sourceMappingURL=main.css.map */
+
+@media (max-width: 768px) {
+  .subtitle-padding {
+    display: none !important;
+  }
+}
