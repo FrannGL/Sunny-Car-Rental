@@ -181,6 +181,7 @@ const CarModal: React.FC<CarModalProps> = ({
                 <Form.Label>Precio por día</Form.Label>
                 <Form.Control
                   type="number"
+                  step="0.01"
                   {...register("price_per_day", { valueAsNumber: true })}
                   isInvalid={!!errors.price_per_day}
                 />
@@ -232,6 +233,79 @@ const CarModal: React.FC<CarModalProps> = ({
                 </Form.Select>
                 <Form.Control.Feedback type="invalid">
                   {errors.location?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Transmisión</Form.Label>
+                <Form.Select
+                  {...register("transmission")}
+                  isInvalid={!!errors.transmission}
+                >
+                  <option value="">Selecciona transmisión</option>
+                  <option value="manual">Manual</option>
+                  <option value="automatic">Automática</option>
+                </Form.Select>
+                <Form.Control.Feedback type="invalid">
+                  {errors.transmission?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Capacidad de pasajeros</Form.Label>
+                <Form.Control
+                  type="number"
+                  {...register("passenger_capacity", { valueAsNumber: true })}
+                  isInvalid={!!errors.passenger_capacity}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.passenger_capacity?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Capacidad de equipaje</Form.Label>
+                <Form.Control
+                  type="number"
+                  {...register("luggage_capacity", { valueAsNumber: true })}
+                  isInvalid={!!errors.luggage_capacity}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.luggage_capacity?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Kilometraje</Form.Label>
+                <Form.Check
+                  type="checkbox"
+                  label="Kilometraje ilimitado"
+                  {...register("unlimited_mileage")}
+                  isInvalid={!!errors.unlimited_mileage}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.unlimited_mileage?.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+
+            <Col md={4}>
+              <Form.Group className="mb-2">
+                <Form.Label>Código del vehículo</Form.Label>
+                <Form.Control
+                  {...register("car_code")}
+                  isInvalid={!!errors.car_code}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.car_code?.message}
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
