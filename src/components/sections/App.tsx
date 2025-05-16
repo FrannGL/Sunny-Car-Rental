@@ -1,6 +1,13 @@
 import { Link } from "@/src/i18n/navigation";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCarCrash, faPeopleArrows, faCreditCard, faBabyCarriage, faUserPlus, faRoad } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCarCrash,
+  faPeopleArrows,
+  faCreditCard,
+  faBabyCarriage,
+  faUserPlus,
+  faRoad,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function App() {
   return (
@@ -13,12 +20,28 @@ export default function App() {
               <h2 className="section-title">Preguntas Frecuentes</h2>
             </div>
           </div>
+          <br />
+          <br />
           <div className="row g-4">
             <div className="col-md-4">
               <div className="faq-card p-4 h-100">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <div className="mb-3" style={{ width: '32px', height: '32px' }}>
-                    <FontAwesomeIcon icon={faCarCrash} size="1x" className="text-primary" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{ width: "32px", height: "32px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCarCrash}
+                      size="1x"
+                      className="text-primary"
+                    />
                   </div>
                   <h3 className="h5 mb-0">Protección del Vehículo</h3>
                 </div>
@@ -30,9 +53,23 @@ export default function App() {
             </div>
             <div className="col-md-4">
               <div className="faq-card p-4 h-100">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <div className="mb-3" style={{ width: '32px', height: '32px' }}>
-                    <FontAwesomeIcon icon={faPeopleArrows} size="1x" className="text-primary" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{ width: "32px", height: "32px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faPeopleArrows}
+                      size="1x"
+                      className="text-primary"
+                    />
                   </div>
                   <h3 className="h5 mb-0">Protección Contra Terceros</h3>
                 </div>
@@ -44,9 +81,23 @@ export default function App() {
             </div>
             <div className="col-md-4">
               <div className="faq-card p-4 h-100">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <div className="mb-3" style={{ width: '32px', height: '32px' }}>
-                    <FontAwesomeIcon icon={faCreditCard} size="1x" className="text-primary" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{ width: "32px", height: "32px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCreditCard}
+                      size="1x"
+                      className="text-primary"
+                    />
                   </div>
                   <h3 className="h5 mb-0">Depósito de Garantía</h3>
                 </div>
@@ -58,9 +109,23 @@ export default function App() {
             </div>
             <div className="col-md-4">
               <div className="faq-card p-4 h-100">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <div className="mb-3" style={{ width: '32px', height: '32px' }}>
-                    <FontAwesomeIcon icon={faBabyCarriage} size="1x" className="text-primary" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{ width: "32px", height: "32px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faBabyCarriage}
+                      size="1x"
+                      className="text-primary"
+                    />
                   </div>
                   <h3 className="h5 mb-0">Extras opcionales</h3>
                 </div>
@@ -73,9 +138,23 @@ export default function App() {
             </div>
             <div className="col-md-4">
               <div className="faq-card p-4 h-100">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <div className="mb-3" style={{ width: '32px', height: '32px' }}>
-                    <FontAwesomeIcon icon={faUserPlus} size="1x" className="text-primary" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{ width: "32px", height: "32px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faUserPlus}
+                      size="1x"
+                      className="text-primary"
+                    />
                   </div>
                   <h3 className="h5 mb-0">Conductor adicional</h3>
                 </div>
@@ -89,9 +168,23 @@ export default function App() {
             </div>
             <div className="col-md-4">
               <div className="faq-card p-4 h-100">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <div className="mb-3" style={{ width: '32px', height: '32px' }}>
-                    <FontAwesomeIcon icon={faRoad} size="1x" className="text-primary" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{ width: "32px", height: "32px" }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faRoad}
+                      size="1x"
+                      className="text-primary"
+                    />
                   </div>
                   <h3 className="h5 mb-0">Kilometraje</h3>
                 </div>
@@ -106,9 +199,11 @@ export default function App() {
           </div>
         </div>
       </section>
-
+      <br />
+      <br />
+      <br />
       {/* Benefits Section */}
-      <section className="benefits-section py-5 bg-light">
+      {/*     <section className="benefits-section py-5 bg-light">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -162,7 +257,7 @@ export default function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

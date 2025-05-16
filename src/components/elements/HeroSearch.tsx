@@ -14,6 +14,7 @@ export default function HeroSearch() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="box-bottom-search background-card"
+      style={{ backgroundColor: 'white', borderRadius: '8px' }}
     >
       <div className="item-search">
         <label className="text-sm-bold neutral-500">Pick Up Location</label>

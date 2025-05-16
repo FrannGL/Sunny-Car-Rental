@@ -83,18 +83,20 @@ export default function Cars() {
               <div className="bg-overlay rounded-12 overflow-hidden">
                 <img
                   className="w-100 h-100 img-fluid img-banner"
-                  src="/assets/imgs/page-header/banner6.png"
+                  src="/assets/imgs/hero/hero-2/group-of-young-multiethnic-friends-travelling-2024-10-18-03-56-10-utc.jpg"
                   alt="Carento"
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 pb-70 translate-middle text-center">
-                <span className="text-sm-bold bg-2 px-4 py-3 rounded-12">
+                {/* <span className="text-sm-bold bg-2 px-4 py-3 rounded-12">
                   Find cars for sale and for rent near you
-                </span>
-                <h2 className="text-white mt-4">Find Your Perfect Car</h2>
-                <span className="text-white text-lg-medium">
+                </span> */}
+                <h2 className="text-white mt-4">
+                  Encontra tu auto perfecto para estas vacaciones
+                </h2>
+                {/* <span className="text-white text-lg-medium">
                   Search and find your best car rental with easy way
-                </span>
+                </span> */}
               </div>
               {/* <div className="background-body position-absolute z-1 top-100 start-50 translate-middle px-3 py-2 rounded-12 border d-flex gap-3 d-none d-none d-md-flex">
                 <Link href="/" className="neutral-700 text-md-medium">
@@ -163,7 +165,7 @@ export default function Cars() {
             </div>
           </section> */}
           {/* cars-listing-1 */}
-          <section className="section-box pt-50 background-body">
+          {/*           <section className="section-box pt-50 background-body">
             <div className="container">
               <div className="row align-items-end">
                 <div className="col-md-9 mb-30 wow fadeInUp">
@@ -176,7 +178,9 @@ export default function Cars() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
+          <br />
+          <br />
           <section className="box-section block-content-tourlist background-body">
             <div className="container">
               <div className="box-content-main pt-20">
@@ -214,7 +218,7 @@ export default function Cars() {
                   />
                 </div>
                 <div className="content-left order-lg-first">
-                  <div className="sidebar-left border-1 background-body">
+                  {/* <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
@@ -237,7 +241,7 @@ export default function Cars() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
