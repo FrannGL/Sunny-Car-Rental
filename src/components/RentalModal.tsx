@@ -38,8 +38,6 @@ const RentalModal: React.FC<RentalModalProps> = ({
     mode: "onChange",
   });
 
-  console.log(errors);
-
   const { locations } = useLocations();
 
   useEffect(() => {

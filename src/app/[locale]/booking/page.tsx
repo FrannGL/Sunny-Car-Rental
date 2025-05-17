@@ -19,6 +19,7 @@ import BrandsMarquee from "@/src/components/BrandsMarquee";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { useCars } from "@/src/hooks/useCars";
+import ByCategory from "@/src/components/Filter/ByCategory";
 
 const carsData = rawCarsData.map((car) => ({
   ...car,
@@ -54,6 +55,7 @@ export default function Cars() {
     handlePriceRangeChange,
     handleItemsPerPageChange,
     handlePageChange,
+    uniqueCategories,
     handlePreviousPage,
     handleNextPage,
     handleClearFilters,
@@ -251,6 +253,20 @@ export default function Cars() {
                         <ByPrice
                           filter={filter}
                           handlePriceRangeChange={handlePriceRangeChange}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="sidebar-left border-1 background-body">
+                    <div className="box-filters-sidebar">
+                      <div className="block-filter border-1">
+                        <h6 className="text-lg-bold item-collapse neutral-1000">
+                          Categoria
+                        </h6>
+                        <ByCategory
+                          filter={filter}
+                          handleCheckboxChange={handleCheckboxChange}
+                          uniqueCategories={uniqueCategories}
                         />
                       </div>
                     </div>

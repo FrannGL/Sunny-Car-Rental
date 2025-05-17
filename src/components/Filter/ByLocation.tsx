@@ -25,7 +25,7 @@ export default function ByLocation({
           {uniqueLocations.map((location: Location) => {
             // Contamos cuántas veces se repite location.name en cars
             const count = cars.filter(
-              (car) => car.location.name === location.name
+              (car) => car.location?.name === location.name
             ).length;
 
             return (
@@ -36,10 +36,9 @@ export default function ByLocation({
                     checked={filter.locations.includes(location.name)}
                     onChange={handleCheckboxChange("locations", location.name)}
                   />
-                  <span className="text-sm-medium">{location.name} </span>
+                  <span className="text-sm-medium">{location.name}</span>
                   <span className="checkmark" />
                 </label>
-                {/* Mostrar la cantidad de veces que se repite location.name */}
                 <span className="number-item">{count}</span>
               </li>
             );

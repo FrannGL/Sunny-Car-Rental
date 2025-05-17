@@ -234,7 +234,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                       ) : (
                         <span
                           style={{
-                            backgroundColor: "green",
+                            backgroundColor:
+                              car.status === "available" ? "green" : "red",
                             color: "white",
                             padding: "5px 10px",
                             borderRadius: "6px",
@@ -242,7 +243,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                             fontWeight: "600",
                           }}
                         >
-                          Available
+                          {car.status === "available" ? "Available" : "Rented"}
                         </span>
                       )}
                     </div>
@@ -1966,6 +1967,134 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 style={{ color: "red" }}
                               >
                                 {errors.damage_report.message}
+                              </span>
+                            )}
+                          </div>
+
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Tipo de Entrega
+                              </label>
+                              <select
+                                {...register("delivery_type")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              >
+                                <option value="physical">
+                                  Físico (En persona)
+                                </option>
+                                <option value="keyless">
+                                  Sin llave (Remoto)
+                                </option>
+                              </select>
+                            </div>
+
+                            {errors.delivery_type && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.delivery_type.message}
+                              </span>
+                            )}
+                          </div>
+
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Reservado Por
+                              </label>
+                              <select
+                                {...register("rented_by")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              >
+                                <option value="web">Web</option>
+                                <option value="amovens">Amovens</option>
+                                <option value="getaround">Getaround</option>
+                              </select>
+                            </div>
+
+                            {errors.rented_by && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.rented_by.message}
+                              </span>
+                            )}
+                          </div>
+
+                          <div
+                            className="item-line-booking"
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "flex-start",
+                            }}
+                          >
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                gap: 3,
+                              }}
+                            >
+                              <label className="text-md-bold neutral-1000">
+                                Código de Reserva
+                              </label>
+                              <input
+                                {...register("reserve_code")}
+                                className="input-style"
+                                style={{ width: "70%" }}
+                              />
+                            </div>
+
+                            {errors.reserve_code && (
+                              <span
+                                className="error-message"
+                                style={{ color: "red" }}
+                              >
+                                {errors.reserve_code.message}
                               </span>
                             )}
                           </div>

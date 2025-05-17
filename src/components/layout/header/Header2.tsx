@@ -163,7 +163,11 @@ export default function Header2({
                 </div>
               )}
               <div className="header-nav">
-                <nav className={`nav-main-menu ${pathname === "/" ? "justify-content-start" : ""}`}>
+                <nav
+                  className={`nav-main-menu ${
+                    pathname === "/" ? "justify-content-start" : ""
+                  }`}
+                >
                   <ul className="main-menu">
                     {/* <li className="has-children">
                       <Link href="#">Home</Link>
@@ -268,6 +272,9 @@ export default function Header2({
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>
+                    <li>
+                      <Link href="/rentals">Rentals</Link>
+                    </li>
                     {user?.role?.id === 2 && (
                       <li className="menu-item-has-children">
                         <Link href="#">Backoffice</Link>
@@ -330,7 +337,7 @@ export default function Header2({
                     </Dropdown.Menu>
                   </Dropdown>
                 ) : (
-                  <div className="d-xxl-inline-block align-middle mr-1 mt-2">
+                  <div className="d-xxl-inline-block align-middle mr-1">
                     <Link
                       className="btn btn-signin neutral-1000"
                       href="/login"

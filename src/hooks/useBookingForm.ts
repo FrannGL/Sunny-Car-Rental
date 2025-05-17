@@ -6,9 +6,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { bookingSchema, BookingSchemaType } from "../schemas/booking-schema";
 import { useCallback, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const useBookingForm = (car: Car) => {
   const { user } = useClientSession();
+
+  const router = useRouter();
 
   const {
     register,
@@ -33,6 +36,9 @@ const useBookingForm = (car: Car) => {
       coupon_code: "",
       pickup_location_id: 0,
       return_location_id: 0,
+      delivery_type: "physical",
+      rented_by: "web",
+      reserve_code: "",
     },
   });
 
@@ -65,6 +71,9 @@ const useBookingForm = (car: Car) => {
       coupon_code: data.coupon_code,
       pickup_location_id: data.pickup_location_id || 1,
       return_location_id: data.return_location_id || 1,
+      delivery_type: data.delivery_type,
+      rented_by: data.rented_by,
+      reserve_code: data.reserve_code || "",
     };
 
     const {
@@ -78,6 +87,10 @@ const useBookingForm = (car: Car) => {
         duration: 3000,
         style: { backgroundColor: "#28a745", color: "#fff" },
       });
+      router.refresh();
+      setTimeout(() => {
+        router.push("/rentals");
+      }, 1000);
     } else {
       toast.error(`Error: ${error || "Unknown error"}`, {
         duration: 3000,

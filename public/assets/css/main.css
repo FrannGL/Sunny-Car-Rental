@@ -73,13 +73,13 @@ TABLE CONTENT
   --bs-neutral-800: #454545;
   --bs-neutral-900: #313131;
   --bs-neutral-1000: #000000;
-  --bs-button-bg: #FBC02D;
+  --bs-button-bg: #fbc02d;
   --bs-button-bg-2: #f2f4f6;
   --bs-button-text: #101010;
   --bs-button-text-2: #000000;
-  --bs-brand-2: #FBC02D;
-  --bs-brand-2-dark: #FBC02D;
-  --bs-brand-2-darken: #FBC02D;
+  --bs-brand-2: #fbc02d;
+  --bs-brand-2-dark: #fbc02d;
+  --bs-brand-2-darken: #fbc02d;
   --bs-brand-2-light: #2d4a2c;
   --bs-link-hover-color: #235922;
   --bs-brand-1: #8acfff;
@@ -1069,7 +1069,14 @@ p {
 
 .background-brand-2 {
   /* background-color: var(--bs-brand-2) !important; */
-  background-color: linear-gradient(135deg, #FFF9C4, #FFEB3B, #FBC02D, #FFA000, #FF6F00);
+  background-color: linear-gradient(
+    135deg,
+    #fff9c4,
+    #ffeb3b,
+    #fbc02d,
+    #ffa000,
+    #ff6f00
+  );
 }
 
 .button-bg-2 {
@@ -1424,9 +1431,15 @@ p {
 }
 
 .background-brand-2 {
-
   /* background-color: var(--bs-brand-2) !important; */
-background: linear-gradient(135deg, #FFF9C4, #FFEB3B, #FBC02D, #FFA000, #FF6F00);
+  background: linear-gradient(
+    135deg,
+    #fff9c4,
+    #ffeb3b,
+    #fbc02d,
+    #ffa000,
+    #ff6f00
+  );
 }
 
 /*Datepick style*/
@@ -1739,7 +1752,7 @@ body {
 
 .btn {
   font-family: var(--urbanist);
-  border-radius: 8px!important;
+  border-radius: 8px !important;
   padding: 16px 32px;
   font-size: 18px;
   line-height: 1;
@@ -1926,7 +1939,14 @@ body {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  background: linear-gradient(135deg, #FFF9C4, #FFEB3B, #FBC02D, #FFA000, #FF6F00);
+  background: linear-gradient(
+    135deg,
+    #fff9c4,
+    #ffeb3b,
+    #fbc02d,
+    #ffa000,
+    #ff6f00
+  );
   border-radius: 12px;
   color: var(--bs-color-1000) !important;
   display: flex;
@@ -5658,7 +5678,6 @@ label {
 
 .header .main-header .header-right {
   width: 10%;
-  padding-top: 10px;
   text-align: right;
   display: flex;
   align-items: center;
@@ -9493,10 +9512,20 @@ a.icon-socials:hover svg path {
 
 .container-search-advance {
   position: absolute;
-  top: 460px;
+  top: 380px;
   left: 0px;
   right: 0px;
-  z-index: 12;
+  z-index: 10000;
+}
+
+.custom-booking-button {
+  color: black;
+  background-color: #ffc107;
+  border: none;
+}
+
+.custom-booking-button:hover {
+  color: white !important;
 }
 
 @media (max-width: 768px) {
@@ -11058,17 +11087,17 @@ a.icon-socials:hover svg path {
   border-color: var(--bs-brand-2);
 }
 
-.box-search-advance {
+/* .box-search-advance {
   border: 1px solid var(--bs-border-color);
   border-radius: 16px;
   background-color: var(--bs-neutral-0);
   padding: 28px;
   position: relative;
   top: -143px;
-  z-index: 12;
+  z-index: 1000;
   margin-bottom: -112px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
-}
+} */
 
 .box-search-advance .box-top-search {
   display: flex;
@@ -11322,8 +11351,8 @@ a.icon-socials:hover svg path {
 }
 
 .box-banner-home7 .item-banner-slide.banner-1 {
-  background: url(../imgs/hero/hero-2/the-four-friends-travel-in-a-yellow-cabriolet-2024-12-04-19-02-22-utc.jpg) lightgray 50% / cover
-    no-repeat;
+  background: url(../imgs/hero/hero-2/the-four-friends-travel-in-a-yellow-cabriolet-2024-12-04-19-02-22-utc.jpg)
+    lightgray 50% / cover no-repeat;
 }
 
 .box-banner-home7 .item-banner-slide.banner-2 {

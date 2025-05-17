@@ -7,6 +7,7 @@ export interface Filter {
   brand: string[];
   locations: string[];
   price_per_day: [number, number];
+  category: string[];
 }
 
 type SortCriteria = "price" | "brand" | "location";
@@ -15,7 +16,8 @@ const useCarFilter = (carsData: Car[]) => {
   const [filter, setFilter] = useState<Filter>({
     brand: [],
     locations: [],
-    price_per_day: [0, 500],
+    price_per_day: [0, 2000],
+    category: [],
   });
   const [sortCriteria, setSortCriteria] = useState<SortCriteria>("brand");
   const [itemsPerPage, setItemsPerPage] = useState<number>(6);
@@ -63,16 +65,31 @@ const useCarFilter = (carsData: Car[]) => {
 
   const uniqueLocations = useMemo(() => {
     return Array.from(
-      new Map(carsData.map((car) => [car.location.name, car.location])).values()
+      new Map(
+        carsData
+          .filter((car) => car.location && car.location.name)
+          .map((car) => [car.location.name, car.location])
+      ).values()
     );
   }, [carsData]);
 
+  const getCarCategory = (price: number) => {
+    if (price >= 150) return "alta";
+    if (price >= 80) return "media";
+    return "economica";
+  };
+
+  const uniqueCategories = ["alta", "media", "economica"];
+
   const filteredCars = useMemo(() => {
     return carsData.filter((car) => {
+      const carCategory = getCarCategory(car.price_per_day);
       return (
         (filter.brand.length === 0 || filter.brand.includes(car.brand)) &&
         (filter.locations.length === 0 ||
           filter.locations.includes(car.location.name)) &&
+        (filter.category.length === 0 ||
+          filter.category.includes(carCategory)) &&
         car.price_per_day >= filter.price_per_day[0] &&
         car.price_per_day <= filter.price_per_day[1]
       );
@@ -90,6 +107,7 @@ const useCarFilter = (carsData: Car[]) => {
   }, [filteredCars, sortCriteria]);
 
   const totalPages = Math.ceil(sortedCars.length / itemsPerPage);
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedCars = sortedCars.slice(startIndex, endIndex);
@@ -147,9 +165,10 @@ const useCarFilter = (carsData: Car[]) => {
       brand: [],
       locations: [],
       price_per_day: [0, 500],
+      category: [],
     });
     setSortCriteria("brand");
-    setItemsPerPage(4);
+    setItemsPerPage(6);
     setCurrentPage(1);
 
     const current = new URLSearchParams(searchParams.toString());
@@ -179,6 +198,7 @@ const useCarFilter = (carsData: Car[]) => {
     setCurrentPage,
     uniqueBrands,
     uniqueLocations,
+    uniqueCategories,
     filteredCars,
     sortedCars,
     totalPages,

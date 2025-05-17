@@ -79,9 +79,10 @@ export default function CarCard1({ car }: { car: Car }) {
         <div className="card-program">
           <div className="card-location">
             <p className="text-location text-sm-medium neutral-500">
-              {car.location.name ? car.location.name : "Unknown location"}
+              {car.location?.name || "Unknown location"}
             </p>
           </div>
+
           <div className="card-facitlities">
             <p className="card-miles text-md-medium">25,100 miles</p>
             <p className="card-gear text-md-medium">Automatic</p>
