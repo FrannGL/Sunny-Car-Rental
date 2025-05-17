@@ -52,9 +52,11 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>
-                    <li>
-                      <Link href="/rentals">Rentals</Link>
-                    </li>
+                    {user && (
+                      <li>
+                        <Link href="/rentals">Rentals</Link>
+                      </li>
+                    )}
                     {user?.role?.id === 2 && (
                       <li
                         className={`has-children ${

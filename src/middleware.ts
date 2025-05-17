@@ -13,7 +13,10 @@ export async function middleware(request: NextRequest) {
 
   const locale = localeMatch[1] || "en";
 
-  if (path.startsWith(`/${locale}/backoffice`)) {
+  if (
+    path.startsWith(`/${locale}/backoffice`) ||
+    path.startsWith(`/${locale}/rentals`)
+  ) {
     const userSessionCookie = request.cookies.get("user-session")?.value;
 
     if (!userSessionCookie) {
