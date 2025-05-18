@@ -126,6 +126,40 @@
     "subtitle": "Reserva online tu coche al mejor precio. Sin cargos ocultos, sin complicaciones.",
     "alt_logo": "Sunny Rental Cars"
   },
+  "booking": {
+    "hero": {
+      "title": "Encuentra tu auto perfecto para estas vacaciones"
+    },
+    "filters": {
+      "price": {
+        "title": "Filtrar por Precio"
+      },
+      "category": {
+        "title": "Categoría"
+      },
+      "brand": {
+        "title": "Filtrar por Marca"
+      },
+      "location": {
+        "title": "Filtrar por Ubicación"
+      }
+    },
+    "sort_filter": {
+      "results": {
+        "found": "vehículos encontrados"
+      },
+      "filters": {
+        "clear": "Limpiar Filtros",
+        "show": "Mostrar",
+        "sort_by": "Ordenar por:"
+      },
+      "sort_options": {
+        "brand": "Marca",
+        "price": "Precio",
+        "location": "Ubicación"
+      }
+    }
+  },
   "search": {
     "locations": {
       "pickup": {
@@ -156,12 +190,124 @@
     "subtitle": "Encuentra el vehículo perfecto para cualquier ocasión.",
     "view_all": "Ver Todos",
     "load_more": "Cargar más vehículos",
-    "no_cars": "No hay vehículos disponibles"
+    "no_cars": "No hay vehículos disponibles",
+    "car_card": {
+      "reviews": "reseñas",
+      "location": {
+        "unknown": "Ubicación Desconocida"
+      },
+      "details": {
+        "model": "Modelo",
+        "range": {
+          "high": "Gama Alta",
+          "medium": "Gama Media",
+          "economy": "Gama Economica"
+        },
+        "transmission": {
+          "manual": "Manual",
+          "automatic": "Automático"
+        },
+        "seating": "Asientos",
+        "status": {
+          "available": "Disponible",
+          "unavailable": "No Disponible"
+        },
+        "plate": "Matrícula"
+      },
+      "price": {
+        "per_day": "/día"
+      },
+      "button": {
+        "book": "Reservar Ahora"
+      }
+    },
+
+    "car_detail": {
+      "breadcrumbs": {
+        "home": "Inicio",
+        "cars_rental": "Alquiler de Coches"
+      },
+      "status": {
+        "available": "Disponible",
+        "rented": "Alquilado"
+      },
+      "media": {
+        "see_photos": "Ver Todas las Fotos",
+        "video_clips": "Clips de Video"
+      },
+      "features": {
+        "year": "Año",
+        "range": "Gama",
+        "transmission": {
+          "automatic": "Automático",
+          "manual": "Manual"
+        },
+        "seats": "Asientos",
+        "luggage": "Equipaje"
+      },
+      "overview": {
+        "title": "Descripción General",
+        "description": "Descubre las características excepcionales de este vehículo",
+        "general_description": "Tanto si es su primera visita como si es un aficionado experimentado de Las Vegas, The High Roller le promete una experiencia inigualable que le dejará maravillado. Con sus cabinas climatizadas y comentarios de audio inmersivos, esta atracción ofrece una oportunidad única para ver Las Vegas desde una perspectiva completamente nueva, mientras aprende sobre su rica historia y sus famosos lugares de interés.",
+        "included": {
+          "title": "Incluido en el precio",
+          "items": {
+            "insurance": "Cancelación gratuita hasta 48 horas antes de la recogida",
+            "roadside_assistance": "Exención de responsabilidad por daños por colisión con deducible de $700",
+            "unlimited_miles": "Protección contra robo con franquicia de ₫66,926,626",
+            "taxes": "Kilometraje ilimitado"
+          }
+        },
+        "questions": {
+          "title": "Preguntas Frecuentes",
+          "q1": {
+            "title": "¿Es The High Roller adecuado para todas las edades?",
+            "answer": "¡Absolutamente! The High Roller ofrece una experiencia apta para toda la familia. Los niños deben ir acompañados por un adulto."
+          },
+          "q2": {
+            "title": "¿Cuánto dura una vuelta completa en The High Roller?",
+            "answer": "Una rotación completa en The High Roller dura aproximadamente 30 minutos, lo que te da tiempo suficiente para disfrutar de las vistas panorámicas del horizonte de Las Vegas."
+          },
+          "q3": {
+            "title": "¿Puedo llevar comida o bebidas a bordo de The High Roller?",
+            "answer": "No se permite comida ni bebida del exterior en The High Roller. Sin embargo, hay opciones de comida cercanas en The LINQ Promenade donde puedes comer antes o después del paseo."
+          },
+          "q4": {
+            "title": "¿The High Roller es accesible para personas en silla de ruedas?",
+            "answer": "Sí, las cabinas de The High Roller son accesibles para sillas de ruedas, lo que permite que todos disfruten de las impresionantes vistas de Las Vegas."
+          }
+        }
+      },
+      "form": {
+        "title": "Alquilar este vehículo",
+        "pick_up": "Fecha de recogida",
+        "return": "Fecha de devolución",
+        "payment_method": "Método de pago",
+        "driver": "Conductor",
+        "driver_licence": "Permiso de conducir",
+        "additional_driver": "Conductor adicional",
+        "additional_driver_licence": "Permiso de conducir adicional",
+        "with_gas": "Con gasolina",
+        "coupon_code": "Código de cupón",
+        "pickup_location": "Lugar de recogida",
+        "return_location": "Lugar de devolución",
+        "damage_report": "Informe de daños",
+        "delivery_type": "Tipo de entrega",
+        "booking_method": "Método de entrega",
+        "booking_code": "Código de reserva",
+        "comments": "Comentarios",
+        "total_paylable": "Total a pagar",
+        "subtotal": "Subtotal",
+        "button": "Reservar ahora",
+        "need_help": "¿Necesita ayuda?",
+        "login": "Inicia sesión para continuar"
+      }
+    }
   },
   "review": {
     "company_name": "Sunny Rental Cars",
     "title": "Recorre en 4 ruedas",
-    "subtitle": "De Valencia y hasta Alicante",
+    "subtitle": "Desde Valencia hasta Alicante",
     "navigation": {
       "prev": "Diapositiva anterior",
       "next": "Siguiente diapositiva"
@@ -215,6 +361,23 @@
       "mileage": {
         "title": "Kilometraje",
         "description": "Verifica si tu reserva cuenta con kilometraje ilimitado o no. El kilometraje ilimitado significa que puedes andar cuánto quisieras sin pagar ningún valor extra por los kilómetros recorridos."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "locations": {
+      "valencia": {
+        "title": "Valencia",
+        "address": "Calle Principal 123, Valencia, España",
+        "phone": "+34 123 456 789",
+        "email": "valencia@sunnycarrental.com"
+      },
+      "alicante": {
+        "title": "Alicante",
+        "address": "Avenida Central 456, Alicante, España",
+        "phone": "+34 987 654 321",
+        "email": "alicante@sunnycarrental.com"
       }
     }
   }

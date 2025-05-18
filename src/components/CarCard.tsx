@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Link } from "@/src/i18n/navigation";
 import { Car } from "../types/car";
 
@@ -8,6 +9,8 @@ interface CarCardProps {
 }
 
 export const CarCard = ({ car }: CarCardProps) => {
+  const t = useTranslations("featured_cars.car_card");
+
   return (
     <div className="col-lg-3 col-md-4 col-sm-6">
       <div className="card-journey-small background-card hover-up">
@@ -29,7 +32,7 @@ export const CarCard = ({ car }: CarCardProps) => {
               <span className="rating text-xs-medium rounded-pill">
                 4.96{" "}
                 <span className="text-xs-medium neutral-500">
-                  (672 reviews)
+                  (672 {t("reviews")})
                 </span>
               </span>
             </div>
@@ -37,7 +40,7 @@ export const CarCard = ({ car }: CarCardProps) => {
           <div className="card-title">
             <Link
               className="text-lg-bold neutral-1000 text-nowrap"
-              href={`/cars-details-2?id=${car.id}`}
+              href={`/cars-details/${car.id}`}
             >
               {car.brand} {car.model}
             </Link>
@@ -45,31 +48,41 @@ export const CarCard = ({ car }: CarCardProps) => {
           <div className="card-program">
             <div className="card-location">
               <p className="text-location text-sm-medium neutral-500">
-                {car.location.name || "Unknown Location"}
+                {car.location.name || t("location.unknown")}
               </p>
             </div>
             <div className="card-facitlities">
-              <p className="card-miles text-md-medium">{car.year} Model</p>
-              <p className="card-gear text-md-medium">
-                {car.gama.charAt(0).toUpperCase() + car.gama.slice(1)} Range
+              <p className="card-miles text-sm-medium">
+                {t("details.model")} {car.year}
               </p>
-              <p className="card-fuel text-md-medium">
-                {car.status === "available" ? "Available" : "Unavailable"}
+              <p className="card-gear text-sm-medium">
+                {car.transmission === "automatic"
+                  ? t("details.transmission.automatic")
+                  : t("details.transmission.manual")}
               </p>
-              <p className="card-seat text-md-medium">
-                Plate: {car.plate_number}
+              <p className="card-seat text-sm-medium">
+                {car.passenger_capacity} {t("details.seating")}
+              </p>
+              <p className="card-miles text-sm-medium">
+                {car.gama === "alta"
+                  ? t("details.range.high")
+                  : car.gama === "economica"
+                  ? t("details.range.economy")
+                  : t("details.range.medium")}
               </p>
             </div>
             <div className="endtime">
               <div className="card-price">
                 <h6 className="text-lg-bold neutral-1000">
-                  ${car.price_per_day.toFixed(2)}
+                  USD {car.price_per_day.toFixed(2)}
                 </h6>
-                <p className="text-md-medium neutral-500">/day</p>
+                <p className="text-md-medium neutral-500">
+                  {t("price.per_day")}
+                </p>
               </div>
               <div className="card-button">
                 <Link className="btn btn-gray" href={`/cars-details/${car.id}`}>
-                  Book Now
+                  {t("button.book")}
                 </Link>
               </div>
             </div>

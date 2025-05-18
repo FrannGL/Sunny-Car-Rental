@@ -1,6 +1,9 @@
 import Layout from "@/src/components/layout/Layout";
 import { Link } from "@/src/i18n/navigation";
+import { useTranslations } from "next-intl";
 export default function Contact() {
+  const t = useTranslations("contact");
+
   return (
     <>
       <Layout footerStyle={1}>
@@ -15,7 +18,7 @@ export default function Contact() {
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 translate-middle">
-                <h2 className="text-white">Contactanos</h2>
+                <h2 className="text-white">{t("title")}</h2>
               </div>
             </div>
           </div>
@@ -93,7 +96,7 @@ export default function Contact() {
                             className="location text-md-medium ms-2"
                             href="/googlemaps.com"
                           >
-                            750 7th Avenue, Manhattan, New York, NY 10019, USA
+                            {t("locations.valencia.address")}
                           </Link>
                         </div>
                         <div className="d-flex align-items-start mb-2">
@@ -208,7 +211,7 @@ export default function Contact() {
                             className="location text-md-medium ms-2"
                             href="/googlemaps.com"
                           >
-                            2-11-3 Meguro, Meguro City, Tokyo 153-0063, Japan
+                            {t("locations.alicante.address")}
                           </Link>
                         </div>
                         <div className="d-flex align-items-start mb-2">
@@ -266,118 +269,6 @@ export default function Contact() {
               </div>
             </div>
           </section>
-          {/*     <section className="box-section box-contact-form background-body">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-6 mb-30">
-                  <h2 className="neutral-1000 mb-25">Get in Touch</h2>
-                  <div className="form-contact">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <label className="text-sm-medium neutral-1000">
-                            First Name
-                          </label>
-                          <input
-                            className="form-control username"
-                            type="text"
-                            placeholder="First Name"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="form-group">
-                          <label className="text-sm-medium neutral-1000">
-                            First Name
-                          </label>
-                          <input
-                            className="form-control username"
-                            type="text"
-                            placeholder="Last Name"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <label className="text-sm-medium neutral-1000">
-                            Email Adress
-                          </label>
-                          <input
-                            className="form-control email"
-                            type="email"
-                            placeholder="email@domain.com"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <label className="text-sm-medium neutral-1000">
-                            Phone Number
-                          </label>
-                          <input
-                            className="form-control phone"
-                            type="text"
-                            placeholder="Phone number"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <label className="text-sm-medium neutral-1000">
-                            Your Message
-                          </label>
-                          <textarea
-                            className="form-control"
-                            rows={6}
-                            placeholder="Leave us a message..."
-                          />
-                        </div>
-                      </div>
-
-                      <div className="col-lg-12">
-                        <button className="btn btn-book">
-                          Enviar mensaje
-                          <svg
-                            width={17}
-                            height={16}
-                            viewBox="0 0 17 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 mb-30">
-                  <div className="ps-lg-5">
-                    <h4 className="neutral-1000">Our location</h4>
-                    <p className="neutral-500 mb-30">
-                      12560 Rental Rd, Memphis, TN 38118, United States
-                    </p>
-                    <iframe
-                      className="h-520 rounded-3"
-                      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d283661.3575233618!2d2.2296777857951824!3d47.16509219592609!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1712486491620!5m2!1svi!2s"
-                      width="100%"
-                      height={650}
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> */}
         </div>
         <br />
         <br />

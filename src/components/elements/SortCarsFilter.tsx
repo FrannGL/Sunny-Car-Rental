@@ -1,5 +1,6 @@
 "use client";
 import { Link } from "@/src/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function SortCarsFilter({
   sortCriteria,
@@ -11,14 +12,16 @@ export default function SortCarsFilter({
   endItemIndex,
   sortedCars,
 }: any) {
+  const t = useTranslations("booking.sort_filter");
+
   return (
     <>
       <div className="row align-items-center">
         <div className="col-xl-4 col-md-4 mb-10 text-lg-start text-center">
           <div className="box-view-type">
             <span className="text-sm-bold neutral-500 number-found">
-              {startItemIndex} - {endItemIndex} of {sortedCars.length} tours
-              found
+              {startItemIndex} - {endItemIndex} of {sortedCars.length}{" "}
+              {t("results.found")}
             </span>
           </div>
         </div>
@@ -28,10 +31,12 @@ export default function SortCarsFilter({
               className="btn btn-clear text-xs-medium"
               onClick={handleClearFilters}
             >
-              Clear Filters
+              {t("filters.clear")}
             </button>
             <div className="item-sort border-1">
-              <span className="text-xs-medium neutral-500 mr-5">Show</span>
+              <span className="text-xs-medium neutral-500 mr-5">
+                {t("filters.show")}
+              </span>
               <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
                 <option value={10}>10</option>
                 <option value={15}>15</option>
@@ -40,14 +45,12 @@ export default function SortCarsFilter({
             </div>
             <div className="item-sort border-1">
               <span className="text-xs-medium neutral-500 mr-5 d-block m-w-50px">
-                Sort by:
+                {t("filters.sort_by")}
               </span>
               <select value={sortCriteria} onChange={handleSortChange}>
-                <option value="brand">Brand</option>
-                {/* <option value="name">Model</option> */}
-                <option value="price">Price</option>
-                <option value="location">Location</option>
-                {/* <option value="rating">Rating</option> */}
+                <option value="brand">{t("sort_options.brand")}</option>
+                <option value="price">{t("sort_options.price")}</option>
+                <option value="location">{t("sort_options.location")}</option>
               </select>
             </div>
           </div>

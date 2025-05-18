@@ -126,6 +126,40 @@
     "subtitle": "Book your car online at the best price. No hidden charges, no complications.",
     "alt_logo": "Sunny Rental Cars"
   },
+  "booking": {
+    "hero": {
+      "title": "Find your perfect car for this vacation"
+    },
+    "filters": {
+      "price": {
+        "title": "Filter by Price"
+      },
+      "category": {
+        "title": "Filter by Category"
+      },
+      "brand": {
+        "title": "Filter by Brand"
+      },
+      "location": {
+        "title": "Filter by Location"
+      }
+    },
+    "sort_filter": {
+      "results": {
+        "found": "vehicles found"
+      },
+      "filters": {
+        "clear": "Clear Filters",
+        "show": "Show",
+        "sort_by": "Sort by:"
+      },
+      "sort_options": {
+        "brand": "Brand",
+        "price": "Price",
+        "location": "Location"
+      }
+    }
+  },
   "search": {
     "locations": {
       "pickup": {
@@ -156,7 +190,118 @@
     "subtitle": "Find the perfect vehicle for any occasion.",
     "view_all": "View All",
     "load_more": "Load more vehicles",
-    "no_cars": "No vehicles available"
+    "no_cars": "No vehicles available",
+    "car_card": {
+      "reviews": "reviews",
+      "location": {
+        "unknown": "Unknown Location"
+      },
+      "details": {
+        "model": "Model",
+        "range": {
+          "high": "High Range",
+          "medium": "Medium Range",
+          "economy": "Economy Range"
+        },
+        "transmission": {
+          "automatic": "Automatic",
+          "manual": "Manual"
+        },
+        "seating": "Seats",
+        "status": {
+          "available": "Available",
+          "unavailable": "Unavailable"
+        },
+        "plate": "Plate"
+      },
+      "price": {
+        "per_day": "/day"
+      },
+      "button": {
+        "book": "Book Now"
+      }
+    },
+    "car_detail": {
+      "breadcrumbs": {
+        "home": "Home",
+        "cars_rental": "Cars Rental"
+      },
+      "status": {
+        "available": "Available",
+        "rented": "Rented"
+      },
+      "media": {
+        "see_photos": "See All Photos",
+        "video_clips": "Video Clips"
+      },
+      "features": {
+        "year": "Year",
+        "range": "Range",
+        "transmission": {
+          "automatic": "Automatic",
+          "manual": "Manual"
+        },
+        "seats": "Seats",
+        "luggage": "Luggage"
+      },
+      "overview": {
+        "title": "Overview",
+        "description": "Discover the exceptional features of this vehicle",
+        "general_description": "Whether you're a first-time visitor or a seasoned Las Vegas aficionado, The High Roller promises an unparalleled experience that will leave you in awe. With its climate-controlled cabins and immersive audio commentary, this attraction provides a unique opportunity to see Las Vegas from a whole new perspective, while learning about its rich history and famous landmarks along the way.",
+        "included": {
+          "title": "Included in Price",
+          "items": {
+            "insurance": "Free cancellation up to 48 hours before pick-up",
+            "roadside_assistance": "Collision Damage Waiver with $700 deductible",
+            "unlimited_miles": "Theft Protection with ₫66,926,626 excess",
+            "taxes": "Unlimited mileage"
+          }
+        },
+        "questions": {
+          "title": "Question Answers",
+          "q1": {
+            "title": "Is The High Roller suitable for all ages?",
+            "answer": "Absolutely! The High Roller offers a family-friendly experience suitable for visitors of all ages. Children must be accompanied by an adult."
+          },
+          "q2": {
+            "title": "How long does a full rotation on The High Roller take?",
+            "answer": "A complete rotation on The High Roller takes approximately 30 minutes, giving you ample time to enjoy panoramic views of the Las Vegas skyline."
+          },
+          "q3": {
+            "title": "Can I bring food or drinks aboard The High Roller?",
+            "answer": "Outside food and beverages are not permitted on The High Roller. However, there are nearby dining options at The LINQ Promenade where you can enjoy a meal before or after your ride."
+          },
+          "q4": {
+            "title": "Is The High Roller wheelchair accessible?",
+            "answer": "Yes, The High Roller cabins are wheelchair accessible, making it possible for everyone to enjoy the breathtaking views of Las Vegas."
+          }
+        }
+      },
+      "form": {
+        "title": "Rent this vehicle",
+        "pick_up": "Pick Up Date",
+        "return": "Return Date",
+        "payment_method": "Payment Method",
+        "driver": "Driver",
+        "driver_licence": "Driver Licence",
+        "additional_driver": "Additional Driver",
+        "additional_driver_licence": "Additional Driver Licence",
+        "with_gas": "With Gas",
+        "coupon_code": "Coupon Code",
+        "pickup_location": "Pick Up Location",
+        "return_location": "Return Location",
+        "damage_report": "Damage Report",
+        "delivery_type": "Delivery Type",
+        "booking_method": "Delivery Method",
+        "booking_code": "Booking Code",
+        "comments": "Comments",
+        "total_paylable": "Total Payable",
+        "subtotal": "Subtotal",
+        "button": "Book Now",
+        "need_help": "Need Some Help?",
+        "login": "Login to Book"
+      }
+    }
   },
   "review": {
     "company_name": "Sunny Rental Cars",
@@ -215,6 +360,23 @@
       "mileage": {
         "title": "Mileage",
         "description": "Check if your reservation includes unlimited mileage or not. Unlimited mileage means you can drive as much as you want without paying any extra for the kilometers driven."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "locations": {
+      "valencia": {
+        "title": "Valencia",
+        "address": "Main Street 123, Valencia, Spain",
+        "phone": "+34 123 456 789",
+        "email": "valencia@sunnycarrental.com"
+      },
+      "alicante": {
+        "title": "Alicante",
+        "address": "Central Avenue 456, Alicante, Spain",
+        "phone": "+34 987 654 321",
+        "email": "alicante@sunnycarrental.com"
       }
     }
   }

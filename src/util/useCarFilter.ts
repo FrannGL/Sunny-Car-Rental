@@ -84,10 +84,12 @@ const useCarFilter = (carsData: Car[]) => {
   const filteredCars = useMemo(() => {
     return carsData.filter((car) => {
       const carCategory = getCarCategory(car.price_per_day);
+      const carLocationName = car.location?.name ?? "";
+
       return (
         (filter.brand.length === 0 || filter.brand.includes(car.brand)) &&
         (filter.locations.length === 0 ||
-          filter.locations.includes(car.location.name)) &&
+          filter.locations.includes(carLocationName)) &&
         (filter.category.length === 0 ||
           filter.category.includes(carCategory)) &&
         car.price_per_day >= filter.price_per_day[0] &&
@@ -100,8 +102,11 @@ const useCarFilter = (carsData: Car[]) => {
     return [...filteredCars].sort((a, b) => {
       if (sortCriteria === "price") return a.price_per_day - b.price_per_day;
       if (sortCriteria === "brand") return a.brand.localeCompare(b.brand);
-      if (sortCriteria === "location")
-        return a.location.name.localeCompare(b.location.name);
+      if (sortCriteria === "location") {
+        const aLoc = a.location?.name ?? "";
+        const bLoc = b.location?.name ?? "";
+        return aLoc.localeCompare(bLoc);
+      }
       return 0;
     });
   }, [filteredCars, sortCriteria]);

@@ -1,54 +1,32 @@
 "use client";
 import CarCard1 from "@/src/components/elements/carcard/CarCard1";
-import HeroSearch from "@/src/components/elements/HeroSearch";
 import SortCarsFilter from "@/src/components/elements/SortCarsFilter";
-import ByAmenities from "@/src/components/Filter/ByAmenities";
 import ByCarType from "@/src/components/Filter/ByCarType";
-import ByFuel from "@/src/components/Filter/ByFuel";
 import ByLocation from "@/src/components/Filter/ByLocation";
 import ByPagination from "@/src/components/Filter/ByPagination";
 import ByPrice from "@/src/components/Filter/ByPrice";
-import ByRating from "@/src/components/Filter/ByRating";
 import Layout from "@/src/components/layout/Layout";
-import rawCarsData from "@/src/util/cars.json";
 import useCarFilter from "@/src/util/useCarFilter";
-import { Link } from "@/src/i18n/navigation";
-import Marquee from "react-fast-marquee";
-
 import BrandsMarquee from "@/src/components/BrandsMarquee";
+import ByCategory from "@/src/components/Filter/ByCategory";
+import { useCars } from "@/src/hooks/useCars";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
-import { useCars } from "@/src/hooks/useCars";
-import ByCategory from "@/src/components/Filter/ByCategory";
-
-const carsData = rawCarsData.map((car) => ({
-  ...car,
-  rating: parseFloat(car.rating as string),
-}));
+import { useTranslations } from "next-intl";
 
 export default function Cars() {
   const { cars } = useCars();
 
   const {
     filter,
-    setFilter,
     sortCriteria,
-    setSortCriteria,
     itemsPerPage,
-    setItemsPerPage,
     currentPage,
-    setCurrentPage,
     uniqueBrands,
-    // uniqueFuelTypes,
-    // uniqueAmenities,
     uniqueLocations,
-    // uniqueRatings,
-    // uniqueCarTypes,
     filteredCars,
     sortedCars,
     totalPages,
-    startIndex,
-    endIndex,
     paginatedCars,
     handleCheckboxChange,
     handleSortChange,
@@ -64,6 +42,8 @@ export default function Cars() {
   } = useCarFilter(cars);
 
   const searchParams = useSearchParams();
+
+  const t = useTranslations("booking");
 
   const brands = Array.from(new Set(filteredCars.map((car) => car.brand)));
 
@@ -90,97 +70,11 @@ export default function Cars() {
                 />
               </div>
               <div className="container position-absolute z-1 top-50 start-50 pb-70 translate-middle text-center">
-                {/* <span className="text-sm-bold bg-2 px-4 py-3 rounded-12">
-                  Find cars for sale and for rent near you
-                </span> */}
-                <h2 className="text-white mt-4">
-                  Encontra tu auto perfecto para estas vacaciones
-                </h2>
-                {/* <span className="text-white text-lg-medium">
-                  Search and find your best car rental with easy way
-                </span> */}
+                <h2 className="text-white mt-4">{t("hero.title")}</h2>
               </div>
-              {/* <div className="background-body position-absolute z-1 top-100 start-50 translate-middle px-3 py-2 rounded-12 border d-flex gap-3 d-none d-none d-md-flex">
-                <Link href="/" className="neutral-700 text-md-medium">
-                  Home
-                </Link>
-                <span className="@@ds-prev-page">
-                  <img
-                    src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
-                  />
-                </span>
-                <Link href="#" className="neutral-1000 text-md-bold">
-                  @@prev-page
-                </Link>
-                <span>
-                  <img
-                    src="/assets/imgs/template/icons/arrow-right.svg"
-                    alt="Carento"
-                  />
-                </span>
-                <Link
-                  href="#"
-                  className="neutral-1000 text-md-bold text-nowrap"
-                >
-                  @@current-page
-                </Link>
-              </div> */}
             </div>
           </div>
-          {/* search 1 */}
-          {/* <section className="box-section box-search-advance-home10 background-body">
-            <div className="container">
-              <div className="box-search-advance background-card wow fadeIn">
-                <div className="box-top-search">
-                  <div className="left-top-search">
-                    <Link
-                      className="category-link text-sm-bold btn-click active"
-                      href="#"
-                    >
-                      All cars
-                    </Link>
-                    <Link
-                      className="category-link text-sm-bold btn-click"
-                      href="#"
-                    >
-                      New cars
-                    </Link>
-                    <Link
-                      className="category-link text-sm-bold btn-click"
-                      href="#"
-                    >
-                      Used cars
-                    </Link>
-                  </div>
-                  <div className="right-top-search d-none d-md-flex">
-                    <Link
-                      className="text-sm-medium need-some-help"
-                      href="/contact"
-                    >
-                      Need help?
-                    </Link>
-                  </div>
-                </div>
-                <HeroSearch />
-              </div>
-            </div>
-          </section> */}
-          {/* cars-listing-1 */}
-          {/*           <section className="section-box pt-50 background-body">
-            <div className="container">
-              <div className="row align-items-end">
-                <div className="col-md-9 mb-30 wow fadeInUp">
-                  <h4 id="our-fleet" className="title-svg neutral-1000 mb-15">
-                    Our Vehicle Fleet
-                  </h4>
-                  <p className="text-lg-medium text-bold neutral-500">
-                    Turning dreams into reality with versatile vehicles.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section> */}
+
           <br />
           <br />
           <section className="box-section block-content-tourlist background-body">
@@ -220,35 +114,11 @@ export default function Cars() {
                   />
                 </div>
                 <div className="content-left order-lg-first">
-                  {/* <div className="sidebar-left border-1 background-body">
-                    <div className="box-filters-sidebar">
-                      <div className="block-filter border-1">
-                        <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Show on map
-                        </h6>
-                        <div className="box-collapse scrollFilter mb-15">
-                          <div className="pt-0">
-                            <div className="box-map-small">
-                              <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7000!2d-0.375!3d39.4667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1715000000000!5m2!1sen!2ses"
-                                width="100%"
-                                height={160}
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
                   <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Filter Price{" "}
+                          {t("filters.price.title")}
                         </h6>
                         <ByPrice
                           filter={filter}
@@ -261,7 +131,7 @@ export default function Cars() {
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Categoria
+                          {t("filters.category.title")}
                         </h6>
                         <ByCategory
                           filter={filter}
@@ -275,7 +145,7 @@ export default function Cars() {
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Filter Brand
+                          {t("filters.brand.title")}
                         </h6>
                         <ByCarType
                           uniqueBrands={uniqueBrands}
@@ -285,53 +155,12 @@ export default function Cars() {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="sidebar-left border-1 background-body">
-                    <div className="box-filters-sidebar">
-                      <div className="block-filter border-1">
-                        <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Amenities
-                        </h6>
-                        <ByAmenities
-                          uniqueAmenities={uniqueAmenities}
-                          filter={filter}
-                          handleCheckboxChange={handleCheckboxChange}
-                        />
-                      </div>
-                    </div>
-                  </div> */}
-                  {/* <div className="sidebar-left border-1 background-body">
-                    <div className="box-filters-sidebar">
-                      <div className="block-filter border-1">
-                        <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Fuel Type
-                        </h6>
-                        <ByFuel
-                          uniqueFuelTypes={uniqueFuelTypes}
-                          filter={filter}
-                          handleCheckboxChange={handleCheckboxChange}
-                        />
-                      </div>
-                    </div>
-                  </div>
+
                   <div className="sidebar-left border-1 background-body">
                     <div className="box-filters-sidebar">
                       <div className="block-filter border-1">
                         <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Review Score{" "}
-                        </h6>
-                        <ByRating
-                          uniqueRatings={uniqueRatings}
-                          filter={filter}
-                          handleCheckboxChange={handleCheckboxChange}
-                        />
-                      </div>
-                    </div>
-                  </div> */}
-                  <div className="sidebar-left border-1 background-body">
-                    <div className="box-filters-sidebar">
-                      <div className="block-filter border-1">
-                        <h6 className="text-lg-bold item-collapse neutral-1000">
-                          Filter Location
+                          {t("filters.location.title")}
                         </h6>
                         <ByLocation
                           uniqueLocations={uniqueLocations}

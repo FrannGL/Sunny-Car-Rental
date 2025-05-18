@@ -7,6 +7,7 @@ import { useClientSession } from "@/src/hooks/useClientSession";
 import { Link } from "@/src/i18n/navigation";
 import { BookingSchemaType } from "@/src/schemas/booking-schema";
 import { Car } from "@/src/types/car";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import ModalVideo from "react-modal-video";
@@ -69,6 +70,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
   const [nav2, setNav2] = useState(null);
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
+
+  const t = useTranslations("featured_cars.car_detail");
 
   const { user } = useClientSession();
   const { locations } = useCars();
@@ -142,7 +145,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
             <div className="container">
               <ul className="breadcrumbs">
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/">{t("breadcrumbs.home")}</Link>
                   <span className="arrow-right">
                     <svg
                       width={7}
@@ -162,7 +165,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                   </span>
                 </li>
                 <li>
-                  <Link href="/booking">Cars Rental</Link>
+                  <Link href="/booking">{t("breadcrumbs.cars_rental")}</Link>
                   <span className="arrow-right">
                     <svg
                       width={7}
@@ -193,16 +196,6 @@ export default function CarsDetails3({ car }: { car: Car }) {
           <section className="box-section box-content-tour-detail background-body pt-0">
             <div className="container">
               <div className="tour-header">
-                <div className="tour-rate">
-                  <div className="rate-element">
-                    <span className="rating">
-                      4.96{" "}
-                      <span className="text-sm-medium neutral-500">
-                        (672 reviews)
-                      </span>
-                    </span>
-                  </div>
-                </div>
                 <div className="row">
                   <div className="col-lg-8">
                     <div
@@ -218,34 +211,21 @@ export default function CarsDetails3({ car }: { car: Car }) {
                       <h4 className="neutral-1000">
                         {car.brand} {car.model} {car.year}
                       </h4>
-                      {car.status === "rented" ? (
-                        <span
-                          style={{
-                            backgroundColor: "red",
-                            color: "white",
-                            padding: "5px 10px",
-                            borderRadius: "6px",
-                            fontSize: "1.5rem",
-                            fontWeight: "600",
-                          }}
-                        >
-                          Rented
-                        </span>
-                      ) : (
-                        <span
-                          style={{
-                            backgroundColor:
-                              car.status === "available" ? "green" : "red",
-                            color: "white",
-                            padding: "5px 10px",
-                            borderRadius: "6px",
-                            fontSize: "1.5rem",
-                            fontWeight: "600",
-                          }}
-                        >
-                          {car.status === "available" ? "Available" : "Rented"}
-                        </span>
-                      )}
+                      <span
+                        style={{
+                          backgroundColor:
+                            car.status === "available" ? "green" : "red",
+                          color: "white",
+                          padding: "5px 10px",
+                          borderRadius: "6px",
+                          fontSize: "1.5rem",
+                          fontWeight: "600",
+                        }}
+                      >
+                        {car.status === "available"
+                          ? t("status.available")
+                          : t("status.rented")}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -265,81 +245,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           fill="#101010"
                         />
                       </svg>
-                      Las Vegas, USA
+                      {`${car.location.name}, ${car.location.country}`}
                     </p>
-                    <Link
-                      className="text-md-medium neutral-1000 mr-30"
-                      href="#"
-                    >
-                      Show on map
-                    </Link>
-                    <p className="text-md-medium neutral-1000 tour-code mr-15">
-                      <svg
-                        className="invert"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={20}
-                        height={18}
-                        viewBox="0 0 20 18"
-                        fill="none"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M13.2729 0.273646C13.4097 0.238432 13.5538 0.24262 13.6884 0.28573L18.5284 1.83572L18.5474 1.84209C18.8967 1.96436 19.1936 2.19167 19.4024 2.4875C19.5891 2.75202 19.7309 3.08694 19.7489 3.46434C19.7494 3.47622 19.7497 3.4881 19.7497 3.49998V15.5999C19.7625 15.8723 19.7102 16.1395 19.609 16.3754C19.6059 16.3827 19.6026 16.39 19.5993 16.3972C19.476 16.6613 19.3017 16.8663 19.1098 17.0262C19.1023 17.0324 19.0947 17.0385 19.087 17.0445C18.8513 17.2258 18.5774 17.3363 18.2988 17.3734L18.2927 17.3743C18.0363 17.4063 17.7882 17.3792 17.5622 17.3133C17.5379 17.3081 17.5138 17.3016 17.4901 17.294L13.4665 16.0004L6.75651 17.7263C6.62007 17.7614 6.47649 17.7574 6.34221 17.7147L1.47223 16.1647C1.46543 16.1625 1.45866 16.1603 1.45193 16.1579C1.0871 16.0302 0.813939 15.7971 0.613929 15.5356C0.608133 15.528 0.602481 15.5203 0.596973 15.5125C0.395967 15.2278 0.277432 14.8905 0.260536 14.5357C0.259972 14.5238 0.259689 14.5119 0.259689 14.5V2.39007C0.246699 2.11286 0.301239 1.83735 0.420015 1.58283C0.544641 1.31578 0.724533 1.10313 0.942417 0.93553C1.17424 0.757204 1.45649 0.6376 1.7691 0.61312C2.03626 0.583264 2.30621 0.616234 2.56047 0.712834L6.56277 1.99963L13.2729 0.273646ZM13.437 1.78025L6.72651 3.50634C6.58929 3.54162 6.44493 3.53736 6.31011 3.49398L2.08011 2.13402C2.06359 2.1287 2.04725 2.12282 2.03113 2.11637C2.00054 2.10413 1.96854 2.09972 1.93273 2.10419C1.91736 2.10611 1.90194 2.10756 1.88649 2.10852C1.88649 2.10852 1.88436 2.10866 1.88088 2.11001C1.8771 2.11149 1.86887 2.11532 1.85699 2.12447C1.81487 2.15686 1.79467 2.18421 1.77929 2.21715C1.76189 2.25446 1.75611 2.28942 1.75823 2.32321C1.7592 2.33879 1.75969 2.35439 1.75969 2.36999V14.4772C1.76448 14.5336 1.78316 14.5879 1.81511 14.6367C1.86704 14.7014 1.90866 14.7272 1.94108 14.7398L6.59169 16.2199L13.3028 14.4937C13.44 14.4584 13.5844 14.4626 13.7192 14.506L17.8938 15.8482C17.9184 15.8537 17.9428 15.8605 17.9669 15.8685C18.0209 15.8865 18.0669 15.8902 18.1034 15.8862C18.1214 15.8833 18.1425 15.8759 18.1629 15.8623C18.1981 15.8309 18.2196 15.8024 18.2346 15.7738C18.2473 15.7399 18.2533 15.7014 18.2511 15.6668C18.2502 15.6512 18.2497 15.6356 18.2497 15.62V3.52464C18.2453 3.48222 18.2258 3.42174 18.1769 3.3525C18.147 3.3102 18.1062 3.2784 18.0582 3.26022L13.437 1.78025Z"
-                          fill="#101010"
-                        />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M6.55957 2.01953C6.97375 2.01953 7.30957 2.35532 7.30957 2.76953V16.9195C7.30957 17.3338 6.97375 17.6695 6.55957 17.6695C6.14533 17.6695 5.80957 17.3338 5.80957 16.9195V2.76953C5.80957 2.35532 6.14533 2.01953 6.55957 2.01953Z"
-                          fill="#101010"
-                        />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M13.4893 0.330078C13.9035 0.330078 14.2393 0.665862 14.2393 1.08008V15.2301C14.2393 15.6443 13.9035 15.9801 13.4893 15.9801C13.0751 15.9801 12.7393 15.6443 12.7393 15.2301V1.08008C12.7393 0.665862 13.0751 0.330078 13.4893 0.330078Z"
-                          fill="#101010"
-                        />
-                      </svg>
-                      Fleet Code:
-                    </p>
-                    <Link className="text-md-medium neutral-1000" href="#">
-                      LVA-4125
-                    </Link>
-                  </div>
-                  <div className="tour-meta-right">
-                    <Link className="btn btn-share" href="#">
-                      <svg
-                        width={16}
-                        height={18}
-                        viewBox="0 0 16 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M13 11.5332C12.012 11.5332 11.1413 12.0193 10.5944 12.7584L5.86633 10.3374C5.94483 10.0698 6 9.79249 6 9.49989C6 9.10302 5.91863 8.72572 5.77807 8.37869L10.7262 5.40109C11.2769 6.04735 12.0863 6.46655 13 6.46655C14.6543 6.46655 16 5.12085 16 3.46655C16 1.81225 14.6543 0.466553 13 0.466553C11.3457 0.466553 10 1.81225 10 3.46655C10 3.84779 10.0785 4.20942 10.2087 4.54515L5.24583 7.53149C4.69563 6.90442 3.8979 6.49989 3 6.49989C1.3457 6.49989 0 7.84559 0 9.49989C0 11.1542 1.3457 12.4999 3 12.4999C4.00433 12.4999 4.8897 11.9996 5.4345 11.2397L10.147 13.6529C10.0602 13.9331 10 14.2249 10 14.5332C10 16.1875 11.3457 17.5332 13 17.5332C14.6543 17.5332 16 16.1875 16 14.5332C16 12.8789 14.6543 11.5332 13 11.5332Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      Share
-                    </Link>
-                    <Link className="btn btn-wishlish" href="#">
-                      <svg
-                        width={20}
-                        height={18}
-                        viewBox="0 0 20 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M2.2222 2.3638C4.34203 0.243977 7.65342 0.0419426 10.0004 1.7577C12.3473 0.0419426 15.6587 0.243977 17.7786 2.3638C20.1217 4.70695 20.1217 8.50594 17.7786 10.8491L12.1217 16.5059C10.9501 17.6775 9.05063 17.6775 7.87906 16.5059L2.2222 10.8491C-0.120943 8.50594 -0.120943 4.70695 2.2222 2.3638Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      Wishlish
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -410,7 +317,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                               fill="currentColor"
                             />
                           </svg>
-                          See All Photos
+                          {t("media.see_photos")}
                         </Link>
                         <a
                           className="btn btn-white-md popup-youtube"
@@ -421,7 +328,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                             src="/assets/imgs/page/activities/video.svg"
                             alt="Sunny Car Rental"
                           />
-                          Video Clips
+                          {t("media.video_clips")}
                         </a>
                       </div>
                     </div>
@@ -495,7 +402,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                           <div className="feature-info">
                             <p className="text-md-medium neutral-1000">
-                              56,500
+                              {t("features.year")} {car.year}
                             </p>
                           </div>
                         </div>
@@ -510,7 +417,9 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                           <div className="feature-info">
                             <p className="text-md-medium neutral-1000">
-                              Diesel
+                              {t("features.range")}{" "}
+                              {car.gama.charAt(0).toUpperCase() +
+                                car.gama.slice(1)}
                             </p>
                           </div>
                         </div>
@@ -525,7 +434,9 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                           <div className="feature-info">
                             <p className="text-md-medium neutral-1000">
-                              Automatic
+                              {car.transmission === "automatic"
+                                ? t("features.transmission.automatic")
+                                : t("features.transmission.manual")}
                             </p>
                           </div>
                         </div>
@@ -540,7 +451,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                           <div className="feature-info">
                             <p className="text-md-medium neutral-1000">
-                              7 seats
+                              {car.passenger_capacity} {t("features.seats")}
                             </p>
                           </div>
                         </div>
@@ -555,7 +466,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                           <div className="feature-info">
                             <p className="text-md-medium neutral-1000">
-                              3 Large bags
+                              {car.luggage_capacity} {t("features.luggage")}
                             </p>
                           </div>
                         </div>
@@ -618,7 +529,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                         aria-controls="collapseOverview"
                         onClick={() => handleAccordion(1)}
                       >
-                        <h6>Overview</h6>
+                        <h6>{t("overview.title")}</h6>
                         <svg
                           width={12}
                           height={7}
@@ -642,31 +553,14 @@ export default function CarsDetails3({ car }: { car: Car }) {
                         id="collapseOverview"
                       >
                         <div className="card card-body">
-                          <p>
-                            Elevate your Las Vegas experience to new heights
-                            with a journey aboard The High Roller at The LINQ.
-                            As the tallest observation wheel in the world,
-                            standing at an impressive 550 feet tall, The High
-                            Roller offers a bird's-eye perspective of the iconic
-                            Las Vegas Strip and its surrounding desert
-                            landscape. From the moment you step into one of the
-                            spacious cabins, you'll be transported on a
-                            mesmerizing adventure, where every turn offers a new
-                            and breathtaking vista of the vibrant city below.
+                          <p className="text-md-regular neutral-500">
+                            {t("overview.description")}
                           </p>
-                          <p>
-                            Whether you're a first-time visitor or a seasoned
-                            Las Vegas aficionado, The High Roller promises an
-                            unparalleled experience that will leave you in awe.
-                            With its climate-controlled cabins and immersive
-                            audio commentary, this attraction provides a unique
-                            opportunity to see Las Vegas from a whole new
-                            perspective, while learning about its rich history
-                            and famous landmarks along the way.
-                          </p>
+                          <p>{t("overview.general_description")}</p>
                         </div>
                       </div>
                     </div>
+
                     <div className="group-collapse-expand">
                       <button
                         className={
@@ -681,7 +575,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                         aria-controls="collapseItinerary"
                         onClick={() => handleAccordion(2)}
                       >
-                        <h6>Included in the price</h6>
+                        <h6>{t("overview.included.title")}</h6>
                         <svg
                           width={12}
                           height={7}
@@ -706,18 +600,19 @@ export default function CarsDetails3({ car }: { car: Car }) {
                       >
                         <div className="card card-body">
                           <ul className="list-checked-green">
+                            <li>{t("overview.included.items.insurance")}</li>
                             <li>
-                              Free cancellation up to 48 hours before pick-up
+                              {t("overview.included.items.roadside_assistance")}
                             </li>
                             <li>
-                              Collision Damage Waiver with $700 deductible
+                              {t("overview.included.items.unlimited_miles")}
                             </li>
-                            <li>Theft Protection with ₫66,926,626 excess</li>
-                            <li>Unlimited mileage</li>
+                            <li>{t("overview.included.items.taxes")}</li>
                           </ul>
                         </div>
                       </div>
                     </div>
+
                     <div className="group-collapse-expand">
                       <button
                         className={
@@ -732,7 +627,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                         aria-controls="collapseQuestion"
                         onClick={() => handleAccordion(3)}
                       >
-                        <h6>Question Answers</h6>
+                        <h6>{t("overview.questions.title")}</h6>
                         <svg
                           width={12}
                           height={7}
@@ -760,743 +655,49 @@ export default function CarsDetails3({ car }: { car: Car }) {
                             <div className="item-question">
                               <div className="head-question">
                                 <p className="text-md-bold neutral-1000">
-                                  Is The High Roller suitable for all ages?
+                                  {t("overview.questions.q1.title")}
                                 </p>
                               </div>
                               <div className="content-question">
                                 <p className="text-sm-medium neutral-800">
-                                  Absolutely! The High Roller offers a
-                                  family-friendly experience suitable for
-                                  visitors of all ages. Children must be
-                                  accompanied by an adult.
-                                </p>
-                              </div>
-                            </div>
-                            <div className="item-question active">
-                              <div className="head-question">
-                                <p className="text-md-bold neutral-1000">
-                                  Can I bring food or drinks aboard The High
-                                  Roller?
-                                </p>
-                              </div>
-                              <div className="content-question">
-                                <p className="text-sm-medium neutral-800">
-                                  Outside food and beverages are not permitted
-                                  on The High Roller. However, there are nearby
-                                  dining options at The LINQ Promenade where you
-                                  can enjoy a meal before or after your ride.
+                                  {t("overview.questions.q1.answer")}
                                 </p>
                               </div>
                             </div>
                             <div className="item-question">
                               <div className="head-question">
                                 <p className="text-md-bold neutral-1000">
-                                  Is The High Roller wheelchair accessible?
+                                  {t("overview.questions.q2.title")}
                                 </p>
                               </div>
                               <div className="content-question">
                                 <p className="text-sm-medium neutral-800">
-                                  es, The High Roller cabins are wheelchair
-                                  accessible, making it possible for everyone to
-                                  enjoy the breathtaking views of Las Vegas.
+                                  {t("overview.questions.q2.answer")}
                                 </p>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="group-collapse-expand">
-                      <button
-                        className={
-                          isAccordion == 4
-                            ? "btn btn-collapse collapsed"
-                            : "btn btn-collapse"
-                        }
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseReviews"
-                        aria-expanded="false"
-                        aria-controls="collapseReviews"
-                        onClick={() => handleAccordion(4)}
-                      >
-                        <h6>Rate Reviews</h6>
-                        <svg
-                          width={12}
-                          height={7}
-                          viewBox="0 0 12 7"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1 1L6 6L11 1"
-                            stroke=""
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            fill="none"
-                          />
-                        </svg>
-                      </button>
-                      <div
-                        className={
-                          isAccordion == 4 ? "collapse" : "collapse show"
-                        }
-                        id="collapseReviews"
-                      >
-                        <div className="card card-body">
-                          <div className="head-reviews">
-                            <div className="review-left">
-                              <div className="review-info-inner">
-                                <h6 className="neutral-1000">4.95 / 5</h6>
-                                <p className="text-sm-medium neutral-400">
-                                  (672 reviews)
+                            <div className="item-question active">
+                              <div className="head-question">
+                                <p className="text-md-bold neutral-1000">
+                                  {t("overview.questions.q3.title")}
                                 </p>
-                                <div className="review-rate">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star.svg"
-                                    alt="Travila"
-                                  />
-                                </div>
                               </div>
-                            </div>
-                            <div className="review-right">
-                              <div className="review-progress">
-                                <div className="item-review-progress">
-                                  <div className="text-rv-progress">
-                                    <p className="text-sm-bold">Price</p>
-                                  </div>
-                                  <div className="bar-rv-progress">
-                                    <div className="progress">
-                                      <div
-                                        className="progress-bar"
-                                        style={{ width: "90%" }}
-                                      >
-                                        {" "}
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="text-avarage">
-                                    <p>4.8/5</p>
-                                  </div>
-                                </div>
-                                <div className="item-review-progress">
-                                  <div className="text-rv-progress">
-                                    <p className="text-sm-bold">Service</p>
-                                  </div>
-                                  <div className="bar-rv-progress">
-                                    <div className="progress">
-                                      <div
-                                        className="progress-bar"
-                                        style={{ width: "90%" }}
-                                      >
-                                        {" "}
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="text-avarage">
-                                    <p>4.2/5</p>
-                                  </div>
-                                </div>
-                                <div className="item-review-progress">
-                                  <div className="text-rv-progress">
-                                    <p className="text-sm-bold">Safety</p>
-                                  </div>
-                                  <div className="bar-rv-progress">
-                                    <div className="progress">
-                                      <div
-                                        className="progress-bar"
-                                        style={{ width: "95%" }}
-                                      >
-                                        {" "}
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="text-avarage">
-                                    <p>4.9/5</p>
-                                  </div>
-                                </div>
-                                <div className="item-review-progress">
-                                  <div className="text-rv-progress">
-                                    <p className="text-sm-bold">
-                                      Entertainment
-                                    </p>
-                                  </div>
-                                  <div className="bar-rv-progress">
-                                    <div className="progress">
-                                      <div
-                                        className="progress-bar"
-                                        style={{ width: "85%" }}
-                                      >
-                                        {" "}
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="text-avarage">
-                                    <p>4.7/5</p>
-                                  </div>
-                                </div>
-                                <div className="item-review-progress">
-                                  <div className="text-rv-progress">
-                                    <p className="text-sm-bold">
-                                      Accessibility
-                                    </p>
-                                  </div>
-                                  <div className="bar-rv-progress">
-                                    <div className="progress">
-                                      <div
-                                        className="progress-bar"
-                                        style={{ width: "100%" }}
-                                      >
-                                        {" "}
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="text-avarage">
-                                    <p>5/5</p>
-                                  </div>
-                                </div>
-                                <div className="item-review-progress">
-                                  <div className="text-rv-progress">
-                                    <p className="text-sm-bold">Support</p>
-                                  </div>
-                                  <div className="bar-rv-progress">
-                                    <div className="progress">
-                                      <div
-                                        className="progress-bar"
-                                        style={{ width: "100%" }}
-                                      />
-                                    </div>
-                                  </div>
-                                  <div className="text-avarage">
-                                    <p>5/5</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="list-reviews">
-                            <div className="item-review">
-                              <div className="head-review">
-                                <div className="author-review">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/avatar.png"
-                                    alt="Travila"
-                                  />
-                                  <div className="author-info">
-                                    <p className="text-lg-bold">
-                                      Sarah Johnson
-                                    </p>
-                                    <p className="text-sm-medium neutral-500">
-                                      December 4, 2024 at 3:12 pm
-                                    </p>
-                                  </div>
-                                </div>
-                                <div className="rate-review">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                </div>
-                              </div>
-                              <div className="content-review">
+                              <div className="content-question">
                                 <p className="text-sm-medium neutral-800">
-                                  The views from The High Roller were absolutely
-                                  stunning! It's a fantastic way to see the
-                                  Strip and the surrounding area. The cabins are
-                                  spacious and comfortable, and the audio
-                                  commentary adds an extra layer of enjoyment.
-                                  Highly recommend!
+                                  {t("overview.questions.q3.answer")}
                                 </p>
                               </div>
                             </div>
-                            <div className="item-review">
-                              <div className="head-review">
-                                <div className="author-review">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/avatar.png"
-                                    alt="Travila"
-                                  />
-                                  <div className="author-info">
-                                    <p className="text-lg-bold">
-                                      Sarah Johnson
-                                    </p>
-                                    <p className="text-sm-medium neutral-500">
-                                      December 4, 2024 at 3:12 pm
-                                    </p>
-                                  </div>
-                                </div>
-                                <div className="rate-review">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                </div>
+                            <div className="item-question">
+                              <div className="head-question">
+                                <p className="text-md-bold neutral-1000">
+                                  {t("overview.questions.q4.title")}
+                                </p>
                               </div>
-                              <div className="content-review">
+                              <div className="content-question">
                                 <p className="text-sm-medium neutral-800">
-                                  The views from The High Roller were absolutely
-                                  stunning! It's a fantastic way to see the
-                                  Strip and the surrounding area. The cabins are
-                                  spacious and comfortable, and the audio
-                                  commentary adds an extra layer of enjoyment.
-                                  Highly recommend!
+                                  {t("overview.questions.q4.answer")}
                                 </p>
-                              </div>
-                            </div>
-                            <div className="item-review">
-                              <div className="head-review">
-                                <div className="author-review">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/avatar.png"
-                                    alt="Travila"
-                                  />
-                                  <div className="author-info">
-                                    <p className="text-lg-bold">
-                                      Sarah Johnson
-                                    </p>
-                                    <p className="text-sm-medium neutral-500">
-                                      December 4, 2024 at 3:12 pm
-                                    </p>
-                                  </div>
-                                </div>
-                                <div className="rate-review">
-                                  {" "}
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                  <img
-                                    src="/assets/imgs/page/tour-detail/star-big.svg"
-                                    alt="Travila"
-                                  />
-                                </div>
-                              </div>
-                              <div className="content-review">
-                                <p className="text-sm-medium neutral-800">
-                                  The views from The High Roller were absolutely
-                                  stunning! It's a fantastic way to see the
-                                  Strip and the surrounding area. The cabins are
-                                  spacious and comfortable, and the audio
-                                  commentary adds an extra layer of enjoyment.
-                                  Highly recommend!
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <nav aria-label="Page navigation example">
-                            <ul className="pagination">
-                              <li className="page-item">
-                                <Link
-                                  className="page-link"
-                                  href="#"
-                                  aria-label="Previous"
-                                >
-                                  <span aria-hidden="true">
-                                    <svg
-                                      width={12}
-                                      height={12}
-                                      viewBox="0 0 12 12"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M6.00016 1.33325L1.3335 5.99992M1.3335 5.99992L6.00016 10.6666M1.3335 5.99992H10.6668"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                      />
-                                    </svg>
-                                  </span>
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link className="page-link" href="#">
-                                  1
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link className="page-link active" href="#">
-                                  2
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link className="page-link" href="#">
-                                  3
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link className="page-link" href="#">
-                                  4
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link className="page-link" href="#">
-                                  5
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link className="page-link" href="#">
-                                  ...
-                                </Link>
-                              </li>
-                              <li className="page-item">
-                                <Link
-                                  className="page-link"
-                                  href="#"
-                                  aria-label="Next"
-                                >
-                                  <span aria-hidden="true">
-                                    <svg
-                                      width={12}
-                                      height={12}
-                                      viewBox="0 0 12 12"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M5.99967 10.6666L10.6663 5.99992L5.99968 1.33325M10.6663 5.99992L1.33301 5.99992"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                      />
-                                    </svg>
-                                  </span>
-                                </Link>
-                              </li>
-                            </ul>
-                          </nav>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="group-collapse-expand">
-                      <button
-                        className={
-                          isAccordion == 5
-                            ? "btn btn-collapse collapsed"
-                            : "btn btn-collapse"
-                        }
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseAddReview"
-                        aria-expanded="false"
-                        aria-controls="collapseAddReview"
-                        onClick={() => handleAccordion(5)}
-                      >
-                        <h6>Add a review</h6>
-                        <svg
-                          width={12}
-                          height={7}
-                          viewBox="0 0 12 7"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1 1L6 6L11 1"
-                            stroke=""
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            fill="none"
-                          />
-                        </svg>
-                      </button>
-                      <div
-                        className={
-                          isAccordion == 5 ? "collapse" : "collapse show"
-                        }
-                        id="collapseAddReview"
-                      >
-                        <div className="card card-body">
-                          <div className="box-type-reviews">
-                            <div className="row">
-                              <div className="col-lg-4">
-                                <div className="box-type-review">
-                                  <p className="text-sm-bold text-type-rv">
-                                    Price
-                                  </p>
-                                  <p className="rate-type-review">
-                                    {" "}
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                  </p>
-                                </div>
-                                <div className="box-type-review">
-                                  <p className="text-sm-bold text-type-rv">
-                                    Service
-                                  </p>
-                                  <p className="rate-type-review">
-                                    {" "}
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-lg-4">
-                                <div className="box-type-review">
-                                  <p className="text-sm-bold text-type-rv">
-                                    Safety
-                                  </p>
-                                  <p className="rate-type-review">
-                                    {" "}
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                  </p>
-                                </div>
-                                <div className="box-type-review">
-                                  <p className="text-sm-bold text-type-rv">
-                                    Entertainment
-                                  </p>
-                                  <p className="rate-type-review">
-                                    {" "}
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-lg-4">
-                                <div className="box-type-review">
-                                  <p className="text-sm-bold text-type-rv">
-                                    Accessibility
-                                  </p>
-                                  <p className="rate-type-review">
-                                    {" "}
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                  </p>
-                                </div>
-                                <div className="box-type-review">
-                                  <p className="text-sm-bold text-type-rv">
-                                    Support
-                                  </p>
-                                  <p className="rate-type-review">
-                                    {" "}
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                    <img
-                                      src="/assets/imgs/page/tour-detail/star-big.svg"
-                                      alt="Travila"
-                                    />
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="box-form-reviews">
-                            <h6 className="text-md-bold neutral-1000 mb-15">
-                              Leave feedback
-                            </h6>
-                            <div className="row">
-                              <div className="col-md-6">
-                                <div className="form-group">
-                                  <input
-                                    className="form-control"
-                                    type="text"
-                                    placeholder="Your name"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-md-6">
-                                <div className="form-group">
-                                  <input
-                                    className="form-control"
-                                    type="text"
-                                    placeholder="Email address"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-md-12">
-                                <div className="form-group">
-                                  <textarea
-                                    className="form-control"
-                                    placeholder="Your comment"
-                                    defaultValue={""}
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-md-12">
-                                <button className="btn btn-black-lg-square">
-                                  Submit review
-                                  <svg
-                                    width={16}
-                                    height={16}
-                                    viewBox="0 0 16 16"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M8 15L15 8L8 1M15 8L1 8"
-                                      stroke=""
-                                      strokeWidth="1.5"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      fill="none"
-                                    />
-                                  </svg>
-                                </button>
                               </div>
                             </div>
                           </div>
@@ -1510,13 +711,13 @@ export default function CarsDetails3({ car }: { car: Car }) {
                     <div className="booking-form">
                       <div className="head-booking-form">
                         <p className="text-xl-bold neutral-1000">
-                          Rent This Vehicle
+                          {t("form.title")}
                         </p>
                       </div>
                       <div className="content-booking-form">
                         <div className="item-line-booking border-bottom-0 pb-0">
-                          <strong className="text-md-bold neutral-1000">
-                            Pick-Up
+                          <strong className="text-sm-bold neutral-1000">
+                            {t("form.pick_up")}
                           </strong>
                           {errors.pickupDate && (
                             <span className="error-message">
@@ -1547,8 +748,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
                         </div>
                         <div className="item-line-booking">
-                          <strong className="text-md-bold neutral-1000">
-                            Drop-Off
+                          <strong className="text-sm-bold neutral-1000">
+                            {t("form.return")}
                           </strong>
                           {errors.dropoffDate && (
                             <span className="error-message">
@@ -1580,8 +781,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                         </div>
                         <div className="additional-fields">
                           <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Payment Method
+                            <label className="text-sm-bold neutral-1000">
+                              {t("form.payment_method")}
                             </label>
                             {errors.payment_method && (
                               <span className="error-message">
@@ -1619,8 +820,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Driver
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.driver")}
                               </label>
                               <input
                                 {...register("driver")}
@@ -1657,8 +858,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Driver Licence
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.driver_licence")}
                               </label>
                               <input
                                 type="number"
@@ -1697,8 +898,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Additional Driver
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.additional_driver")}
                               </label>
                               <input
                                 {...register("ad_driver")}
@@ -1735,8 +936,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Additional Driver License
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.additional_driver_licence")}
                               </label>
                               <input
                                 type="text"
@@ -1778,8 +979,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                               }}
                               className="item-line-booking-checkbox"
                             >
-                              <label className="text-md-bold neutral-1000">
-                                With Gas
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.with_gas")}
                               </label>
                               <input
                                 {...register("with_gas")}
@@ -1819,8 +1020,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Coupon Code
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.coupon_code")}
                               </label>
                               <input
                                 {...register("coupon_code")}
@@ -1857,8 +1058,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Pickup Location
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.pickup_location")}
                               </label>
                               <select
                                 {...register("pickup_location_id", {
@@ -1904,8 +1105,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Return Location
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.return_location")}
                               </label>
                               <select
                                 {...register("return_location_id", {
@@ -1951,8 +1152,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Damage Report
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.damage_report")}
                               </label>
                               <input
                                 {...register("damage_report")}
@@ -1990,8 +1191,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Tipo de Entrega
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.delivery_type")}
                               </label>
                               <select
                                 {...register("delivery_type")}
@@ -2036,8 +1237,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Reservado Por
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.booking_method")}
                               </label>
                               <select
                                 {...register("rented_by")}
@@ -2079,8 +1280,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 gap: 3,
                               }}
                             >
-                              <label className="text-md-bold neutral-1000">
-                                Código de Reserva
+                              <label className="text-sm-bold neutral-1000">
+                                {t("form.booking_code")}
                               </label>
                               <input
                                 {...register("reserve_code")}
@@ -2100,8 +1301,8 @@ export default function CarsDetails3({ car }: { car: Car }) {
                           </div>
 
                           <div className="item-line-booking">
-                            <label className="text-md-bold neutral-1000">
-                              Comments
+                            <label className="text-sm-bold neutral-1000">
+                              {t("form.comments")}
                             </label>
                             {errors.comments && (
                               <span className="error-message">
@@ -2117,12 +1318,12 @@ export default function CarsDetails3({ car }: { car: Car }) {
                         </div>
                         <div className="item-line-booking last-item">
                           <strong className="text-md-bold neutral-1000">
-                            Total Payable
+                            {t("form.total_paylable")}
                           </strong>
                         </div>
                         <div className="item-line-booking last-item pb-0">
                           <strong className="text-md-medium neutral-1000">
-                            Subtotal
+                            {t("form.subtotal")}
                           </strong>
                           <div className="line-booking-right">
                             <p className="text-xl-bold neutral-1000">
@@ -2152,7 +1353,7 @@ export default function CarsDetails3({ car }: { car: Car }) {
                             </button>
                           ) : (
                             <Link href="/login" className="btn btn-book">
-                              Login to Book
+                              {t("form.login")}
                               <svg
                                 width={16}
                                 height={16}
@@ -2185,257 +1386,13 @@ export default function CarsDetails3({ car }: { car: Car }) {
                                 fill="currentColor"
                               />
                             </svg>
-                            Need some help?
+                            {t("form.need_help")}
                           </Link>
                         </div>
                       </div>
                     </div>
                   </form>
-                  <div className="sidebar-left border-1 background-card">
-                    <h6 className="text-xl-bold neutral-1000">Listed by</h6>
-                    <div className="box-sidebar-content">
-                      <div className="box-agent-support border-bottom pb-3 mb-3">
-                        <div className="card-author">
-                          <div className="me-2">
-                            <img
-                              src="/assets/imgs/template/icons/car-1.png"
-                              alt="Sunny Car Rental"
-                            />
-                          </div>
-                          <div className="card-author-info">
-                            <p className="text-lg-bold neutral-1000">
-                              Emily Rose
-                            </p>
-                            <p className="text-sm-medium neutral-500">
-                              Las Vegas, USA
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="box-info-contact">
-                        <p className="text-md-medium mobile-phone neutral-1000">
-                          <span className="text-md-bold">Mobile:</span>{" "}
-                          1-222-333-4444
-                        </p>
-                        <p className="text-md-medium email neutral-1000">
-                          <span className="text-md-bold">Email:</span>{" "}
-                          emily-rose@gmail.com
-                        </p>
-                        <p className="text-md-medium whatsapp neutral-1000">
-                          <span className="text-md-bold">WhatsApp:</span>{" "}
-                          1-222-333-4444
-                        </p>
-                        <p className="text-md-medium fax neutral-1000">
-                          <span className="text-md-bold">Fax:</span>{" "}
-                          1-222-333-4444
-                        </p>
-                      </div>
-                      <div className="box-link-bottom">
-                        <Link
-                          className="btn btn-primary py-3 w-100 rounded-3"
-                          href="#"
-                        >
-                          All items by this dealer
-                          <svg
-                            width={16}
-                            height={16}
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M8 15L15 8L8 1M15 8L1 8"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="background-100 pt-55 pb-55 mt-100">
-              <div className="container">
-                <Marquee
-                  direction="left"
-                  pauseOnHover={true}
-                  className="carouselTicker carouselTicker-left box-list-brand-car justify-content-center  wow fadeIn"
-                >
-                  <ul className="carouselTicker__list">
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/jaguar.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/jaguar-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/honda.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/honda-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/chevrolet.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/chevrolet-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/acura.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/acura-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/bmw.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/bmw-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/toyota.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/toyota-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/lexus.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/lexus-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/mer.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/mer-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                    <li className="carouselTicker__item">
-                      <div className="item-brand">
-                        <img
-                          className="light-mode"
-                          src="/assets/imgs/page/homepage2/bugatti.png"
-                          alt="Sunny Car Rental"
-                        />
-                        <img
-                          className="dark-mode"
-                          src="/assets/imgs/page/homepage2/bugatti-w.png"
-                          alt="Sunny Car Rental"
-                        />
-                      </div>
-                    </li>
-                  </ul>
-                </Marquee>
               </div>
             </div>
           </section>
