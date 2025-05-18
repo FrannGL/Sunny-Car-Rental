@@ -1,0 +1,221 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "booking": "Reservar",
+    "contact": "Contacto",
+    "rentals": "Mis reservas",
+    "backoffice": {
+      "title": "Panel Admin",
+      "cars": "Vehículos",
+      "rentals": "Alquileres",
+      "locations": "Ubicaciones",
+      "seasons": "Temporadas",
+      "coupons": "Cupones"
+    },
+    "auth": {
+      "sign_in": "Iniciar Sesión",
+      "sign_out": "Cerrar Sesión",
+      "loading": "Cargando..."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Escríbenos para recibir atención personalizada, no lo dudes, aquí estamos para ti.",
+      "contact_title": "Contacto",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Correo",
+      "phone": "Número de Teléfono",
+      "message": "Tu Mensaje",
+      "send": "Enviar",
+      "placeholder": {
+        "first_name": "José",
+        "last_name": "...",
+        "email": "email@domain.com",
+        "phone": "+99",
+        "message": "Mensaje ..."
+      }
+    },
+    "location": {
+      "title": "Ubicación",
+      "address": "Valencia, España"
+    },
+    "copyright": "© {year} Sunny Car Rental Inc. Todos los derechos reservados."
+  },
+  "error_403": {
+    "title": "Acceso Denegado",
+    "message": "No tienes permiso para acceder a esta página.",
+    "action": "Por favor, inicia sesión o vuelve a la página principal.",
+    "button": "Ir al Login",
+    "alt": {
+      "arrow": "flecha-izquierda",
+      "image": "Acceso Prohibido"
+    }
+  },
+  "error_404": {
+    "title": "Página No Encontrada",
+    "message": "Página no disponible. Por favor, busca de nuevo o navega usando el menú.",
+    "button": "Volver al Inicio",
+    "alt": {
+      "arrow": "flecha-izquierda",
+      "logo": "Sunny Car Rental"
+    }
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "welcome": "Bienvenido de nuevo",
+    "form": {
+      "username": {
+        "label": "Email / Usuario",
+        "placeholder": "Email / Usuario"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "****************"
+      },
+      "submit": "Iniciar sesión"
+    },
+    "register": {
+      "text": "¿No tienes una cuenta?",
+      "link": "¡Regístrate aquí!"
+    }
+  },
+  "register": {
+    "title": "Registro",
+    "welcome": "¡Bienvenido!",
+    "form": {
+      "email": {
+        "label": "Correo",
+        "placeholder": "Ingresa tu correo"
+      },
+      "username": {
+        "label": "Usuario",
+        "placeholder": "Ingresa tu usuario"
+      },
+      "verification": {
+        "title": "Código de Verificación",
+        "placeholder": "Ingresa el código de verificación"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "Contraseña"
+      },
+      "confirm_password": {
+        "label": "Confirmar Contraseña",
+        "placeholder": "Confirmar Contraseña"
+      },
+      "buttons": {
+        "send_code": "Enviar Código",
+        "register": "Registrarse"
+      }
+    },
+    "errors": {
+      "user_exists": "Este usuario ya se encuentra registrado",
+      "email_error": "Error al enviar el correo. Intenta nuevamente.",
+      "invalid_code": "El código ingresado es incorrecto",
+      "verification_error": "Hubo un error al verificar el código. Intenta nuevamente."
+    },
+    "login": {
+      "text": "¿Ya tienes una cuenta?",
+      "link": "¡Inicia sesión aquí!"
+    }
+  },
+  "hero": {
+    "title": "Alquilá tu auto en Valencia o Alicante, Low Cost",
+    "subtitle": "Reserva online tu coche al mejor precio. Sin cargos ocultos, sin complicaciones.",
+    "alt_logo": "Sunny Rental Cars"
+  },
+  "search": {
+    "locations": {
+      "pickup": {
+        "label": "Lugar de Recogida",
+        "placeholder": "Selecciona una ubicación"
+      },
+      "dropoff": {
+        "label": "Lugar de Devolución",
+        "placeholder": "Selecciona una ubicación"
+      }
+    },
+    "dates": {
+      "pickup": {
+        "label": "Fecha de Recogida"
+      },
+      "return": {
+        "label": "Fecha de Devolución"
+      }
+    },
+    "button": "Buscar Vehículo",
+    "errors": {
+      "required": "Este campo es requerido",
+      "invalid_date": "Fecha inválida"
+    }
+  },
+  "featured_cars": {
+    "title": "Vehículos Destacados",
+    "subtitle": "Encuentra el vehículo perfecto para cualquier ocasión.",
+    "view_all": "Ver Todos",
+    "load_more": "Cargar más vehículos",
+    "no_cars": "No hay vehículos disponibles"
+  },
+  "review": {
+    "company_name": "Sunny Rental Cars",
+    "title": "Recorre en 4 ruedas",
+    "subtitle": "De Valencia y hasta Alicante",
+    "navigation": {
+      "prev": "Diapositiva anterior",
+      "next": "Siguiente diapositiva"
+    }
+  },
+  "how_it_works": {
+    "title": "¿Cómo funciona?",
+    "subtitle": "Nuestro sistema de alquiler funciona de la siguiente manera",
+    "steps": {
+      "location": {
+        "title": "Elegí la ubicación",
+        "description": "Selecciona el destino ideal para comenzar tu viaje con facilidad."
+      },
+      "vehicle": {
+        "title": "Elegí tu vehículo",
+        "description": "Explora nuestra flota y encuentra el coche perfecto para tus necesidades."
+      },
+      "verification": {
+        "title": "Verificación",
+        "description": "Revisa tu información y confirma tu reserva"
+      },
+      "start_journey": {
+        "title": "Comienza tu viaje",
+        "description": "¡Listo para comenzar tu viaje! Recuerda que puedes cancelar tu reserva en cualquier momento."
+      }
+    }
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "cards": {
+      "vehicle_protection": {
+        "title": "Protección del Vehículo",
+        "description": "Los seguros CDW y LDW cubren daños por choques, robos o accidentes durante el período de alquiler."
+      },
+      "third_party": {
+        "title": "Protección Contra Terceros",
+        "description": "Protección ALI y SLI para vehículos de terceros involucrados en colisiones con tu auto alquilado."
+      },
+      "deposit": {
+        "title": "Depósito de Garantía",
+        "description": "Se requiere un depósito de garantía que se bloquea en tu tarjeta y se libera al devolver el vehículo."
+      },
+      "extras": {
+        "title": "Extras opcionales",
+        "description": "Es posible adicionar extras a tu reserva como GPS y sillas de bebé o de niños. ¡Agrégalas ahora para que no te preocupes por eso durante tu viaje!"
+      },
+      "additional_driver": {
+        "title": "Conductor adicional",
+        "description": "Si otra persona también va a conducir el auto, deberá firmar el contrato como conductor adicional y cumplir con los requisitos para alquilar un auto tales como: documentación necesaria y edad mínima para conducir."
+      },
+      "mileage": {
+        "title": "Kilometraje",
+        "description": "Verifica si tu reserva cuenta con kilometraje ilimitado o no. El kilometraje ilimitado significa que puedes andar cuánto quisieras sin pagar ningún valor extra por los kilómetros recorridos."
+      }
+    }
+  }
+}

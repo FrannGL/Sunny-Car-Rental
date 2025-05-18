@@ -14,6 +14,7 @@ import {
   verifySchema,
 } from "@/src/schemas/register.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -34,6 +35,7 @@ export default function RegisterForm() {
 
   const { preRegister, register } = useAuth();
   const router = useRouter();
+  const t = useTranslations("register");
 
   const emailForm = useForm<EmailFormValues>({
     resolver: zodResolver(emailSchema),
@@ -63,7 +65,7 @@ export default function RegisterForm() {
       } else {
         setError((prevState) => ({
           ...prevState,
-          preRegisterError: "Este usuario ya se encuentra registrado",
+          preRegisterError: t("errors.user_exists"),
         }));
         console.error("Error al pre-registrar");
       }
@@ -71,7 +73,7 @@ export default function RegisterForm() {
       console.error("Error al enviar email:", err);
       setError((prevState) => ({
         ...prevState,
-        preRegisterError: "Error al enviar el correo. Intenta nuevamente.",
+        preRegisterError: t("errors.email_error"),
       }));
     }
   };
@@ -90,7 +92,7 @@ export default function RegisterForm() {
       } else {
         setError((prevState) => ({
           ...prevState,
-          verificationError: "El código ingresado es incorrecto",
+          verificationError: t("errors.invalid_code"),
         }));
         console.error("Error al registrar usuario");
       }
@@ -98,8 +100,7 @@ export default function RegisterForm() {
       console.error("Error en el registro:", err);
       setError((prevState) => ({
         ...prevState,
-        verificationError:
-          "Hubo un error al verificar el código. Intenta nuevamente.",
+        verificationError: t("errors.verification_error"),
       }));
     }
   };
@@ -112,11 +113,11 @@ export default function RegisterForm() {
             <div className="register-content border rounded-3 px-md-5 px-3 ptb-50">
               <div className="text-center">
                 <p className="neutral-1000 px-4 py-2 bg-2 text-sm-bold rounded-12 d-inline-flex align-items-center">
-                  Register
+                  {t("title")}
                 </p>
               </div>
 
-              <h4 className="neutral-1000 text-center mt-10">Welcome!</h4>
+              <h4 className="neutral-1000 text-center mt-10">{t("welcome")}</h4>
 
               <div className="form-login mt-20">
                 {step === 0 ? (
@@ -125,7 +126,7 @@ export default function RegisterForm() {
                       <input
                         className="form-control"
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder={t("form.email.placeholder")}
                         {...emailForm.register("email")}
                       />
                       {emailForm.formState.errors.email && (
@@ -139,7 +140,7 @@ export default function RegisterForm() {
                       <input
                         className="form-control"
                         type="text"
-                        placeholder="Enter your username"
+                        placeholder={t("form.username.placeholder")}
                         {...emailForm.register("username")}
                       />
                       {emailForm.formState.errors.username && (
@@ -159,7 +160,7 @@ export default function RegisterForm() {
                       className="btn btn-primary w-100 mt-3"
                       type="submit"
                     >
-                      Send Code
+                      {t("form.buttons.send_code")}
                     </button>
                   </form>
                 ) : (
@@ -172,7 +173,7 @@ export default function RegisterForm() {
                       <input
                         className="form-control"
                         type="text"
-                        placeholder="Verification Code"
+                        placeholder={t("form.verification.placeholder")}
                         {...registerForm.register("code")}
                       />
                       {registerForm.formState.errors.code && (
@@ -186,7 +187,7 @@ export default function RegisterForm() {
                       <input
                         className="form-control"
                         type={showPassword ? "text" : "password"}
-                        placeholder="Password"
+                        placeholder={t("form.password.placeholder")}
                         {...registerForm.register("password")}
                       />
                       <button
@@ -213,7 +214,7 @@ export default function RegisterForm() {
                       <input
                         className="form-control"
                         type={showConfirmPassword ? "text" : "password"}
-                        placeholder="Confirm Password"
+                        placeholder={t("form.confirm_password.placeholder")}
                         {...registerForm.register("conf_pass")}
                       />
                       <button
@@ -243,15 +244,15 @@ export default function RegisterForm() {
                     )}
 
                     <button className="btn btn-primary w-100" type="submit">
-                      Register
+                      {t("form.buttons.register")}
                     </button>
                   </form>
                 )}
 
                 <p className="text-sm-medium neutral-500 text-center mt-4">
-                  Already have an account?{" "}
+                  {t("login.text")}{" "}
                   <Link className="neutral-1000" href="/login">
-                    Login Here!
+                    {t("login.link")}
                   </Link>
                 </p>
               </div>

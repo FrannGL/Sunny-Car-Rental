@@ -4,10 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { useAuth } from "@/src/context/AuthContext";
+import { useTranslations } from "next-intl";
 
 export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
   const [isAccordion, setIsAccordion] = useState(0);
   const { user } = useAuth();
+
+  const t = useTranslations("navbar");
 
   const handleAccordion = (key: any) => {
     setIsAccordion((prevState) => (prevState === key ? null : key));
@@ -41,20 +44,20 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                 <nav>
                   <ul className="mobile-menu font-heading">
                     <li>
-                      <Link href="/">Home</Link>
+                      <Link href="/">{t("home")}</Link>
                     </li>
                     <li>
-                      <Link href="/about-us">About Us</Link>
+                      <Link href="/about-us">{t("about")}</Link>
                     </li>
                     <li>
-                      <Link href="/booking">Booking</Link>
+                      <Link href="/booking">{t("booking")}</Link>
                     </li>
                     <li>
-                      <Link href="/contact">Contact</Link>
+                      <Link href="/contact">{t("contact")}</Link>
                     </li>
                     {user && (
                       <li>
-                        <Link href="/rentals">Rentals</Link>
+                        <Link href="/rentals">{t("rentals")}</Link>
                       </li>
                     )}
                     {user?.role?.id === 2 && (
@@ -66,7 +69,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                       >
                         <div className="d-flex align-items-center justify-content-between">
                           <Link href="#" onClick={(e) => e.preventDefault()}>
-                            Backoffice
+                            {t("backoffice.title")}
                           </Link>
                           <span className="menu-expand">
                             <i className="arrow-small-down"></i>
@@ -78,19 +81,29 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                           }`}
                         >
                           <li>
-                            <Link href="/backoffice/cars">Cars</Link>
+                            <Link href="/backoffice/cars">
+                              {t("backoffice.cars")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/rentals">Rentals</Link>
+                            <Link href="/backoffice/rentals">
+                              {t("backoffice.rentals")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/locations">Locations</Link>
+                            <Link href="/backoffice/locations">
+                              {t("backoffice.locations")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/seasons">Seasons</Link>
+                            <Link href="/backoffice/seasons">
+                              {t("backoffice.seasons")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/coupons">Coupons</Link>
+                            <Link href="/backoffice/coupons">
+                              {t("backoffice.coupons")}
+                            </Link>
                           </li>
                         </ul>
                       </li>

@@ -2,7 +2,7 @@
 import { useAuth } from "@/src/context/AuthContext";
 import useMediaQuery from "@/src/hooks/useMediaQuery";
 import { Link, usePathname, useRouter } from "@/src/i18n/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useCallback } from "react";
@@ -19,8 +19,18 @@ const ThemeSwitch = dynamic(
 );
 
 const languages = [
-  { value: "en", label: "English", countryCode: "US" },
-  { value: "es", label: "Español", countryCode: "ES" },
+  {
+    value: "en",
+    label: "English",
+    countryCode: "US",
+    flagIcon: "/assets/imgs/flags/uk.png",
+  },
+  {
+    value: "es",
+    label: "Español",
+    countryCode: "ES",
+    flagIcon: "/assets/imgs/flags/es.png",
+  },
 ];
 
 export default function Header2({
@@ -35,6 +45,7 @@ export default function Header2({
   const locale = useLocale();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 1400px)");
+  const t = useTranslations("navbar");
 
   const currentLang = languages.find((lang) => lang.value === locale);
 
@@ -97,19 +108,17 @@ export default function Header2({
                 </span>
               </Link>
             </div>
-            {/* <div className="text-header">
-							<div className="text-unlock text-sm-medium text-white">More than <span className="text-primary">800+</span> special collection cars in this summer</div>
-							<Link className="btn btn-brand-2 btn-small text-dark px-3 py-2 text-xs-medium " href="/cars-list-1">
-								Access Now
-								<svg className="ms-1" xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 16 16" fill="none">
-									<path fillRule="evenodd" clipRule="evenodd" d="M1 7.99965C1 7.86705 1.05268 7.73987 1.14645 7.6461C1.24021 7.55233 1.36739 7.49965 1.5 7.49965H13.293L10.146 4.35366C10.0521 4.25977 9.99937 4.13243 9.99937 3.99966C9.99937 3.86688 10.0521 3.73954 10.146 3.64565C10.2399 3.55177 10.3672 3.49902 10.5 3.49902C10.6328 3.49902 10.7601 3.55177 10.854 3.64565L14.854 7.64565C14.9006 7.6921 14.9375 7.74728 14.9627 7.80802C14.9879 7.86877 15.0009 7.93389 15.0009 7.99965C15.0009 8.06542 14.9879 8.13054 14.9627 8.19129C14.9375 8.25203 14.9006 8.30721 14.854 8.35365L10.854 12.3537C10.7601 12.4475 10.6328 12.5003 10.5 12.5003C10.3672 12.5003 10.2399 12.4475 10.146 12.3537C10.0521 12.2598 9.99937 12.1324 9.99937 11.9997C9.99937 11.8669 10.0521 11.7395 10.146 11.6457L13.293 8.49965H1.5C1.36739 8.49965 1.24021 8.44698 1.14645 8.35321C1.05268 8.25944 1 8.13226 1 7.99965Z" fill="#101010" />
-								</svg>
-							</Link>
-						</div> */}
+
             <div className="top-right-header">
               <Dropdown className="d-inline-block ms-3">
                 <Dropdown.Toggle variant="dark" id="language-selector">
-                  <LiaGlobeAmericasSolid className="me-2" />
+                  <Image
+                    src={currentLang?.flagIcon || "/assets/icons/us.png"}
+                    alt={currentLang?.label || "Language"}
+                    width={20}
+                    height={20}
+                    className="me-2"
+                  />
                   {currentLang?.label || "Language"}
                 </Dropdown.Toggle>
 
@@ -124,26 +133,18 @@ export default function Header2({
                         }
                       }}
                     >
+                      <Image
+                        src={lang.flagIcon}
+                        alt={lang.label}
+                        width={20}
+                        height={20}
+                        className="me-2"
+                      />
                       {lang.label}
                     </Dropdown.Item>
                   ))}
                 </Dropdown.Menu>
               </Dropdown>
-              {/* <Dropdown className="d-none d-xl-inline-block box-dropdown-cart align-middle head-currency">
-								<Dropdown.Toggle  as="span" className="text-14-medium icon-list icon-cart">
-									<span className="text-14-medium arrow-down">USD</span>
-									</Dropdown.Toggle>
-								<Dropdown.Menu style={{visibility: 'visible'}} className="dropdown-cart">
-									<ul>
-										<li><Link className="text-sm-medium" href="#">USD</Link></li>
-										<li><Link className="text-sm-medium" href="#">EUR</Link></li>
-										<li><Link className="text-sm-medium" href="#">SGP</Link></li>
-									</ul>
-								</Dropdown.Menu>
-							</Dropdown> */}
-              {/* <div className="top-button-mode">
-								<ThemeSwitch />
-							</div> */}
             </div>
           </div>
         </div>
@@ -169,132 +170,51 @@ export default function Header2({
                   }`}
                 >
                   <ul className="main-menu">
-                    {/* <li className="has-children">
-                      <Link href="#">Home</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/">Home page v1</Link>
-                        </li>
-                        <li>
-                          <Link href="/index-2">Home page v2</Link>
-                        </li>
-                        <li>
-                          <Link href="/index-3">Home page v3</Link>
-                        </li>
-                      </ul>
-                    </li> */}
                     <li className="mega-li-small">
-                      <Link href="/">Home</Link>
+                      <Link href="/">{t("home")}</Link>
                     </li>
                     <li className="mega-li-small">
-                      <Link href="/about-us">About Us</Link>
+                      <Link href="/about-us">{t("about")}</Link>
                     </li>
                     <li className="mega-li-small">
-                      <Link href="/booking">Booking</Link>
+                      <Link href="/booking">{t("booking")}</Link>
                     </li>
-                    {/* <li className="mega-li-small has-children">
-                      <Link href="#">Dealers</Link>
-                      <div className="mega-menu">
-                        <div className="mega-menu-inner mega-menu-inner-small mega-menu-inner-destinations">
-                          <ul className="sub-menu">
-                            <li>
-                              <Link href="/dealer-listing">
-                                Dealers Listing
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/dealer-details">Dealer Details</Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li> */}
-                    {/* <li className="has-children">
-                      <Link href="#">Shop</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/shop-list">Shop Grid</Link>
-                        </li>
-                        <li>
-                          <Link href="/shop-details">Product Details</Link>
-                        </li>
-                      </ul>
-                    </li> */}
-                    {/* <li className="has-children">
-                      <Link href="#">Pages</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/about-us">About Us</Link>
-                        </li>
-                        <li>
-                          <Link href="/services">Our Services</Link>
-                        </li>
-                        <li>
-                          <Link href="/pricing">Pricing</Link>
-                        </li>
-                        <li>
-                          <Link href="/calculator">Loan Calculator</Link>
-                        </li>
-                        <li>
-                          <Link href="/faqs">FAQs</Link>
-                        </li>
-                        <li>
-                          <Link href="/term">Term</Link>
-                        </li>
-                        <li>
-                          <Link href="/contact">Contact</Link>
-                        </li>
-                        <li>
-                          <Link href="/login">Login</Link>
-                        </li>
-                        <li>
-                          <Link href="/register">Register</Link>
-                        </li>
-                        <li>
-                          <Link href="/404">Error 404</Link>
-                        </li>
-                      </ul>
-                    </li> */}
-                    {/* <li className="has-children">
-                      <Link href="#">News</Link>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link href="/blog-grid">News Grid</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-list">News List</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-details">News Details</Link>
-                        </li>
-                      </ul>
-                    </li> */}
                     <li>
-                      <Link href="/contact">Contact</Link>
+                      <Link href="/contact">{t("contact")}</Link>
                     </li>
                     {user && (
                       <li>
-                        <Link href="/rentals">Rentals</Link>
+                        <Link href="/rentals">{t("rentals")}</Link>
                       </li>
                     )}
                     {user?.role?.id === 2 && (
                       <li className="menu-item-has-children">
-                        <Link href="#">Backoffice</Link>
+                        <Link href="#">{t("backoffice.title")}</Link>
                         <ul className="sub-menu">
                           <li>
-                            <Link href="/backoffice/cars">Cars</Link>
+                            <Link href="/backoffice/cars">
+                              {t("backoffice.cars")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/rentals">Rentals</Link>
+                            <Link href="/backoffice/rentals">
+                              {t("backoffice.rentals")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/locations">Locations</Link>
+                            <Link href="/backoffice/locations">
+                              {t("backoffice.locations")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/seasons">Seasons</Link>
+                            <Link href="/backoffice/seasons">
+                              {t("backoffice.seasons")}
+                            </Link>
                           </li>
                           <li>
-                            <Link href="/backoffice/coupons">Coupons</Link>
+                            <Link href="/backoffice/coupons">
+                              {t("backoffice.coupons")}
+                            </Link>
                           </li>
                         </ul>
                       </li>
@@ -334,7 +254,7 @@ export default function Header2({
                         className="logout-item"
                       >
                         <FaSignOutAlt />
-                        Cerrar sesión
+                        {t("auth.sign_out")}
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
@@ -362,13 +282,13 @@ export default function Header2({
                           fill="#101010"
                         />
                       </svg>
-                      Sign in
+                      {t("auth.sign_in")}
                     </Link>
                   </div>
                 )}
 
                 <div
-                  className="burger-icon burger-icon-white mt-2"
+                  className="burger-icon burger-icon-white"
                   onClick={handleMobileMenu}
                 >
                   <span className="burger-icon-top" />

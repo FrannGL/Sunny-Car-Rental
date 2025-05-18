@@ -6,17 +6,20 @@ import { CarCard } from "../CarCard";
 import { useState } from "react";
 import { FaCarSide } from "react-icons/fa";
 import { useCars } from "@/src/hooks/useCars";
+import { useTranslations } from "next-intl";
 
 export default function CarsListing4() {
   const { cars } = useCars();
   const [visibleCars, setVisibleCars] = useState(4);
+
+  const t = useTranslations("featured_cars");
 
   const loadMoreCars = () => {
     setVisibleCars((prevVisibleCars) => prevVisibleCars + 4);
   };
 
   if (!cars.length) {
-    return <></>;
+    return <div className="text-center">{t("no_cars")}</div>;
   }
 
   return (
@@ -28,15 +31,13 @@ export default function CarsListing4() {
         <div style={{ maxWidth: "1600px", width: "90%" }}>
           <div className="row align-items-end">
             <div className="col-md-8">
-              <h3 className="neutral-1000">Vehículos Destacados</h3>
-              <p className="text-lg-medium neutral-500">
-                Encuentra el vehículo perfecto para cualquier ocasión.
-              </p>
+              <h3 className="neutral-1000">{t("title")}</h3>
+              <p className="text-lg-medium neutral-500">{t("subtitle")}</p>
             </div>
             <div className="col-md-4 mt-md-0 mt-4">
               <div className="d-flex justify-content-end">
                 <Link className="btn btn-primary" href="/booking">
-                  Ver Todos
+                  {t("view_all")}
                   <svg
                     width={16}
                     height={16}
@@ -70,8 +71,8 @@ export default function CarsListing4() {
               style={{ flexWrap: "wrap" }}
             >
               <button className="btn btn-primary" onClick={loadMoreCars}>
-                <FaCarSide className="mr-2" style={{ marginTop: 1 }} /> Cargar
-                más vehículos
+                <FaCarSide className="mr-2" style={{ marginTop: 1 }} />
+                {t("load_more")}
               </button>
             </div>
           )}

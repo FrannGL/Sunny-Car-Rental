@@ -1,0 +1,221 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "booking": "Booking",
+    "contact": "Contact",
+    "rentals": "Rentals",
+    "backoffice": {
+      "title": "Backoffice",
+      "cars": "Cars",
+      "rentals": "Rentals",
+      "locations": "Locations",
+      "seasons": "Seasons",
+      "coupons": "Coupons"
+    },
+    "auth": {
+      "sign_in": "Sign in",
+      "sign_out": "Sign out",
+      "loading": "Loading..."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Write to us for personalized attention, don't hesitate, we're here for you.",
+      "contact_title": "Contact",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "send": "Send",
+      "placeholder": {
+        "first_name": "John",
+        "last_name": "...",
+        "email": "email@domain.com",
+        "phone": "+99",
+        "message": "Message ..."
+      }
+    },
+    "location": {
+      "title": "Location",
+      "address": "Valencia, Spain"
+    },
+    "copyright": "© {year} Sunny Car Rental Inc. All rights reserved."
+  },
+  "error_403": {
+    "title": "Access Denied",
+    "message": "You do not have permission to access this page.",
+    "action": "Please log in or return to the homepage.",
+    "button": "Go to Login",
+    "alt": {
+      "arrow": "arrow-left",
+      "image": "Forbidden Access"
+    }
+  },
+  "error_404": {
+    "title": "Page Not Found",
+    "message": "Page not available. Please search again or navigate using the menu.",
+    "button": "Back to Home",
+    "alt": {
+      "arrow": "arrow-left",
+      "logo": "Sunny Car Rental"
+    }
+  },
+  "login": {
+    "title": "Sign in",
+    "welcome": "Welcome back",
+    "form": {
+      "username": {
+        "label": "Email / Username",
+        "placeholder": "Email / Username"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "****************"
+      },
+      "submit": "Sign in"
+    },
+    "register": {
+      "text": "Don't have an account?",
+      "link": "Register Here!"
+    }
+  },
+  "register": {
+    "title": "Register",
+    "welcome": "Welcome!",
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "Enter your username"
+      },
+      "verification": {
+        "title": "Verification Code",
+        "placeholder": "Enter verification code"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Password"
+      },
+      "confirm_password": {
+        "label": "Confirm Password",
+        "placeholder": "Confirm Password"
+      },
+      "buttons": {
+        "send_code": "Send Code",
+        "register": "Register"
+      }
+    },
+    "errors": {
+      "user_exists": "This user is already registered",
+      "email_error": "Error sending email. Please try again.",
+      "invalid_code": "The verification code is incorrect",
+      "verification_error": "There was an error verifying the code. Please try again."
+    },
+    "login": {
+      "text": "Already have an account?",
+      "link": "Login Here!"
+    }
+  },
+  "hero": {
+    "title": "Rent your car in Valencia or Alicante, Low Cost",
+    "subtitle": "Book your car online at the best price. No hidden charges, no complications.",
+    "alt_logo": "Sunny Rental Cars"
+  },
+  "search": {
+    "locations": {
+      "pickup": {
+        "label": "Pick Up Location",
+        "placeholder": "Select a location"
+      },
+      "dropoff": {
+        "label": "Drop Off Location",
+        "placeholder": "Select a location"
+      }
+    },
+    "dates": {
+      "pickup": {
+        "label": "Pick Up Date"
+      },
+      "return": {
+        "label": "Return Date"
+      }
+    },
+    "button": "Find a Vehicle",
+    "errors": {
+      "required": "This field is required",
+      "invalid_date": "Invalid date"
+    }
+  },
+  "featured_cars": {
+    "title": "Featured Vehicles",
+    "subtitle": "Find the perfect vehicle for any occasion.",
+    "view_all": "View All",
+    "load_more": "Load more vehicles",
+    "no_cars": "No vehicles available"
+  },
+  "review": {
+    "company_name": "Sunny Rental Cars",
+    "title": "Travel on 4 wheels",
+    "subtitle": "From Valencia to Alicante",
+    "navigation": {
+      "prev": "Previous slide",
+      "next": "Next slide"
+    }
+  },
+  "how_it_works": {
+    "title": "How it works?",
+    "subtitle": "Our rental system works as follows",
+    "steps": {
+      "location": {
+        "title": "Choose location",
+        "description": "Select the ideal destination to start your journey with ease."
+      },
+      "vehicle": {
+        "title": "Choose your vehicle",
+        "description": "Explore our fleet and find the perfect car for your needs."
+      },
+      "verification": {
+        "title": "Verification",
+        "description": "Review your information and confirm your reservation"
+      },
+      "start_journey": {
+        "title": "Start your journey",
+        "description": "We will contact you to confirm your reservation and start your journey."
+      }
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "cards": {
+      "vehicle_protection": {
+        "title": "Vehicle Protection",
+        "description": "CDW and LDW insurance cover damage from collisions, theft, or accidents during the rental period."
+      },
+      "third_party": {
+        "title": "Third Party Protection",
+        "description": "ALI and SLI protection for third-party vehicles involved in collisions with your rental car."
+      },
+      "deposit": {
+        "title": "Security Deposit",
+        "description": "A security deposit is required which is blocked on your card and released upon return of the vehicle."
+      },
+      "extras": {
+        "title": "Optional Extras",
+        "description": "You can add extras to your reservation such as GPS and baby or child seats. Add them now so you don't have to worry about it during your trip!"
+      },
+      "additional_driver": {
+        "title": "Additional Driver",
+        "description": "If someone else will also be driving the car, they must sign the contract as an additional driver and meet the requirements for renting a car such as: necessary documentation and minimum driving age."
+      },
+      "mileage": {
+        "title": "Mileage",
+        "description": "Check if your reservation includes unlimited mileage or not. Unlimited mileage means you can drive as much as you want without paying any extra for the kilometers driven."
+      }
+    }
+  }
+}

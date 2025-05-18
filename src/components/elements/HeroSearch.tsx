@@ -3,9 +3,12 @@ import { useBookingSearch } from "@/src/hooks/useBookingSearch";
 import { Controller } from "react-hook-form";
 import MyDatePicker from "./MyDatePicker";
 import { useCars } from "@/src/hooks/useCars";
+import { useTranslations } from "next-intl";
 
 export default function HeroSearch() {
   const { locations } = useCars();
+
+  const t = useTranslations("search");
 
   const { register, handleSubmit, control, errors, onSubmit } =
     useBookingSearch();
@@ -14,12 +17,17 @@ export default function HeroSearch() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="box-bottom-search background-card"
-      style={{ backgroundColor: 'white', borderRadius: '8px' }}
+      style={{ backgroundColor: "white", borderRadius: "8px" }}
     >
       <div className="item-search">
-        <label className="text-sm-bold neutral-500">Pick Up Location</label>
-        <select className="form-control" {...register("pickUpLocation")}>
-          <option value="">Select a location</option>
+        <label className="text-xs-bold neutral-500">
+          {t("locations.pickup.label")}
+        </label>
+        <select
+          className="form-control text-xs"
+          {...register("pickUpLocation")}
+        >
+          <option value="">{t("locations.pickup.placeholder")}</option>
           {locations.map((location) => (
             <option key={location.id} value={location.id}>
               {location.name} ({location.country})
@@ -36,15 +44,20 @@ export default function HeroSearch() {
               textOverflow: "ellipsis",
             }}
           >
-            {errors.pickUpLocation.message}
+            {t("errors.required")}
           </p>
         )}
       </div>
 
       <div className="item-search item-search-2">
-        <label className="text-sm-bold neutral-500">Drop Off Location</label>
-        <select className="form-control" {...register("dropOffLocation")}>
-          <option value="">Select a location</option>
+        <label className="text-xs-bold neutral-500">
+          {t("locations.dropoff.label")}
+        </label>
+        <select
+          className="form-control text-xs"
+          {...register("dropOffLocation")}
+        >
+          <option value="">{t("locations.dropoff.placeholder")}</option>
           {locations.map((location) => (
             <option key={location.id} value={location.id}>
               {location.name} ({location.country})
@@ -61,14 +74,14 @@ export default function HeroSearch() {
               textOverflow: "ellipsis",
             }}
           >
-            {errors.dropOffLocation.message}
+            {t("errors.required")}
           </p>
         )}
       </div>
 
       <div className="item-search item-search-3">
-        <label className="text-sm-bold neutral-500">
-          Pick Up Date &amp; Time
+        <label className="text-xs-bold neutral-500">
+          {t("dates.pickup.label")}
         </label>
         <div className="input-calendar">
           <Controller
@@ -114,8 +127,8 @@ export default function HeroSearch() {
       </div>
 
       <div className="item-search bd-none">
-        <label className="text-sm-bold neutral-500">
-          Return Date &amp; Time
+        <label className="text-xs-bold neutral-500">
+          {t("dates.return.label")}
         </label>
         <div className="input-calendar">
           <Controller
@@ -178,7 +191,7 @@ export default function HeroSearch() {
               strokeLinejoin="round"
             />
           </svg>
-          Find a Vehicle
+          {t("button")}
         </button>
       </div>
     </form>

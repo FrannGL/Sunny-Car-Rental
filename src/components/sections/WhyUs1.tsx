@@ -1,4 +1,8 @@
+import { useTranslations } from "next-intl";
+
 export default function WhyUs1({ cls }: any) {
+  const t = useTranslations("how_it_works");
+
   return (
     <>
       <section className={`section-box box-why-book-22 background-body ${cls}`}>
@@ -7,11 +11,10 @@ export default function WhyUs1({ cls }: any) {
           <br />
           <div className="text-center wow fadeInUp">
             <p className="text-xl-medium neutral-500 wow fadeInUp">
-              ¿Cómo funciona?
+              {t("title")}
             </p>
             <h3 className="neutral-1000 wow fadeInUp">
-              Nuestro sistema de alquiler <br className="d-none d-lg-block" />
-              funciona de la siguiente manera
+              {t("subtitle")} <br className="d-none d-lg-block" />
             </h3>
           </div>
           <br />
@@ -51,11 +54,10 @@ export default function WhyUs1({ cls }: any) {
                 </div>
                 <div className="card-info">
                   <h6 className="text-xl-bold neutral-1000">
-                    Elegí la ubicación
+                    {t("steps.location.title")}
                   </h6>
                   <p className="text-md-medium neutral-500">
-                    Selecciona el destino ideal para comenzar tu viaje con
-                    facilidad.
+                    {t("steps.location.description")}
                   </p>
                 </div>
               </div>
@@ -98,11 +100,10 @@ export default function WhyUs1({ cls }: any) {
                 </div>
                 <div className="card-info">
                   <h6 className="text-xl-bold neutral-1000">
-                    Elegí tu vehículo
+                    {t("steps.vehicle.title")}
                   </h6>
                   <p className="text-md-medium neutral-500">
-                    Explora nuestra flota y encuentra el coche perfecto para tus
-                    necesidades.
+                    {t("steps.vehicle.description")}
                   </p>
                 </div>
               </div>
@@ -147,9 +148,12 @@ export default function WhyUs1({ cls }: any) {
                   </svg>
                 </div>
                 <div className="card-info">
-                  <h6 className="text-xl-bold neutral-1000">Verificación</h6>
+                  <h6 className="text-xl-bold neutral-1000">
+                    {" "}
+                    {t("steps.verification.title")}
+                  </h6>
                   <p className="text-md-medium neutral-500">
-                    Revisa tu información y confirma tu reserva
+                    {t("steps.verification.description")}
                   </p>
                 </div>
               </div>
@@ -192,10 +196,10 @@ export default function WhyUs1({ cls }: any) {
                 </div>
                 <div className="card-info">
                   <h6 className="text-xl-bold neutral-1000">
-                    Comienza tu viaje
+                    {t("steps.start_journey.title")}
                   </h6>
                   <p className="text-md-medium neutral-500">
-                    Comienza tu aventura con confianza y facilidad.
+                    {t("steps.start_journey.description")}
                   </p>
                 </div>
               </div>

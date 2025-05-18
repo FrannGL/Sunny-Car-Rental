@@ -4,7 +4,7 @@ import Layout from "@/src/components/layout/Layout";
 import { useAuth } from "@/src/context/AuthContext";
 import { SignInSchema, SignInSchemaType } from "@/src/schemas/login.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/src/i18n/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,6 +17,7 @@ export default function Login() {
 
   const router = useRouter();
   const locale = useLocale();
+  const t = useTranslations("login");
 
   const methods = useForm<SignInSchemaType>({
     resolver: zodResolver(SignInSchema),
@@ -74,9 +75,9 @@ export default function Login() {
                 <div className="login-content">
                   <div className="text-center">
                     <p className="neutral-1000 px-4 py-2 bg-2 text-sm-bold rounded-12 d-inline-flex align-items-center">
-                      Sign in
+                      {t("title")}
                     </p>
-                    <h4 className="neutral-1000">Welcome back</h4>
+                    <h4 className="neutral-1000">{t("welcome")}</h4>
                   </div>
                   <div className="form-login mt-30">
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -84,7 +85,7 @@ export default function Login() {
                         <input
                           className="form-control username"
                           type="text"
-                          placeholder="Email / Username"
+                          placeholder={t("form.username.placeholder")}
                           {...register("username")}
                         />
                         {errors.username && (
@@ -118,7 +119,7 @@ export default function Login() {
                           className="btn btn-primary w-100"
                           disabled={isLoading}
                         >
-                          Sign in
+                          {t("form.submit")}
                           <svg
                             width={16}
                             height={16}
@@ -137,9 +138,9 @@ export default function Login() {
                         </button>
                       </div>
                       <p className="text-sm-medium neutral-500 text-center mt-70">
-                        Don’t have an account?{" "}
+                        {t("register.text")}
                         <Link className="neutral-1000" href="/register">
-                          Register Here !
+                          {t("register.link")}
                         </Link>
                       </p>
                     </form>

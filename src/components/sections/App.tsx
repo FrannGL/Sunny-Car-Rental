@@ -8,16 +8,18 @@ import {
   faUserPlus,
   faRoad,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTranslations } from "next-intl";
 
 export default function App() {
+  const t = useTranslations("faqs");
+
   return (
     <>
-      {/* FAQs Section */}
       <section className="faqs-section py-5">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-50">
-              <h2 className="section-title">Preguntas Frecuentes</h2>
+              <h2 className="section-title">{t("title")}</h2>
             </div>
           </div>
           <br />
@@ -43,11 +45,12 @@ export default function App() {
                       className="text-primary"
                     />
                   </div>
-                  <h3 className="h5 mb-0">Protección del Vehículo</h3>
+                  <h3 className="h5 mb-0">
+                    {t("cards.vehicle_protection.title")}
+                  </h3>
                 </div>
                 <p className="text-muted">
-                  Los seguros CDW y LDW cubren daños por choques, robos o
-                  accidentes durante el período de alquiler.
+                  {t("cards.vehicle_protection.description")}
                 </p>
               </div>
             </div>
@@ -71,11 +74,10 @@ export default function App() {
                       className="text-primary"
                     />
                   </div>
-                  <h3 className="h5 mb-0">Protección Contra Terceros</h3>
+                  <h3 className="h5 mb-0">{t("cards.third_party.title")}</h3>
                 </div>
                 <p className="text-muted">
-                  Protección ALI y SLI para vehículos de terceros involucrados
-                  en colisiones con tu auto alquilado.
+                  {t("cards.third_party.description")}
                 </p>
               </div>
             </div>
@@ -99,12 +101,9 @@ export default function App() {
                       className="text-primary"
                     />
                   </div>
-                  <h3 className="h5 mb-0">Depósito de Garantía</h3>
+                  <h3 className="h5 mb-0">{t("cards.deposit.title")}</h3>
                 </div>
-                <p className="text-muted">
-                  Se requiere un depósito de garantía que se bloquea en tu
-                  tarjeta y se libera al devolver el vehículo.
-                </p>
+                <p className="text-muted">{t("cards.deposit.description")}</p>
               </div>
             </div>
             <div className="col-md-4">
@@ -127,13 +126,9 @@ export default function App() {
                       className="text-primary"
                     />
                   </div>
-                  <h3 className="h5 mb-0">Extras opcionales</h3>
+                  <h3 className="h5 mb-0">{t("cards.extras.title")}</h3>
                 </div>
-                <p className="text-muted">
-                  Es posible adicionar extras a tu reserva como GPS y sillas de
-                  bebé o de niños. ¡Agrégalas ahora para que no te preocupes por
-                  eso durante tu viaje!
-                </p>
+                <p className="text-muted">{t("cards.extras.description")}</p>
               </div>
             </div>
             <div className="col-md-4">
@@ -156,13 +151,12 @@ export default function App() {
                       className="text-primary"
                     />
                   </div>
-                  <h3 className="h5 mb-0">Conductor adicional</h3>
+                  <h3 className="h5 mb-0">
+                    {t("cards.additional_driver.title")}
+                  </h3>
                 </div>
                 <p className="text-muted">
-                  Si otra persona también va a conducir el auto, deberá firmar
-                  el contrato como conductor adicional y cumplir con los
-                  requisitos para alquilar un auto tales como: documentación
-                  necesaria y edad mínima para conducir.
+                  {t("cards.additional_driver.description")}
                 </p>
               </div>
             </div>
@@ -186,14 +180,9 @@ export default function App() {
                       className="text-primary"
                     />
                   </div>
-                  <h3 className="h5 mb-0">Kilometraje</h3>
+                  <h3 className="h5 mb-0">{t("cards.mileage.title")}</h3>
                 </div>
-                <p className="text-muted">
-                  Verifica si tu reserva cuenta con kilometraje ilimitado o no.
-                  El kilometraje ilimitado significa que puedes andar cuánto
-                  quisieras sin pagar ningún valor extra por los kilómetros
-                  recorridos.
-                </p>
+                <p className="text-muted">{t("cards.mileage.description")}</p>
               </div>
             </div>
           </div>
@@ -202,62 +191,6 @@ export default function App() {
       <br />
       <br />
       <br />
-      {/* Benefits Section */}
-      {/*     <section className="benefits-section py-5 bg-light">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h2 className="section-title">Ventajas de Sunny Car Rental</h2>
-            </div>
-          </div>
-          <div className="row g-4">
-            <div className="col-md-3">
-              <div className="benefit-card text-center p-4">
-                <div className="icon-wrapper mb-3">
-                  <i className="fas fa-percentage fa-2x text-primary"></i>
-                </div>
-                <h3 className="h5 mb-3">Descuentos Exclusivos</h3>
-                <p className="text-muted">
-                  Hasta 30% de descuento en alquileres seleccionados
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="benefit-card text-center p-4">
-                <div className="icon-wrapper mb-3">
-                  <i className="fas fa-car fa-2x text-primary"></i>
-                </div>
-                <h3 className="h5 mb-3">Amplia Selección</h3>
-                <p className="text-muted">
-                  Más de 300 compañías de alquiler disponibles
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="benefit-card text-center p-4">
-                <div className="icon-wrapper mb-3">
-                  <i className="fas fa-globe fa-2x text-primary"></i>
-                </div>
-                <h3 className="h5 mb-3">Cobertura Global</h3>
-                <p className="text-muted">
-                  Disponible en más de 160 países y 7,000 ciudades
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="benefit-card text-center p-4">
-                <div className="icon-wrapper mb-3">
-                  <i className="fas fa-edit fa-2x text-primary"></i>
-                </div>
-                <h3 className="h5 mb-3">Modificaciones Gratuitas</h3>
-                <p className="text-muted">
-                  Modifica tu reserva sin costo adicional
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }

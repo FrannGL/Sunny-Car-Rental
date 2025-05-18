@@ -1,17 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
+
+const intlMiddleware = createIntlMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
+  const response = await intlMiddleware(request);
 
-  const localeMatch = path.match(/^\/([a-z]{2})(?:-[a-z]{2})?(?=\/|$)/);
-
-  if (!localeMatch) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/en${path}`;
-    return NextResponse.redirect(url);
+  if (response.status === 307) {
+    return response;
   }
 
-  const locale = localeMatch[1] || "en";
+  const localeMatch = path.match(/^\/([a-z]{2})(?:-[a-z]{2})?(?=\/|$)/);
+  const locale = localeMatch?.[1] || routing.defaultLocale;
 
   if (
     path.startsWith(`/${locale}/backoffice`) ||
@@ -58,7 +60,7 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {

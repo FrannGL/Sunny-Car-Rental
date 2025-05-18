@@ -1,5 +1,5 @@
 import { routing } from "@/src/i18n/routing";
-import { hasLocale } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -35,7 +35,9 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${inter.variable}`}>
-        <Providers locale={locale}>{children}</Providers>
+        <NextIntlClientProvider>
+          <Providers locale={locale}>{children}</Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

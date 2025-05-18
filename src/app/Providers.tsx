@@ -20,14 +20,12 @@ const Providers = ({
   }
 
   return (
-    <NextIntlClientProvider locale={locale}>
-      <AuthProvider>
-        <QueryClientProvider client={queryClient}>
-          <Toaster />
-          {children}
-        </QueryClientProvider>
-      </AuthProvider>
-    </NextIntlClientProvider>
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <Toaster />
+        {children}
+      </QueryClientProvider>
+    </AuthProvider>
   );
 };
 
