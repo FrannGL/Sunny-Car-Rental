@@ -1,12 +1,12 @@
 "use client";
-import CarCard1 from "@/src/components/elements/carcard/CarCard1";
+import CarCard1 from "@/src/components/elements/CarCard1";
 import SortCarsFilter from "@/src/components/elements/SortCarsFilter";
 import ByCarType from "@/src/components/Filter/ByCarType";
 import ByLocation from "@/src/components/Filter/ByLocation";
 import ByPagination from "@/src/components/Filter/ByPagination";
 import ByPrice from "@/src/components/Filter/ByPrice";
 import Layout from "@/src/components/layout/Layout";
-import useCarFilter from "@/src/util/useCarFilter";
+import useCarFilter from "@/src/hooks/useCarFilter";
 import BrandsMarquee from "@/src/components/BrandsMarquee";
 import ByCategory from "@/src/components/Filter/ByCategory";
 import { useCars } from "@/src/hooks/useCars";

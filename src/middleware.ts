@@ -15,10 +15,7 @@ export async function middleware(request: NextRequest) {
   const localeMatch = path.match(/^\/([a-z]{2})(?:-[a-z]{2})?(?=\/|$)/);
   const locale = localeMatch?.[1] || routing.defaultLocale;
 
-  if (
-    path.startsWith(`/${locale}/backoffice`) ||
-    path.startsWith(`/${locale}/rentals`)
-  ) {
+  if (path.startsWith(`/${locale}/backoffice`)) {
     const userSessionCookie = request.cookies.get("user-session")?.value;
 
     if (!userSessionCookie) {

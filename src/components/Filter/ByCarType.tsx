@@ -1,4 +1,4 @@
-import { Filter } from "@/src/util/useCarFilter";
+import { Filter } from "@/src/hooks/useCarFilter";
 import React from "react";
 
 interface ByCarTypeProps {

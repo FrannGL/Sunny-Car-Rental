@@ -1,6 +1,6 @@
 import { useCars } from "@/src/hooks/useCars";
 import { Location } from "@/src/types/locations";
-import { Filter } from "@/src/util/useCarFilter";
+import { Filter } from "@/src/hooks/useCarFilter";
 
 interface ByLocationProps {
   uniqueLocations: Location[];

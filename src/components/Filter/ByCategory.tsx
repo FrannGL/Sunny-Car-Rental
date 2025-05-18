@@ -1,5 +1,5 @@
 import React from "react";
-import { Filter } from "@/src/util/useCarFilter";
+import { Filter } from "@/src/hooks/useCarFilter";
 
 interface ByCategoryProps {
   uniqueCategories: string[];
